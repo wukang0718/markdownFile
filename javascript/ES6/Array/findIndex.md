@@ -8,3 +8,5 @@
 
 > ​	arr.findIndex(callback[, thisArg])
 
+### 参数
+
