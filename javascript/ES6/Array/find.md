@@ -34,5 +34,5 @@
 ```js
 let arr = [1, 2, 3, 4];
 console.log(arr.find((item, index, array) => item % 2 === 0)) // 2 只返回第一个值
-conoole.log(arr.find(item => item > 10)) // undefined
+console.log(arr.find(item => item > 10)) // undefined
 ```
