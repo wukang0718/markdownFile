@@ -13,7 +13,7 @@
 | 参数          | 作用                                       |
 | ------------- | ------------------------------------------ |
 | callback      | 针对数组的每个元素都会执行的函数的回调函数 |
-| thisArg(可选) | 执行callback时作为this的对象的值           |
+| thisArg(可选) | 执行callback时作为this的对象的值,          |
 
 
 
@@ -34,5 +34,6 @@
 ```js
 let arr = [1, 2, 3, 4];
 console.log(arr.findIndex(item => item % 3 === 0)) // 2
+console.log(arr.findIndex(item => item > 10)) // -1
 ```
 
