@@ -28,3 +28,7 @@ git地址换成了这个以后，可以使用了
     git config  user.email "xxxx@xx.com"
     git config  user.name "xxxx"
 ```
+
+自启动更新好使了
+
+我的第一次测试啊，哈哈哈
