@@ -25,7 +25,7 @@
 ```javascript
 let arr = Array(5);
 let arr1 = arr.fill(1);
-console.log(arr === arr1)
+console.log(arr === arr1); // true
 ```
 
 
