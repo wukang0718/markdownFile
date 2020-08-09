@@ -22,3 +22,9 @@ git地址换成了这个以后，可以使用了
 自启动的还是又问题啊
 
 单独设置了一下项目的用户名和密码
+
+```js
+ 2.设置每个项目repo的自己的user.email
+    git config  user.email "xxxx@xx.com"
+    git config  user.name "xxxx"
+```
