@@ -4,6 +4,8 @@
 
 `find()`方法返回数组中满足提供的测试函数的第一个元素的值，如果没有符合的值，则返回undefined
 
+该方法不会修改原数组
+
 ##	语法
 
 > ​	`arr.find(callback[, thisArg])`
