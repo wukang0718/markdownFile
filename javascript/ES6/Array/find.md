@@ -36,3 +36,4 @@ console.log(arr.find((item, index, array) => item % 2 === 0)) // 2 只返回第�
 
 ## 注意事项
 
+- 
