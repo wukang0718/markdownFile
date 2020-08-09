@@ -33,6 +33,6 @@
 
 ```js
 let arr = [1, 2, 3, 4];
-console.log(arr.findIndex(item => item % 3 === 0))
+console.log(arr.findIndex(item => item % 3 === 0)) // 2
 ```
 
