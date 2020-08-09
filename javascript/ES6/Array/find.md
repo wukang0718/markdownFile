@@ -6,3 +6,5 @@
 
 ##	语法
 
+> ​	`arr.find(callback[, thisArg])`
+
