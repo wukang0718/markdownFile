@@ -16,11 +16,19 @@
 | statr（可选） | 起始索引，默认收0             |
 | end（可选）   | 结束索引，默认值是this.length |
 
-
-
 ###	返回值
 
 返回修改后的数组（返回的是原数组）
+
+##	示例
+
+```javascript
+let arr = Array(5);
+let arr1 = arr.fill(1);
+console.log(arr === arr1)
+```
+
+
 
 ##	注意事项
 
