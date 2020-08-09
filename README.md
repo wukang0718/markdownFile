@@ -16,3 +16,5 @@ git remote set-url remote-name https://<username>:<password>@github.com/<usernam
 ```
 
 git地址换成了这个以后，可以使用了
+
+自动同步可以更新了，但是提交还是又问题
