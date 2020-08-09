@@ -2,5 +2,5 @@
 
 ## 作用
 
-`findIndex()`方法
+`findIndex()`方法返回数组中的
 
