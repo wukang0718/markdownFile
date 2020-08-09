@@ -26,7 +26,9 @@
 let arr = Array(5);
 let arr1 = arr.fill(1);
 console.log(arr === arr1); // true
-let arr2 = [1, 2]
+let arr2 = [1, 2, 3, 4]
+arr2.fill(6, 2, 4);
+console.log(arr2); //  [1, 2, 6, 6]
 ```
 
 
