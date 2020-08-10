@@ -8,6 +8,8 @@
 
 ## 实现
 
+新创建一个项目，执行`npm init`一直回车
+
 ### 上传到github
 
 > ​	使用`simple-git`模块
@@ -17,4 +19,8 @@
 ```bash
 npm install simple-git --save
 ```
+
+- 使用
+
+
 
