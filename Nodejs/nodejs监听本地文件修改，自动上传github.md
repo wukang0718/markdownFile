@@ -267,6 +267,7 @@ invokeGit("pull", true).then(() => {
 - 安装
 
 ```bash
-
+npm install node-windows --save
 ```
 
+- 
