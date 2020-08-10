@@ -28,7 +28,15 @@
 
 #### 日志处理
 
-> ​	使用`log4.js`
+> ​	使用`log4js`模块
+
+- 安装
+
+```bash
+npm install log4js --save
+```
+
+
 
 
 
