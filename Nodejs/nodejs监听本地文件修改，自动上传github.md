@@ -169,7 +169,15 @@ module.exports = function (type, immediately) {
 - 安装
 
 ```bash
-npm install 
+npm install chokidar --save
+```
+
+- 使用
+
+在项目下新建`watchFile.js`文件
+
+```javascript
+
 ```
 
 
