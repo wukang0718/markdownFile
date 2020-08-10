@@ -38,7 +38,34 @@ npm install log4js --save
 
 - 使用
 
-在项目目录中创建`log`
+在项目目录中创建`log.js`
+
+```javascript
+const log4js = require('log4js');
+
+log4js.configure({
+    appenders: {
+        file: {
+            type: 'file',
+            filename: 'logs/app.log',
+            layout: {
+                type: 'pattern',
+                pattern: '%r %p - %m',
+            }
+        }
+    },
+    categories: {
+        default: {
+            appenders: ['file'],
+            level: 'debug'
+        }
+    }
+})
+
+module.exports = log4js.getLogger()
+```
+
+
 
 
 
