@@ -16,9 +16,9 @@
 {
     "dirPath": "D:/武康/markdown文件",  // 要监听的本地文件目录
     "commitMessage": "公司电脑设置nodejs脚本自动提交",   // 提交到github的message
-    "repo": "wukang0718/markdownFile", // github残
-    "branch": "master",
-    "remote": "origin"
+    "repo": "wukang0718/markdownFile", // github仓库地址
+    "branch": "master", // 分支
+    "remote": "origin" // 仓库
 }
 ```
 
