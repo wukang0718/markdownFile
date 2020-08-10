@@ -240,5 +240,11 @@ module.exports = function(dirPath) {
 
 ### 启动项目
 
+再项目目录中创建`app.js`文件
+
+```javascript
+
+```
+
 
 
