@@ -80,10 +80,17 @@ npm install node-notifier --save
 再项目目录中创建`toast.js`文件
 
 ```javascript
+const notifier = require("node-notifier");
+const path = require('path');
 
+module.exports = function(message) {
+    notifier.notify({
+        title: "nodejsServer消息",
+        message,
+        icon: path.join(__dirname, "./assets/icon.png") // 提示消息的图标，可有可无
+    })
+}
 ```
-
-
 
 ### 上传到github
 
