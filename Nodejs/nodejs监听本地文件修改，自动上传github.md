@@ -10,7 +10,7 @@
 
 ### 上传到github
 
-> ​	使用`chokidar`模块
+> ​	使用`simple-git`模块
 
 - 安装
 
