@@ -15,6 +15,6 @@
 - 安装
 
 ```bash
-npm install 
+npm install simple-git --save
 ```
 
