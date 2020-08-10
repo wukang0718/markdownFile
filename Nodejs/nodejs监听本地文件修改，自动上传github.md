@@ -65,6 +65,18 @@ log4js.configure({
 module.exports = log4js.getLogger()
 ```
 
+#### 消息提示（可有可无，设置自启动后，消息提示不会再生效了）
+
+> ​	使用`node-notifier`模块
+
+- 安装
+
+```bash
+
+```
+
+
+
 ### 上传到github
 
 > ​	使用`simple-git`模块
