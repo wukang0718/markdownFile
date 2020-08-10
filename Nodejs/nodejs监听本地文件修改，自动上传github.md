@@ -12,6 +12,18 @@
 
 在项目中创建一个`config.json`文件，存放github相关配置信息
 
+```json
+{
+    "dirPath": "D:/武康/markdown文件",  // 要监听的本地文件目录
+    "commitMessage": "公司电脑设置nodejs脚本自动提交",   // 提交到github的message
+    "repo": "wukang0718/markdownFile", // github残
+    "branch": "master",
+    "remote": "origin"
+}
+```
+
+
+
 ### 上传到github
 
 > ​	使用`simple-git`模块
