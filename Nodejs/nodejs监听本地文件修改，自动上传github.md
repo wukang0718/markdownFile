@@ -322,6 +322,11 @@ if (args[0] === "uninstall") {
 ### 再package.json中配置启动命令
 
 ```json
-
+{
+    "scripts": {
+        "start": "node server.js", // 启动服务
+        "uninstall": "node server.js uninstall" // 卸载服务
+     }
+}
 ```
 
