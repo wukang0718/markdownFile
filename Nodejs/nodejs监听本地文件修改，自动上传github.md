@@ -332,7 +332,14 @@ if (args[0] === "uninstall") {
 
 ## 注意事项
 
+- 要修改repo的remote 
 
+```bash
+git remote set-url remote-name https://<username>:<password>@github.com/<username>/<repo_name>.git
+```
+
+- 设置为repo用户名和邮箱 
+- 
 
 ## 启动服务
 
