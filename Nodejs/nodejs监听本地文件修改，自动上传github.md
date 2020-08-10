@@ -14,9 +14,9 @@
 
 ```json
 {
-    "dirPath": "D:/武康/markdown文件",  // 要监听的本地文件目录
-    "commitMessage": "公司电脑设置nodejs脚本自动提交",   // 提交到github的message
-    "repo": "wukang0718/markdownFile", // github仓库地址
+    "dirPath": "D:/dir/markdown文件",  // 要监听的本地文件目录
+    "commitMessage": "使用nodejs自动提交的文件",   // 提交到github的message
+    "repo": "<github.name>/<项目名称>", // github仓库地址
     "branch": "master", // 分支
     "remote": "origin" // 仓库
 }
@@ -243,7 +243,21 @@ module.exports = function(dirPath) {
 再项目目录中创建`app.js`文件
 
 ```javascript
+const invokeGit = require("./git-cmd");
+const toast = require("./toast");
+const logger = require("./log");
+const watch = require("./watchFile");
+const { dirPath } = require("./config.json");
 
+logger.info('服务启动成功');
+toast("nodejsUploadMarkdown初始化成功");
+
+// 程序加载 ---- 更新文件
+invokeGit("pull", true).then(() => {
+    watch(dirPath);
+    logger.info("监听文件");
+    toast("markdwon笔记初始化更新完成，开始监听文件自动同步");
+});
 ```
 
 
