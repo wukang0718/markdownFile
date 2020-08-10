@@ -330,3 +330,9 @@ if (args[0] === "uninstall") {
 }
 ```
 
+## 启动服务
+
+```bash
+npm start
+```
+
