@@ -65,10 +65,6 @@ log4js.configure({
 module.exports = log4js.getLogger()
 ```
 
-
-
-
-
 ### 上传到github
 
 > ​	使用`simple-git`模块
