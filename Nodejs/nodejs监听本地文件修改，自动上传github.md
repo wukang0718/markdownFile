@@ -72,6 +72,14 @@ module.exports = log4js.getLogger()
 - 安装
 
 ```bash
+npm install node-notifier --save
+```
+
+- 使用
+
+再项目目录中创建`toast.js`文件
+
+```javascript
 
 ```
 
