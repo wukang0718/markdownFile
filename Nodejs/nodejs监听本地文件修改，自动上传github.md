@@ -164,5 +164,13 @@ module.exports = function (type, immediately) {
 
 ### 监听文件
 
-> ​	使用
+> ​	使用`chokidar`模块
+
+- 安装
+
+```bash
+npm install 
+```
+
+
 
