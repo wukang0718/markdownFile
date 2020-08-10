@@ -10,6 +10,8 @@
 
 新创建一个项目，执行`npm init`一直回车
 
+在项目中创建一个`config.json`文件，存放github相关配置信息
+
 ### 上传到github
 
 > ​	使用`simple-git`模块
