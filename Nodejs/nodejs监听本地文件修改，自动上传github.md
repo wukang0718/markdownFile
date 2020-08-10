@@ -339,7 +339,11 @@ git remote set-url remote-name https://<username>:<password>@github.com/<usernam
 ```
 
 - 设置为repo用户名和邮箱 
-- 
+
+```bash
+git config  user.email "xxxx@xx.com"
+git config  user.name "xxxx"
+```
 
 ## 启动服务
 
