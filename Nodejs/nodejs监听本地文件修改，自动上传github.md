@@ -36,7 +36,9 @@
 npm install log4js --save
 ```
 
+- 使用
 
+在项目目录中创建`log`
 
 
 
