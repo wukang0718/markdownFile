@@ -319,4 +319,9 @@ if (args[0] === "uninstall") {
 }
 ```
 
-### 
+### 再package.json中配置启动命令
+
+```json
+
+```
+
