@@ -81,7 +81,7 @@ npm install simple-git --save
 
 ```javascript
 const git = require('simple-git');
-const toast = require("./toast"); // toast时一个消息提示插件，可有可无，所有的信息都会落在日志里
+const toast = require("./toast"); // toast时一个消息提示插件，可有可无，所有的信息都会落在日志里,设置自启动后，消息不会ti
 const { dirPath, branch, commitMessage, remote } = require("./config.json");
 const logger = require('./log'); // 落日志
 
