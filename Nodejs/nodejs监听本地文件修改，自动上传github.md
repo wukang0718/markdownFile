@@ -270,4 +270,11 @@ invokeGit("pull", true).then(() => {
 npm install node-windows --save
 ```
 
-- 
+- 使用
+
+再项目中创建`server.js`文件
+
+```javascript
+
+```
+
