@@ -22,5 +22,7 @@ npm install simple-git --save
 
 - 使用
 
+在项目下创建`git-cmd.js`的文件
+
 
 
