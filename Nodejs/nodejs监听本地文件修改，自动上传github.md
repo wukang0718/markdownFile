@@ -262,4 +262,11 @@ invokeGit("pull", true).then(() => {
 
 ### 设置开机自启动
 
-使用
+使用`node-windows`模块
+
+- 安装
+
+```bash
+
+```
+
