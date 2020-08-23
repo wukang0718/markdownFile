@@ -83,9 +83,8 @@ npm install simple-git --save
 
 ```javascript
 const git = require('simple-git');
-const toast = require("./toast"); // toast时一个消息提示插件，可有可无，所有的信息都会落在日志里,设置自启动后，消息提示不会生效
 const { dirPath, branch, commitMessage, remote } = require("./config.json");
-const logger = require('./log'); // 落日志
+const logger = require('./log');
 
 /**
  * 初始化git
@@ -108,7 +107,6 @@ function gitPush() {
             .catch(err => {
                 logger.error(`Push to ${branch} error`);
                 logger.error(err);
-                toast(`Push to ${branch} error`);
             })
 
     })
@@ -127,18 +125,17 @@ function gitPull() {
         .catch(err => {
             logger.error(`Pull to ${branch} error`);
             logger.error(err);
-            toast(`Pull to ${branch} error`);
         });
 }
 
 /**
  * 延时执行函数, 延迟3秒
  */
-const delayMethod = function (type) {
+const delayMethod = function(type) {
     let timer;
-    return function () {
+    return function() {
         clearTimeout(timer);
-        timer = setTimeout(function () {
+        timer = setTimeout(function() {
             gitCmd[type]();
             clearTimeout(timer);
         }, 3000)
@@ -155,7 +152,7 @@ const gitCmd = {
 }
 
 
-module.exports = function (type, immediately) {
+module.exports = function(type, immediately) {
     if (immediately) {
         return gitCmd[type]();
     } else {
