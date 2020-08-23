@@ -50,12 +50,10 @@ const log4js = require('log4js');
 log4js.configure({
     appenders: {
         file: {
-            type: 'file',
-            filename: 'logs/app.log',
-            layout: {
-                type: 'pattern',
-                pattern: '%r %p - %m',
-            }
+            type: 'DateFile',
+            filename: 'logs/app',
+            pattern: '-yyyy-MM-dd.log',
+            alwaysIncludePattern: true
         }
     },
     categories: {
