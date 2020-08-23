@@ -82,7 +82,9 @@ npm install simple-git --save
 在项目下创建`git-cmd.js`的文件
 在这个文件定义同步和提交 git 的方法
 
-**提交到 git 之前，要先和 git 仓库做一次同步**
+**提交到 git 之前，要先和 git 仓库做一次同步，如果是监听文件修改要上传到 github ，设置延迟3秒保存，防止快速保存，造成多次同步**
+
+
 
 ```javascript
 const git = require('simple-git');
