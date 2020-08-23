@@ -82,6 +82,8 @@ npm install simple-git --save
 在项目下创建`git-cmd.js`的文件
 在这个文件定义同步和提交 git 的方法
 
+****
+
 ```javascript
 const git = require('simple-git');
 const { dirPath, branch, commitMessage, remote } = require("./config.json");
