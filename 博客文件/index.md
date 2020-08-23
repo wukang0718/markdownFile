@@ -10,3 +10,4 @@
 
 ### nodejs
 
+1. nodejs实现文件夹自动同步github
