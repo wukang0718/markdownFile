@@ -1,3 +1,5 @@
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
 # 博客目录
 
 > ​	记录日常开发和学习中的知识
