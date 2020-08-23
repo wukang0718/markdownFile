@@ -236,7 +236,6 @@ npm install node-windows --save
 
 ```javascript
 const logger = require("./log");
-const toast = require("./toast");
 const path = require("path");
 const Service = require("node-windows").Service;
 
@@ -264,7 +263,6 @@ svc.on("alreadyinstalled ", () => {
 
 svc.on("error", (err) => {
     logger.error("自启动服务异常" + err);
-    toast("自启动服务异常");
 })
 
 svc.on("start", () => {
