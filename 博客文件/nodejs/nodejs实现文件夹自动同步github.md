@@ -203,7 +203,7 @@ module.exports = function(dirPath) {
 
 再项目目录中创建`app.js`文件
 
-**项目启动hou**
+**项目启动后和 github 先做一次同步**
 
 ```javascript
 const invokeGit = require("./git-cmd");
