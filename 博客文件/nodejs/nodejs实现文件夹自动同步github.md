@@ -296,7 +296,7 @@ if (args[0] === "uninstall") {
 git remote set-url remote-name https://<username>:<password>@github.com/<username>/<repo_name>.git
 ```
 
-- 设置为repo用户名和邮箱 
+- 为repo设置用户名和邮箱 
 
 ```bash
 git config  user.email "xxxx@xx.com"
