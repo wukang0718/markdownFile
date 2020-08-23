@@ -50,8 +50,8 @@ const log4js = require('log4js');
 log4js.configure({
     appenders: {
         file: {
-            type: 'DateFile',
-            filename: 'logs/app',
+            type: 'DateFile', // 文件以日期命名
+            filename: 'logs/app', // 文件存放目录
             pattern: '-yyyy-MM-dd.log',
             alwaysIncludePattern: true
         }
