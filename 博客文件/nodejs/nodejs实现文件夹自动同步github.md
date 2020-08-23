@@ -52,8 +52,8 @@ log4js.configure({
         file: {
             type: 'DateFile', // 文件以日期命名
             filename: 'logs/app', // 文件存放目录
-            pattern: '-yyyy-MM-dd.log',
-            alwaysIncludePattern: true
+            pattern: '-yyyy-MM-dd.log', // 文件名称格式
+            alwaysIncludePattern: true // 使用
         }
     },
     categories: {
