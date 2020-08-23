@@ -67,33 +67,6 @@ log4js.configure({
 module.exports = log4js.getLogger()
 ```
 
-#### 消息提示（可有可无，设置自启动后，消息提示不会再生效了）
-
-> ​	使用`node-notifier`模块
-
-- 安装
-
-```bash
-npm install node-notifier --save
-```
-
-- 使用
-
-再项目目录中创建`toast.js`文件
-
-```javascript
-const notifier = require("node-notifier");
-const path = require('path');
-
-module.exports = function(message) {
-    notifier.notify({
-        title: "nodejsServer消息",
-        message,
-        icon: path.join(__dirname, "./assets/icon.png") // 提示消息的图标，可有可无
-    })
-}
-```
-
 ### 上传到github
 
 > ​	使用`simple-git`模块
