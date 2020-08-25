@@ -9,3 +9,7 @@
 ## 项目地址
 
 > ​	svn://39.106.209.22/repository/repository/trunk/web/leaderleave_app
+
+# 框架
+
+`vue全家桶`
