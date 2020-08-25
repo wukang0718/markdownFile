@@ -14,4 +14,4 @@
 
 `vue全家桶`
 
-`mint`
+ui框架使用 `mint`
