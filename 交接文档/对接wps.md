@@ -5,3 +5,5 @@
 ## 项目目录
 
 ![项目目录](C:\Users\admin\AppData\Roaming\Typora\typora-user-images\image-20200825125537974.png)
+
+- plugins    di
