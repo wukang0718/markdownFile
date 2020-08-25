@@ -63,5 +63,5 @@ npm run build:inner   #	内网环境打包
     - 用户机器访问：`[wps 发布地址]publish.html`
     - 例：
         - 外网用户安装：
-            - http://192.168.240.21:9092/javascript/plugin/wps/oawps/publish.html`
+            - http://192.168.240.21:9092/javascript/plugin/wps/oawps/publish.html
 
