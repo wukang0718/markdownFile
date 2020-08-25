@@ -43,3 +43,10 @@ npm run dev
 
 #### 生产环境
 
+###### 运行
+
+```bash
+npm run build
+```
+
+**h**
