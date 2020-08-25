@@ -60,5 +60,8 @@ npm run build:inner   #	内网环境打包
 - wps 加载项目发布一定需要提供服务器地址和端口
 - wps 加载项发布过程中会出现选择发布模式，选 **离线模式发布**
 - **用户机器需要安装 wps 加载项，才能正常使用**
-    - 用户机器访问：`[wps 发布地址]/publish.html`
+    - 用户机器访问：`[wps 发布地址]publish.html`
+    - 例：
+        - 外网用户安装：
+            - http://192.168.240.21:9092/javascript/plugin/wps/oawps/publish.html`
 
