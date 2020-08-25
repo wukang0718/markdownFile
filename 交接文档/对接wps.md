@@ -67,3 +67,4 @@ npm run build:inner   #	内网环境打包
 
 #### wps 加载项开发
 
+> ​	开发文档地址：[https://open.wps.cn/docs/office](https://open.wps.cn/docs/office)
