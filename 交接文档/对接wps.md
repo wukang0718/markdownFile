@@ -23,4 +23,6 @@ npm run dev
 
 开发环境需要启动系统的开发环境和wps加载项的开发环境，**`npm run dev` 环境已经全部集成了**
 
-- wps 开发项的
+- wps 开发项的启动方式
+
+    ​	在 `plugins/`
