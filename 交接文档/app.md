@@ -14,4 +14,5 @@
 
 `vue全家桶`
 
-ui框架使用 `mint`
+ui框架使用 `mint`，文档： [https://mint-ui.github.io/docs](https://mint-ui.github.io/docs)
+
