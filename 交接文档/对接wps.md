@@ -52,7 +52,7 @@ npm run build:inner   #	内网环境打包
 
 内外网环境打包的区别就在于，wps 加载项发布的地址不同
 
-- 外网测试地址：
+- 外网测试地址：http://192.168.240.21:9092/javascript/plugin/wps/oawps/
 
 **注：**
 
