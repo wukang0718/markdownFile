@@ -31,6 +31,6 @@ npm run dev
 
 - wps 开发项的启动方式
 
-    ​	在 `plugins/wps/oawps` 目录下，运行 `wpsjs debug`，**如果运行`npm run dev` 命令，已经集成了wps的启动命令，不需要开发人员手动启动 wps**
+    在 `plugins/wps/oawps` 目录下，运行 `wpsjs debug`，**如果运行`npm run dev` 命令，已经集成了wps的启动命令，不需要开发人员手动启动 wps**
 
-    
+- 
