@@ -25,4 +25,4 @@ npm run dev
 
 - wps 开发项的启动方式
 
-    ​	在 `plugins/`
+    ​	在 `plugins/wps/oawps` 目录下，运行 `wpsjs debug`
