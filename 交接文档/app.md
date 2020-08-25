@@ -16,3 +16,6 @@
 
 ui框架使用 `mint`，文档： [https://mint-ui.github.io/docs](https://mint-ui.github.io/docs)
 
+ajax 使用 `axios`
+
+生产环境部署使用 `nginx`
