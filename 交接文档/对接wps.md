@@ -49,4 +49,6 @@ npm run dev
 npm run build
 ```
 
-**h**
+**注：**
+
+- wps 加载项目发布需要提供服务器地址和端口
