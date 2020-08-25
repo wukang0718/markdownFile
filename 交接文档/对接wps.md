@@ -39,3 +39,4 @@ npm run dev
 
         ![wps-api.js](https://raw.githubusercontent.com/wukang0718/mdImage/master/images/202008/25/130906-232759.png?token=AKCNZH63BHA5O6UGPHZGX6K7ISOTA)
 
+- wps 加载项开发文档: 
