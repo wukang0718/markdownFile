@@ -46,10 +46,10 @@ npm run dev
 ###### 运行
 
 ```bash
-npm run build
+npm run build  #	外网环境打包
+npm run build:inner   #	内网环境打包
 ```
 
 **注：**
 
 - wps 加载项目发布需要提供服务器地址和端口
-    - 
