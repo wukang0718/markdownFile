@@ -6,7 +6,9 @@
 
 ## 固定值
 
+#### `systemCode`
 
+![image-20200827133144401](https://raw.githubusercontent.com/wukang0718/mdImage/master/images/202008/27/133145-869645.png?token=AKCNZH33RDAJ2VR2CTDYJOC7I5CYA)
 
 # 请假系统（移动端）
 
