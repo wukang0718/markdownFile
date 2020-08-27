@@ -70,3 +70,8 @@ npm run build:inner   #	内网环境打包
 > ​	开发文档地址：[https://open.wps.cn/docs/office](https://open.wps.cn/docs/office)
 
 业务相关功能都封装在 `/plugins/wps/oawps/js/wps.js` 文件中，目前有 新建文档、打开服务器文档
+
+## wps 开发问题
+
+
+
