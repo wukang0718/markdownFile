@@ -37,7 +37,7 @@ npm run dev
 
     - 例：
 
-        ![image-20200827134818513](https://raw.githubusercontent.com/wukang0718/mdImage/master/images/202008/27/134821-54892.png?token=AKCNZHY4S3FN6PZDDGIYEOS7I5EWG)
+        ![image-20200827134818513](https://raw.githubusercontent.com/wukang0718/mdImage/master/images/202008/27/134821-54892.png?token=AKCNZH4S7I5L5EMYEAFEH5S7I5LBU)
 
 - wps 加载项开发文档: [wps开发文档](https://open.wps.cn/docs/office)
 
