@@ -75,4 +75,5 @@ npm run build:inner   #	内网环境打包
 
 1. 国产环境从业务系统调起wps后，没有新建文档，浏览器访问的 `runParams` 接口没有返回响应，wps 一直给业务系统发送消息。国产环境其余功能还没有测试。
 2. 调用 `wpsApp.Quit();` 方法，国产环境会出现 `wps` 闪退的问题。
+3. 国产机不支持 `wps.OAAssist.WebNotify` 方法
 
