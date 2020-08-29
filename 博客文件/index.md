@@ -13,7 +13,3 @@
 ### nodejs
 
 1. [nodejs实现文件夹自动同步github](https://wukang0718.github.io/blog/nodejs/nodejs实现文件夹自动同步github)
-
-![image-20200829102316136](https://raw.githubusercontent.com/wukang0718/mdImage/master/images/image-20200829102316136.png?token=AKCNZH3E4ZIVZ2X7VVT54NS7JG6UY)
-
-![image-20200829102746420](https://raw.githubusercontent.com/wukang0718/mdImage/master/images/image-20200829102746420.png?token=AKCNZH3FU6EK2RIARPNICWK7JG6WC)
