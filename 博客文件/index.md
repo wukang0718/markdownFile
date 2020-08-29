@@ -14,3 +14,4 @@
 
 1. [nodejs实现文件夹自动同步github](https://wukang0718.github.io/blog/nodejs/nodejs实现文件夹自动同步github)
 
+![image-20200829102316136](C:\Users\wukang\AppData\Roaming\Typora\typora-user-images\image-20200829102316136.png)
