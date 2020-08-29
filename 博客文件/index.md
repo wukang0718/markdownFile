@@ -16,4 +16,4 @@
 
 ![image-20200829102316136](https://raw.githubusercontent.com/wukang0718/mdImage/master/images/image-20200829102316136.png?token=AKCNZH3E4ZIVZ2X7VVT54NS7JG6UY)
 
-![image-20200829102746420](C:\Users\wukang\AppData\Roaming\Typora\typora-user-images\image-20200829102746420.png)
+![image-20200829102746420](https://raw.githubusercontent.com/wukang0718/mdImage/master/images/image-20200829102746420.png?token=AKCNZH3FU6EK2RIARPNICWK7JG6WC)
