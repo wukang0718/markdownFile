@@ -3,6 +3,6 @@
 ## 安装依赖
 
 ```
-npm install 
+npm install vue-class-component  vue-property-decorator
 ```
 
