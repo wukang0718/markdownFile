@@ -5,6 +5,6 @@
 装饰器依赖
 
 ```bash
-npm install vue-class-component  vue-property-decorator --save
+npm install nuxt-class-component  nuxt-property-decorator --save
 ```
 
