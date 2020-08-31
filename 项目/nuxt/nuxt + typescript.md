@@ -1,6 +1,6 @@
 ---
 title: NUXT + TypeScript
-description: 
+description: NUXT + TypeScript
 ---
 
 # NUXT + TypeScript
