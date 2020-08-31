@@ -2,7 +2,9 @@
 
 ## 安装依赖
 
-```
-npm install vue-class-component  vue-property-decorator
+装饰器依赖
+
+```bash
+npm install vue-class-component  vue-property-decorator --save
 ```
 
