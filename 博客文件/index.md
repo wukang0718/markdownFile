@@ -14,4 +14,4 @@
 
 1. [nodejs实现文件夹自动同步github](https://wukang0718.github.io/blog/nodejs/nodejs实现文件夹自动同步github)
 
-![image-20200902112519324](http://img.wukang0718.com/0e968b1d-941e-4b5d-96a2-9c8a86cf9bf9.png)
+![image-20200902114821473](http://img.wukang0718.com/9b8227ff-01d9-4bb8-a384-3bda450f54aa.png)
