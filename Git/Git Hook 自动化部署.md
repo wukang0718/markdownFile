@@ -2,11 +2,11 @@
 
     例：
 
-    ```
+    ```bash
     cd /home/gitrepo/nuxt-blog/hooks/
-    cp 
+    cp  post-update.sample  post-update
     ```
+
+2. 编辑 hook 文件，实现自动化部署
 
     
-
-2. 
