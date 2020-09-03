@@ -45,11 +45,10 @@
 
 ## 错误
 
-### remote: fatal: Not a git repository: '.'
+- ### remote: fatal: Not a git repository: '.'
 
-- 错误： Host key verification failed.      
-    -  ssh-keygen -R 39.96.170.240
-- remote: fatal: Not a git repository: '.'
-    - 注意： 一定要unset GIT_DIR清除变量， 不然会引起remote: fatal: Not a git repository: ‘.’错误。
-- Please, commit your changes or stash them before you can merge.
+    #### 解决：
 
+    ​	在 `post-update` 文件中 `unset GIT_DIR`
+
+    > 注意： 一定要unset GIT_DIR清除变量， 不然会引起remote: fatal: Not a git repository: ‘.’错误。
