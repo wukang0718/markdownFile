@@ -28,7 +28,7 @@
 
         ```bash
         cd /opt/project
-        
+        git clone git@<ip>:/home/gitrepo/<project-name>.git
         ```
 
         
