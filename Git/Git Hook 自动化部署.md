@@ -33,4 +33,6 @@
 
 - 错误： Host key verification failed.      
     -  ssh-keygen -R 39.96.170.240
+- remote: fatal: Not a git repository: '.'
+    - 
 
