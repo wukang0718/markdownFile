@@ -26,7 +26,7 @@
 
         ```bash
         cd /opt/project
-        git clone git@<ip>:/home/gitrepo/<project-name>.git
+        git clone /home/gitrepo/<project-name>.git
         ```
 
 3. 编写 git hook 文件，在新项目中完成自动化部署
