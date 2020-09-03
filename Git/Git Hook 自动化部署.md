@@ -17,11 +17,18 @@
 
     - 添加到git中
 
-        ```
+        ```bash
          cd /root/.ssh/
-         
+         cat id_rsa.pub >> /home/git/.ssh/authorized_keys
+        ```
+
+    - clone 项目	
+
+        ​	
+
+        ```bash
+        cd /opt/project
+        
         ```
 
         
-
-    - clone 项目	
