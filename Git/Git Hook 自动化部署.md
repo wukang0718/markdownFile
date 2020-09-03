@@ -7,6 +7,14 @@
     cp  post-update.sample  post-update
     ```
 
-2. 在服务器 clone yi'fe
+2. 在服务器 clone 一份 git 中的项目
+
+    - 生成服务器自己的公钥
+
+        ```bash
+        ssh-keygen -t rsa -C "your_email@youremail.com"
+        ```
+
+        
 
     
