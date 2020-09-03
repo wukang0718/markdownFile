@@ -1,9 +1,3 @@
----
-title: git hooks 自动化部署
-description: git hooks 自动化部署
-category: git
----
-
 1. 在服务器 git 仓库中创建 hook 文件
 
     ```bash
