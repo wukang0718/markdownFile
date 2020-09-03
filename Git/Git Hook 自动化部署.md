@@ -43,7 +43,9 @@
     echo "successful"
     ```
 
-    
+## 错误
+
+### remote: fatal: Not a git repository: '.'
 
 - 错误： Host key verification failed.      
     -  ssh-keygen -R 39.96.170.240
