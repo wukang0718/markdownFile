@@ -29,7 +29,7 @@ npm run dev
 
 开发环境需要启动系统的开发环境和wps加载项的开发环境，`npm run dev`  是业务开发环境 `npm run devWps` 是运行 wps 开发环境
 
-- wps 开发项的启动方式
+- wps 开发项的启动方式	
 
     在 `plugins/wps/oawps` 目录下，运行 `wpsjs debug`，**如果运行`npm run devWps` 命令，已经集成了wps的启动命令，不需要开发人员手动启动 wps**
 
