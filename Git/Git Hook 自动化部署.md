@@ -31,3 +31,6 @@
 
 3. 编写 git hook 文件，在新项目中完成自动化部署
 
+- 错误： Host key verification failed.      
+    -  ssh-keygen -R 39.96.170.240
+
