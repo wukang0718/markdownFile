@@ -15,6 +15,13 @@
         ssh-keygen -t rsa -C "your_email@youremail.com"
         ```
 
+    - 添加到git中
+
+        ```
+         cd /root/.ssh/
+         
+        ```
+
         
 
-    
+    - clone 项目	
