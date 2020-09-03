@@ -11,6 +11,9 @@
 
     - 生成服务器自己的公钥
 
+        ```bash
+        ssh-keygen -t rsa -C "<your_email@youremail.com>"
+        ```
 
     - 添加到git中
 
@@ -26,6 +29,3 @@
         git clone git@<ip>:/home/gitrepo/<project-name>.git
         ```
 
-    
-
-3. 
