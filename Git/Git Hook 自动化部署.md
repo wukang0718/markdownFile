@@ -7,6 +7,6 @@
     cp  post-update.sample  post-update
     ```
 
-2. 编辑 hook 文件，实现自动化部署
+2. 在服务器 clone yi'fe
 
     
