@@ -29,4 +29,3 @@
         git clone git@<ip>:/home/gitrepo/<project-name>.git
         ```
 
-        
