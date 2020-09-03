@@ -49,6 +49,6 @@
 
     #### 解决：
 
-    ​	**在 `post-update` 文件中 `unset GIT_DIR`**
+    ​			**在 `post-update` 文件中 `unset GIT_DIR`**
 
     > 注意： 一定要unset GIT_DIR清除变量， 不然会引起remote: fatal: Not a git repository: ‘.’错误。
