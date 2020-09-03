@@ -34,5 +34,5 @@
 - 错误： Host key verification failed.      
     -  ssh-keygen -R 39.96.170.240
 - remote: fatal: Not a git repository: '.'
-    - 
+    - 注意： 一定要unset GIT_DIR清除变量， 不然会引起remote: fatal: Not a git repository: ‘.’错误。
 
