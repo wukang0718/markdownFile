@@ -10,7 +10,7 @@
 
 > ​	svn://39.106.209.22/repository/repository/trunk/web/leaderleave_app
 
-ui框架是[vant]()
+ui框架是[vant](https://youzan.github.io/vant/#/zh-CN/)
 
 # 框架
 
