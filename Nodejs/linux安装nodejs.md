@@ -52,7 +52,7 @@ cd node-v12.18.3
     
     cd gcc-build-7.1.0
     
-    ../configure –enable-checking=release –enable-languages=c,c++ –disable-multilib
+    ../configure --enable-checking=release --enable-languages=c,c++ --disable-multilib
     
     make
     
