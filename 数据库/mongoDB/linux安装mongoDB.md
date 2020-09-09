@@ -36,11 +36,15 @@ rpm -i mongodb-org-server-4.4.0-1.amzn1.x86_64.rpm
 
 ## 错误 
 
->  loaded (/etc/rc.d/init.d/mongod; bad; vendor preset: disabled)
+> Job for mongod.service failed because the control process exited with error code. See "systemctl status mongod.service" and "journalctl -xe" for details. 
 
+运行
 
+```bash
+systemctl status mongod.service
+```
 
-
+> loaded (/etc/rc.d/init.d/mongod; bad; vendor preset: disabled)
 
 
 
