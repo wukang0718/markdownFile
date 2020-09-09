@@ -7,6 +7,6 @@
 ## 解压
 
 ```
-tar -xzvf 
+tar -xzvf node-v12.18.3.tar.
 ```
 
