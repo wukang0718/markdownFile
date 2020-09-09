@@ -4,3 +4,9 @@
 
 > https://nodejs.org/en/download/
 
+## 解压
+
+```
+tar -xzvf 
+```
+
