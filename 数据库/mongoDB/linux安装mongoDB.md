@@ -24,7 +24,9 @@ rpm -i mongodb-org-server-4.4.0-1.amzn1.x86_64.rpm
 
 # 配置mongoDB
 
-配置文件位置 `/etc/mongo.conf`
+使用默认配置即可，端口号是27017，默认后台启动
+
+配置文件位置在`/etc/mongo.conf`
 
 
 
