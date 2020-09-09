@@ -37,4 +37,28 @@ cd node-v12.18.3
 
     #### 解决：
 
-    ​	
+    重新安装gcc
+
+    ```bash
+    wget http://ftp.gnu.org/gnu/gcc/gcc-7.1.0/gcc-7.1.0.tar.gz
+    
+    tar zxvf gcc-7.1.0.tar.gz
+    
+    cd gcc-7.1.0
+    
+    ./contrib/download_prerequisites 
+    
+    mkdir gcc-build-7.1.0
+    
+    cd gcc-build-7.1.0
+    
+    ../configure –enable-checking=release –enable-languages=c,c++ –disable-multilib
+    
+    make
+    
+    make install
+    
+    gcc -v
+    ```
+
+    
