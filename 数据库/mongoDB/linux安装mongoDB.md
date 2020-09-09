@@ -36,13 +36,11 @@ rpm -i mongodb-org-server-4.4.0-1.amzn1.x86_64.rpm
 
 # 卸载
 
-使用 `rpm -e`
+使用 `rpm -e <卸载的安装包>`，**安装包不包含 `.rpm` 的结尾**
 
 ```
 rpm -i mongodb-org-server-4.4.0-1.amzn1.x86_64
 ```
-
-
 
 ## 错误 
 
