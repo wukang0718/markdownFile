@@ -40,11 +40,11 @@ cd node-v12.18.3
     重新安装gcc
 
     ```bash
-    wget http://ftp.gnu.org/gnu/gcc/gcc-7.1.0/gcc-7.1.0.tar.gz
+    wget http://ftp.gnu.org/gnu/gcc/gcc-10.2.0/gcc-10.2.0.tar.gz
     
-    tar zxvf gcc-7.1.0.tar.gz
+    tar zxvf gcc-10.2.0.tar.gz
     
-    cd gcc-7.1.0
+    cd gcc-10.2.0
     
     ./contrib/download_prerequisites # 需要的时间可能有点长
     
