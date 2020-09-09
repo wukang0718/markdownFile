@@ -46,7 +46,7 @@ cd node-v12.18.3
     
     cd gcc-7.1.0
     
-    ./contrib/download_prerequisites 
+    ./contrib/download_prerequisites # 需要的时间可能有点长
     
     mkdir gcc-build-7.1.0
     
