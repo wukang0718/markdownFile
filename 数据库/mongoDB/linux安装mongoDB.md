@@ -2,4 +2,4 @@
 
 > https://www.mongodb.com/try/download/community
 
-![image-20200909125927838](C:\Users\wukang\AppData\Roaming\Typora\typora-user-images\image-20200909125927838.png)
+![image-20200909125927838](http://img.wukang0718.com/6aa5d763-233b-4207-b3ce-1f506ebdf8ba.png)
