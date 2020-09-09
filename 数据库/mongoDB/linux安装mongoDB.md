@@ -28,7 +28,11 @@ rpm -i mongodb-org-server-4.4.0-1.amzn1.x86_64.rpm
 
 配置文件位置在`/etc/mongo.conf`, 如果需要特殊配置，可以修改这个文件
 
+# 启动
 
+```bash
+ mongod --config /etc/mongod.conf
+```
 
 
 
