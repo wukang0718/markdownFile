@@ -24,7 +24,7 @@ rpm -i mongodb-org-server-4.4.0-1.amzn1.x86_64.rpm
 
 # 配置mongoDB
 
-配置文件位置 ``
+配置文件位置 `/etc/mongo.conf`
 
 
 
