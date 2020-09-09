@@ -27,4 +27,8 @@ cd node-v12.18.3
 
     ​	安装gcc
 
-    
+    ```bash
+    yum search g++ -y
+    ```
+
+- 
