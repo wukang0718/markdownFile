@@ -34,14 +34,6 @@ rpm -i mongodb-org-server-4.4.0-1.amzn1.x86_64.rpm
  mongod --config /etc/mongod.conf
 ```
 
-# 卸载
-
-使用 `rpm -e <卸载的安装包>`，**安装包不包含 `.rpm` 的结尾**
-
-```bash
-rpm -i mongodb-org-server-4.4.0-1.amzn1.x86_64
-```
-
 ## 错误 
 
 > Job for mongod.service failed because the control process exited with error code. See "systemctl status mongod.service" and "journalctl -xe" for details. 
@@ -53,6 +45,14 @@ systemctl status mongod.service
 ```
 
 > loaded (/etc/rc.d/init.d/mongod; bad; vendor preset: disabled)
+
+# 卸载
+
+使用 `rpm -e <卸载的安装包>`，**安装包不包含 `.rpm` 的结尾**
+
+```bash
+rpm -i mongodb-org-server-4.4.0-1.amzn1.x86_64
+```
 
 
 
