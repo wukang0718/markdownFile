@@ -19,6 +19,12 @@ cd node-v12.18.3
 
 ## 报错
 
-- ###### failed to autodetect C++ compiler version (CXX=g++)
+- #### failed to autodetect C++ compiler version (CXX=g++)
 
-###### 
+    没有gcc的依赖
+
+    #### 解决：
+
+    ​	安装gcc
+
+    
