@@ -20,4 +20,5 @@ wget https://repo.mongodb.org/yum/amazon/2013.03/mongodb-org/4.4/x86_64/RPMS/mon
 rpm -i mongodb-org-server-4.4.0-1.amzn1.x86_64.rpm
 ```
 
-没有报错，标识安装成功
+没有报错，表示安装成功
+
