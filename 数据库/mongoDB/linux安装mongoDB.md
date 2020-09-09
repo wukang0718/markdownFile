@@ -22,3 +22,19 @@ rpm -i mongodb-org-server-4.4.0-1.amzn1.x86_64.rpm
 
 没有报错，表示安装成功
 
+# 配置mongoDB
+
+配置文件位置 ``
+
+
+
+
+
+
+
+
+
+
+
+
+
