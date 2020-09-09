@@ -34,6 +34,12 @@ rpm -i mongodb-org-server-4.4.0-1.amzn1.x86_64.rpm
  mongod --config /etc/mongod.conf
 ```
 
+## 错误 
+
+>  loaded (/etc/rc.d/init.d/mongod; bad; vendor preset: disabled)
+
+
+
 
 
 
