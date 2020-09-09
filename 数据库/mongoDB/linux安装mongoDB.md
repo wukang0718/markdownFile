@@ -34,6 +34,16 @@ rpm -i mongodb-org-server-4.4.0-1.amzn1.x86_64.rpm
  mongod --config /etc/mongod.conf
 ```
 
+# 卸载
+
+使用 `rpm -e`
+
+```
+rpm -i mongodb-org-server-4.4.0-1.amzn1.x86_64
+```
+
+
+
 ## 错误 
 
 > Job for mongod.service failed because the control process exited with error code. See "systemctl status mongod.service" and "journalctl -xe" for details. 
