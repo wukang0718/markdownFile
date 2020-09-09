@@ -32,3 +32,7 @@ cd node-v12.18.3
     ```
 
 - ####  C++ compiler (CXX=g++, 4.8.5) too old, need g++ 6.3.0 or clang++ 8.0.0
+
+    g++ 版本太低
+
+    #### 解决：
