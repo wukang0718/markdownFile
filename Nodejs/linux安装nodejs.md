@@ -48,10 +48,6 @@ cd node-v12.18.3
     
     ./contrib/download_prerequisites # 需要的时间可能有点长
     
-    mkdir gcc-build-7.1.0
-    
-    cd gcc-build-7.1.0
-    
     ../configure --enable-checking=release --enable-languages=c,c++ --disable-multilib
     
     make
