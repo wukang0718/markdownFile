@@ -14,3 +14,9 @@ wget https://repo.mongodb.org/yum/amazon/2013.03/mongodb-org/4.4/x86_64/RPMS/mon
 
 # 安装
 
+使用 `rpm -i <需要安装的包文件名>` 命令进行安装
+
+```
+
+```
+
