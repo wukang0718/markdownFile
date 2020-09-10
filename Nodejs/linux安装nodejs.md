@@ -15,7 +15,8 @@ tar -xvf node-v12.18.3-linux-x64.tar.xz
 # 检查安装成功
 
 ```
-cd 
+cd node-v12.18.3-linux-x64
+
 ```
 
 
