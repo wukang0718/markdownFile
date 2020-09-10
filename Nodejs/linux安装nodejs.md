@@ -2,7 +2,7 @@
 
 官网地址
 
-下载 ****Linux Binaries (x64)****
+下载 **Linux Binaries (x64)**
 
 > [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
 
