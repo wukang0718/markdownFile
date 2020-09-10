@@ -57,4 +57,4 @@ cd node-v12.18.3
     gcc -v
     ```
 
-    
+- #### lbzip2: Cannot exec: No such file or directory
