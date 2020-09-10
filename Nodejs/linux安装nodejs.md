@@ -58,3 +58,17 @@ cd node-v12.18.3
     ```
 
 - ### lbzip2: Cannot exec: No such file or directory
+
+    没有安装 `bzip2`
+
+    #### 解决：
+
+    ​	安装 `bzip2`
+
+    ```
+    yum install 
+    ```
+
+    
+
+    ####  
