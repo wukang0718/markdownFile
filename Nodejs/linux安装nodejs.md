@@ -2,12 +2,14 @@
 
 官网地址
 
+下载 ****Linux Binaries (x64)****
+
 > [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
 
 # 解压
 
 ```bash
-tar -xzvf node-v12.18.3.tar.gz
+tar -xvf node-v12.18.3.tar.gz
 ```
 
 # 编译 安装
