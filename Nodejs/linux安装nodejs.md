@@ -48,7 +48,7 @@ cd node-v12.18.3
     
     cd gcc-10.2.0
     
-    ./contrib/download_prerequisites # 需要的时间可能有点长
+    ./contrib/download_prerequisites      # 需要的时间可能有点长
     
     mkdir gcc-build
      
@@ -56,9 +56,7 @@ cd node-v12.18.3
     
     ../configure --enable-checking=release --enable-languages=c,c++ --disable-multilib
     
-    make
-    
-    make install
+    make && make install      # 需要的时间相当长了点
     
     gcc -v
     ```
