@@ -39,6 +39,8 @@ cd node-v12.18.3
 
     重新安装gcc
 
+    ##### 下载地址：[http://ftp.gnu.org/gnu/gcc/](http://ftp.gnu.org/gnu/gcc/)
+
     ```bash
     wget http://ftp.gnu.org/gnu/gcc/gcc-10.2.0/gcc-10.2.0.tar.gz
     
