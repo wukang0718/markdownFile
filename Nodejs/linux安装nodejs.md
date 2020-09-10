@@ -65,8 +65,8 @@ cd node-v12.18.3
 
     ​	安装 `bzip2`
 
-    ```
-    yum install 
+    ```bash
+    yum -y install bzip2
     ```
 
     
