@@ -12,11 +12,7 @@
 tar -xvf node-v12.18.3-linux-x64.tar.xz
 ```
 
-# 编译 安装
+# 设置软连接
 
-```bash
-cd node-v12.18.3
-./configure
-make && make install
-```
+
 
