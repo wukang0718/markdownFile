@@ -10,11 +10,12 @@
 tar -xzvf node-v12.18.3.tar.gz
 ```
 
-# 编译
+# 编译 安装
 
 ```bash
 cd node-v12.18.3
 ./configure
+make && make install
 ```
 
 ## 报错
