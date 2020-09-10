@@ -2,7 +2,7 @@
 
 官网地址
 
-> https://nodejs.org/en/download/
+> [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
 
 # 解压
 
@@ -57,4 +57,4 @@ cd node-v12.18.3
     gcc -v
     ```
 
-- #### lbzip2: Cannot exec: No such file or directory
+- ### lbzip2: Cannot exec: No such file or directory
