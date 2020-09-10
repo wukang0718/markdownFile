@@ -16,6 +16,7 @@ tar -xvf node-v12.18.3-linux-x64.tar.xz
 
 ```
 cd node-v12.18.3-linux-x64
+./bin/node -v
 
 ```
 
