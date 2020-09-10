@@ -19,9 +19,18 @@ cd node-v12.18.3-linux-x64
 ./bin/node -v
 ```
 
-
-
 # 设置软连接
 
+```bash
+ln -s /opt/node-v12.18.3-linux-x64/bin/node /usr/bin/
+ln -s /opt/node-v12.18.3-linux-x64/bin/npm /usr/bin/
+ln -s /opt/node-v12.18.3-linux-x64/bin/npx /usr/bin/
+```
 
+# 检查软连接
+
+```bash
+node -v
+npm -v
+```
 
