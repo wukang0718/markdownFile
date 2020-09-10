@@ -9,7 +9,7 @@
 # 解压
 
 ```bash
-tar -xvf node-v12.18.3.tar.gz
+tar -xvf node-v12.18.3-linux-x64.tar.xz
 ```
 
 # 编译 安装
