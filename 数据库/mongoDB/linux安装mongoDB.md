@@ -30,8 +30,25 @@ vi mongodb.conf
 
 # 编辑文件
 
-```
-
+```conf
+#数据库路径
+dbpath=/usr/local/mongodb/data
+#日志输出文件路径
+logpath=/usr/local/mongodb/logs/mongodb.log
+#错误日志采用追加模式
+logappend=true
+#启用日志文件，默认启用
+journal=true
+#这个选项可以过滤掉一些无用的日志信息，若需要调试使用请设置为false
+quiet=true
+#端口号 默认为27017
+port=27017
+#允许远程访问
+bind_ip=0.0.0.0
+#开启子进程
+fork=true
+#开启认证，必选先添加用户，先不开启（不用验证账号密码）
+#auth=true
 ```
 
 
