@@ -21,9 +21,14 @@ mkdir /usr/local/mongodb/logs
 touch /usr/local/mongodb/logs/mongodb.log
 ```
 
+# 创建mongodb配置文件
 
+```bash
+touch mongodb.conf
+vi mongodb.conf
+```
 
-
+# 编译文件
 
 
 
