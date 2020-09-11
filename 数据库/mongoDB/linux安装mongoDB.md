@@ -4,55 +4,9 @@
 
 ![image-20200911125935964](http://39.96.170.240:81/ed4b5e7a-33e9-4cbc-a6e2-1d78d11cee31.png)
 
-下载的文件是 `rpm` 格式的安装包
+下载的文件是 `tgz`格式的安装包
 
 # 安装
-
-使用 `rpm -i <需要安装的包文件名>` 命令进行安装
-
-```bash
-rpm -i mongodb-org-server-4.4.0-1.amzn1.x86_64.rpm
-```
-
-没有报错，表示安装成功
-
-# 配置mongoDB
-
-使用默认配置即可，端口号是27017，默认后台启动
-
-配置文件位置在`/etc/mongo.conf`, 如果需要特殊配置，可以修改这个文件
-
-# 启动
-
-```bash
- mongod --config /etc/mongod.conf
-```
-
-## 错误 
-
-> Job for mongod.service failed because the control process exited with error code. See "systemctl status mongod.service" and "journalctl -xe" for details. 
-
-运行
-
-```bash
-systemctl status mongod.service
-```
-
-> loaded (/etc/rc.d/init.d/mongod; bad; vendor preset: disabled)
-
-# 卸载
-
-使用 `rpm -e <卸载的安装包>`，**安装包不包含 `.rpm` 的结尾**
-
-```bash
-rpm -i mongodb-org-server-4.4.0-1.amzn1.x86_64
-```
-
-
-
-
-
-
 
 
 
