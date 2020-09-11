@@ -75,4 +75,10 @@ source /etc/profile
 ./bin/mongod --config mongodb.conf
 ```
 
-查看进程是否qi'do'g
+# 查看进程是否启动成功
+
+```bash
+ps -ef | grep mongo
+```
+
+# 检查
