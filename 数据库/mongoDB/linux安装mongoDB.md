@@ -69,3 +69,9 @@ export PATH=/opt/mongodb-linux-x86_64-rhel70-4.4.1/bin:$PATH
 source /etc/profile
 ```
 
+# 启动mongodb
+
+```bash
+./bin/mongod --config mongodb.conf
+```
+
