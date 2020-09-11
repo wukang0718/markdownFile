@@ -9,7 +9,7 @@
 # 解压
 
 ```
-tar -zxvf
+tar -zxvf mongodb-linux-x86_64-rhel70-4.4.1.tgz
 ```
 
 
