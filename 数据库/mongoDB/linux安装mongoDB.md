@@ -12,5 +12,25 @@
 tar -zxvf mongodb-linux-x86_64-rhel70-4.4.1.tgz
 ```
 
+# 创建mongodb数据存储文件和日志文件
+
+```bash
+mkdir -p /usr/local/mongodb/db
+mkdir /usr/local/mongodb/logs
+touch /usr/local/mongodb/logs/mongodb.log
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
