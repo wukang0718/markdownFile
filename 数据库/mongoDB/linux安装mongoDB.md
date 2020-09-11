@@ -65,5 +65,7 @@ export PATH=/opt/mongodb-linux-x86_64-rhel70-4.4.1/bin:$PATH
 
 ## 重启系统配置
 
-
+```bash
+source /etc/profile
+```
 
