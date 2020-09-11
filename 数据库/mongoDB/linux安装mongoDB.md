@@ -75,3 +75,4 @@ source /etc/profile
 ./bin/mongod --config mongodb.conf
 ```
 
+查看进程是否qi'do'g
