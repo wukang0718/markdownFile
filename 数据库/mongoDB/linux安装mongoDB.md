@@ -57,7 +57,11 @@ fork=true
 vi /etc/profile
 ```
 
+## 在最后一行加入
 
+```
+export 
+```
 
 
 
