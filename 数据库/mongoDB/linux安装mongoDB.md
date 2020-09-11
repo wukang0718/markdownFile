@@ -28,9 +28,11 @@ touch mongodb.conf
 vi mongodb.conf
 ```
 
-# 编译文件
+# 编辑文件
 
+```
 
+```
 
 
 
