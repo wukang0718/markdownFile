@@ -75,10 +75,19 @@ source /etc/profile
 ./bin/mongod --config mongodb.conf
 ```
 
-# 查看进程是否启动成功
+# 查看是否启动成功
+
+## 查看进程
 
 ```bash
 ps -ef | grep mongo
 ```
 
-# 检查
+## 连接数据库
+
+```bash
+mongo
+show dbs
+```
+
+显示出数据库，即为启动成功
