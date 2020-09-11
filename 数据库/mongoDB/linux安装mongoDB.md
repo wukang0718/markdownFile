@@ -2,13 +2,7 @@
 
 > https://www.mongodb.com/try/download/community
 
-
-
-使用 `wget` 命令下载，网速不好，可以直接浏览器下载，再传到服务器
-
-```bash
-wget https://repo.mongodb.org/yum/amazon/2013.03/mongodb-org/4.4/x86_64/RPMS/mongodb-org-server-4.4.0-1.amzn1.x86_64.rpm
-```
+![image-20200911125935964](http://39.96.170.240:81/ed4b5e7a-33e9-4cbc-a6e2-1d78d11cee31.png)
 
 下载的文件是 `rpm` 格式的安装包
 
