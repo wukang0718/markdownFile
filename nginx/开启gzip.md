@@ -2,7 +2,7 @@
 
 在 server 层级 加 gzip:  
 
-```
+```nginx
     server {
         gzip on  开启gzip
 
