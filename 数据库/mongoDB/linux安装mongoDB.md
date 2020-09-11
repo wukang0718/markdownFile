@@ -60,7 +60,7 @@ vi /etc/profile
 ## 在最后一行加入
 
 ```
-export PATH=$PATH:/opt/mongodb-linux-x86_64-rhel70-4.4.1/bin
+export PATH=/opt/mongodb-linux-x86_64-rhel70-4.4.1/bin:$PATH
 ```
 
 
