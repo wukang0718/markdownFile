@@ -53,7 +53,9 @@ fork=true
 
 # 将mongodb服务加入环境变量
 
-
+```bash
+vi /etc/profile
+```
 
 
 
