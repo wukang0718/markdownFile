@@ -10,6 +10,7 @@
 
 ```bash
 tar -zxvf mongodb-linux-x86_64-rhel70-4.4.1.tgz
+cd mongodb-linux-x86_64-rhel70-4.4.1
 ```
 
 # 创建mongodb数据存储文件和日志文件
