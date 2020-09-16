@@ -45,7 +45,7 @@ module.exports = appInfo => {
    * built-in config
    * @type {Egg.EggAppConfig}
    **/
-  const config = {
+  const config = exports = {
     mongoose: {
       client: {
         url: 'mongodb://39.96.170.240/blog',
