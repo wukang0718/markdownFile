@@ -86,7 +86,7 @@ module.exports = appInfo => {
 
 ### 不使用 `exports` 的原因
 
-`require` 导入的是 `module.exports` 导出的对象，这个配置文件中的 `module.exports` 导出的是一个函数，**(这个文件中的 `module.exports` 默认的引用地址已经改变了，而 `exports` 的没有改变，任然指向的是一个空对象)；**当使用 `exports.mongoose` 的时候，`exports` 导出的对象不会被 `require` 的方式导入，
+`require` 导入的是 `module.exports` 导出的对象，这个配置文件中的 `module.exports` 导出的是一个函数，**(这个文件中的 `module.exports` 默认的引用地址已经改变了，而 `exports` 的没有改变，任然指向的是一个空对象)；**当使用 `exports.mongoose` 的时候，`exports` 导出的对象不会被 `require` 的方式导入，所以配置无效.
 
 ## 使用
 
