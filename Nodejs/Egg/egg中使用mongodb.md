@@ -86,7 +86,7 @@ module.exports = appInfo => {
 
 ### 不使用 `exports` 的原因
 
-`module.exports` 导出的是
+`require` 导入的是 `module.exports` 导出的对象，
 
 ## 使用
 
