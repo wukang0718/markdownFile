@@ -1,3 +1,4 @@
 ## 区别：
 
-1. 
+1. `module.exports` 和 `exports` 初始都指向同一个对象
+2. exports 
