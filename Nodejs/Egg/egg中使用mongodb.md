@@ -28,7 +28,9 @@ module.exports = {
 
 > config/config.default.js
 
-添加一下代码
+改成一下（注意两点）：
+
+1. const config
 
 ```js
 /* eslint valid-jsdoc: "off" */
