@@ -31,12 +31,55 @@ module.exports = {
 添加一下代码
 
 ```js
-exports.mongoose = {
-  client: {
-    url: 'mongodb://39.96.170.240/blog',
-    options: {}
-  },
+/* eslint valid-jsdoc: "off" */
+
+'use strict';
+
+/**
+ * @param {Egg.EggAppInfo} appInfo app info
+ */
+module.exports = appInfo => {
+  /**
+   * built-in config
+   * @type {Egg.EggAppConfig}
+   **/
+  const config = {
+    mongoose: {
+      client: {
+        url: 'mongodb://39.96.170.240/blog',
+        options: {
+          useNewUrlParser: true,
+          useUnifiedTopology: true,
+          useFindAndModify: false,
+          useCreateIndex: true,
+          autoReconnect: true
+        }
+      }
+    },
+    security: {
+      csrf: {
+        enable: false,
+      }
+    }
+  };
+
+  // use for cookie sign key, should change to your own and keep security
+  config.keys = appInfo.name + '_1600059179764_5209';
+
+  // add your middleware config here
+  config.middleware = [];
+
+  // add your user config here
+  const userConfig = {
+    // myAppName: 'egg',
+  };
+
+  return {
+    ...config,
+    ...userConfig,
+  };
 };
+
 ```
 
 ## 使用
