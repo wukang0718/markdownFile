@@ -28,13 +28,7 @@ module.exports = {
 
 > config/config.default.js
 
-改成一下:
-
-配置参数卸载 `config` 中，不使用 `exports.mongoose` 的方式
-
-### 不使用 `exports` 的原因
-
-
+改成以下：
 
 ```js
 /* eslint valid-jsdoc: "off" */
@@ -87,6 +81,12 @@ module.exports = appInfo => {
 };
 
 ```
+
+配置参数写在 `config` 中，不使用 `exports.mongoose` 的方式
+
+### 不使用 `exports` 的原因
+
+`module.exports` 导出的是
 
 ## 使用
 
