@@ -4,5 +4,3 @@
 2. `exports` 是 指向的是 `module.exports` 的引用地址
 3. `require()` 导入的 `module.exports` 而不是 `exports`、
 
-## 示例说明
-
