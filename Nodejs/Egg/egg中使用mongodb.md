@@ -86,7 +86,7 @@ module.exports = appInfo => {
 
 ### 不使用 `exports` 的原因
 
-`require` 导入的是 `module.exports` 导出的对象，这个配置文件中的 `module.exports` 导出的是一个函数
+`require` 导入的是 `module.exports` 导出的对象，这个配置文件中的 `module.exports` 导出的是一个函数，当使用 
 
 ## 使用
 
