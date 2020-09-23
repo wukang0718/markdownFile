@@ -43,4 +43,4 @@ props: {
 
 `string` 直接赋值
 
-`object`  `Object.keys().join("|")` 
+`object`  =>  `Object.keys().join("|")` 
