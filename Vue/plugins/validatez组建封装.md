@@ -10,10 +10,7 @@ data: [{
       /**
        * rule： 规则名称
        */
-      	rule: {
-          validator // function | string | 
-          message: 
-        }
+      	rule: String | Array // 校验规则
     },
 		name: "" // 表单校验显示的字段名称
 }]
