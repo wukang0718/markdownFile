@@ -1,4 +1,4 @@
-组建接收的数据
+`form`组建接收的数据
 
 ```js
 props: {
@@ -20,6 +20,16 @@ props: {
 
 
 
-
-
 `Vue` 原型挂载方法 `$extendRule` 可以扩展校验规则
+
+
+
+`validateInput` 组件接收数据
+
+```js
+props: {
+		options: {}, // md组件配置参数
+  	rules: Object | String | Array // 校验规则
+}
+```
+
