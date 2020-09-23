@@ -2,7 +2,7 @@
 
 ```js
 props: {
-  type: {input | }
+  type: {input | NumberKeyboard | }
 }
 ```
 
