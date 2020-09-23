@@ -7,7 +7,7 @@ props: {
     	  
     },
     rules: {
-      	
+      	rule: {}
     }
 }
 ```
