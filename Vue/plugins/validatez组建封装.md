@@ -1,7 +1,7 @@
 `form`组建接收的数据
 
 ```js
-props: [{
+data: [{
   	type: {input | NumberKeyboard | Radio | Slider | Switch | TextareaItem},
     options: { // md-[type] 对应的设置
     	  
