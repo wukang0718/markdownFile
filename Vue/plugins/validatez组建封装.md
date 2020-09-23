@@ -43,4 +43,4 @@ props: {
 
 `string` 直接赋值
 
-`object` 判断
+`object` 判断值是 `string` 或者是 `object`
