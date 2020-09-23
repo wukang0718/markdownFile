@@ -14,7 +14,8 @@ data: [{
           validator // function | string | 
           message: 
         }
-    }
+    },
+		name: "" // 表单校验显示的字段名称
 }]
 ```
 
@@ -36,4 +37,3 @@ props: {
   	rules: Object | String | Array // 校验规则
 }
 ```
-
