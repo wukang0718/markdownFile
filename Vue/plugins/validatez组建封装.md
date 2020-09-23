@@ -38,3 +38,5 @@ props: {
   	rules: Object | String | Array // 校验规则
 }
 ```
+
+`rules` 如果是 `array` join("|")
