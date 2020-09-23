@@ -2,7 +2,7 @@
 
 ```js
 props: {
-  type: {input | NumberKeyboard | Radio | Slider | }
+  type: {input | NumberKeyboard | Radio | Slider | Switch}
 }
 ```
 
