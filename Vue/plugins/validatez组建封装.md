@@ -41,4 +41,4 @@ props: {
 
 `rules` 如果是 `array` join("|")
 
-`string` 直接复制
+`string` 直接赋值
