@@ -3,9 +3,10 @@
 ```js
 props: {
   	type: {input | NumberKeyboard | Radio | Slider | Switch | TextareaItem},
-    options: {
+    options: { // md-[type] 对应的设置
     	  
-    }
+    },
+      
 }
 ```
 
