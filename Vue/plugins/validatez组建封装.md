@@ -45,3 +45,7 @@ props: {
 `string` 直接赋值
 
 `object` 判断值是 `string` 或者是 `object` 中包含 `message` 字段
+
+
+
+抛出 `getData` 方法，给父组件获取护具
