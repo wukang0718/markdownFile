@@ -12,6 +12,7 @@ props: {
        */
       	rule: {
           validator // function | string | 
+          message: 
         }
     }
 }
