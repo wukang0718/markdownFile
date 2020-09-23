@@ -22,10 +22,6 @@ data: [{
 
 
 
-getData()
-
-
-
 `Vue` 原型挂载方法 `$extendRule` 可以扩展校验规则
 
 
