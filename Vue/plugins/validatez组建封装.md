@@ -6,7 +6,7 @@ props: {
     options: { // md-[type] 对应的设置
     	  
     },
-    
+    rules: []
 }
 ```
 
