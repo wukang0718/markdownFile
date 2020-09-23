@@ -22,4 +22,4 @@ props: {
 
 
 
-`Vue` 原型挂载方法 ``
+`Vue` 原型挂载方法 `$extendRule` 可以扩展
