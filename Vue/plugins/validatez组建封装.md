@@ -8,8 +8,8 @@ props: {
     },
     rules: {
       /**
-      * rule： 规则名称
-      */
+       * rule： 规则名称
+       */
       	rule: {}
     }
 }
