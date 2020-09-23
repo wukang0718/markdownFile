@@ -10,7 +10,9 @@ props: {
       /**
        * rule： 规则名称
        */
-      	rule: {}
+      	rule: {
+          validator // function | string | 
+        }
     }
 }
 ```
