@@ -30,6 +30,7 @@ data: [{
 
 ```js
 props: {
+  type: string, // 和 md 组件库的form 表单做一次映射
       options: {}, // md组件配置参数
     label: "", // 表单校验显示的字段名称
       props："", // 获取数据的 key 值
