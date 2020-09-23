@@ -4,4 +4,4 @@ Vee-Validate 默认规则[https://logaretm.github.io/vee-validate/guide/rules.ht
 
 
 
-`validate` 方法支持传入 `promise` 函数左一步校验
+`validate` 方法支持传入 `promise` 函数做异步校验
