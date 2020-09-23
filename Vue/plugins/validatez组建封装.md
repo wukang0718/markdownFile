@@ -7,7 +7,7 @@ props: {
     	  
     },
     rules: {
-      	rule: {}
+      	rule: {} // 规则名称
     }
 }
 ```
