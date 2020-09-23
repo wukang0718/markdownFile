@@ -2,7 +2,7 @@
 
 ```js
 props: {
-  type: {}
+  type: {input | }
 }
 ```
 
