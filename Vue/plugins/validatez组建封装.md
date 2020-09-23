@@ -43,3 +43,6 @@ props: {
 `string` 直接赋值
 
 ​	
+
+**不需要 `getData` 的方法**
+
