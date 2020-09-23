@@ -20,6 +20,10 @@ props: {
 
 
 
+`form` 组件根据传入的 `type` 参数，动态渲染
+
+
+
 `Vue` 原型挂载方法 `$extendRule` 可以扩展校验规则
 
 
