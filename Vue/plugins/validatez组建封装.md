@@ -35,6 +35,7 @@ data: [{
 props: {
 		options: {}, // md组件配置参数
     label: "", // 表单校验显示的字段名称
+      props：
   	rules: Object | String | Array // 校验规则
 }
 ```
