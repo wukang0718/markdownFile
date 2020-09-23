@@ -36,15 +36,13 @@ props: {
       options: {}, // md组件配置参数
     label: "", // 表单校验显示的字段名称
       props："", // 获取数据的 key 值
-  	rules: Object | String | Array // 校验规则
+  	rules:   String | Array // 校验规则
 }
 ```
 
 `rules` 如果是 `array` =>  `join("|")`
 
 `string` 直接赋值
-
-`object` 判断值是 `string` 或者是 `object` 中包含 `message` 字段
 
 
 
