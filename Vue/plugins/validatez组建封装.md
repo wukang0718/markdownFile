@@ -43,4 +43,4 @@ props: {
 
 `string` 直接赋值
 
-`object` 判断值是 `string` 或者是 `object`
+`object` 判断值是 `string` 或者是 `object` 中包含 `message` 字段
