@@ -2,7 +2,10 @@
 
 ```js
 props: {
-  type: {input | NumberKeyboard | Radio | Slider | Switch | TextareaItem}
+  	type: {input | NumberKeyboard | Radio | Slider | Switch | TextareaItem},
+    options: {
+    	  
+    }
 }
 ```
 
