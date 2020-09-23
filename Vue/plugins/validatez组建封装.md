@@ -40,3 +40,5 @@ props: {
 ```
 
 `rules` 如果是 `array` join("|")
+
+`string` 直接复制
