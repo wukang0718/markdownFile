@@ -23,3 +23,4 @@ icon font采用的是字体渲染，icon font在一倍屏幕下渲染效果并�
 ##### icon font只能支持单色
 
 icon font做为字体无法支持多色图形，这就对设计造成了许多限制，因此这也成为了icon font的一个瓶颈。
+
