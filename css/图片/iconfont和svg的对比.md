@@ -39,3 +39,4 @@ icon font主要在页面用Unicode符号调用对应的图标，这种方式不�
 ##### svg与icon font性能对比
 
 结果svg整体是的 **Rendering项基本上是碾压了icon font**
+
