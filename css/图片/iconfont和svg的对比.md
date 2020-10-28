@@ -24,3 +24,6 @@ icon font采用的是字体渲染，icon font在一倍屏幕下渲染效果并�
 
 icon font做为字体无法支持多色图形，这就对设计造成了许多限制，因此这也成为了icon font的一个瓶颈。
 
+##### icon font可读性不好
+
+icon font主要在页面用Unicode符号调用对应的图标，这种方式不管是浏览器，搜索引擎和对无障碍方面的能力都没有SVG好
