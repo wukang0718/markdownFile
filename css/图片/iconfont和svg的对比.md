@@ -30,4 +30,4 @@ icon font主要在页面用Unicode符号调用对应的图标，这种方式不�
 
 ## SVG的制作成本与维护成本
 
-目前制作SVG设计软件有：Adobe Illustrator、Visio以及CorelDRAW等，用PS画一个图形和用AI画一个图形的所需时间基本是一样，AI做好后直接导出成SVG格式给前端同学即可使用。相比制作字体包要步骤简单许多。
+目前制作SVG设计软件有：Adobe Illustrator、Visio以及CorelDRAW等，用PS画一个图形和用AI画一个图形的所需时间基本是一样（蓝湖可以直接下载svg格式图片），AI做好后直接导出成SVG格式给前端同学即可使用。相比制作字体包要步骤简单许多。
