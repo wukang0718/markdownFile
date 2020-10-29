@@ -40,7 +40,7 @@ icon font主要在页面用Unicode符号调用对应的图标，这种方式不�
 
 结果svg整体是的 **Rendering项基本上是碾压了icon font**
 
-两种不同svg引用方式，在页面直接inline svg方式插入的方法和用svg sprite合并后引用图标的两种，结果显示**svg sprite的性能是最高的**
+两种不同svg引用方式，在页面直接inline svg方式插入的方法和用svg sprite合并后引用图标的两种，结果显示**`  svg sprite的性能是最高的 `**
 
 ## SVG动画
 
