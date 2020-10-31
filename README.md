@@ -8,7 +8,7 @@
 
 `picgo install gitee-uploader`
 
-pcigo 配置
+#### pcigo 配置
 
 ```json
 {
@@ -33,3 +33,4 @@ pcigo 配置
 }
 ```
 
+#### typora 设置
