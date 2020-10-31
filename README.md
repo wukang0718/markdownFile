@@ -4,6 +4,10 @@
 
 
 
+`npm install picgo -g`
+
+
+
 ```json
 {
   "picBed": {
