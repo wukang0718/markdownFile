@@ -8,6 +8,8 @@
 
 `picgo install gitee-uploader`
 
+`picgo-plugin-super-prefix`
+
 #### pcigo 配置
 
 ```json
