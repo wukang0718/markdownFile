@@ -35,6 +35,6 @@
 
 #### typora 设置
 
-选择 `Custom `
+选择 `Custom Command`
 
 `picgo upload`
