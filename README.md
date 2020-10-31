@@ -25,10 +25,14 @@
     }
   },
   "picgoPlugins": {
-    "picgo-plugin-gitee-uploader": true
+    "picgo-plugin-gitee-uploader": true,
+    "picgo-plugin-super-prefix": true
   },
   "picgo-plugin-gitee-uploader": {
-    "lastSync": "2020-10-31 01:52:31"
+    "lastSync": "2020-10-31 02:22:35"
+  },
+  "picgo-plugin-super-prefix": {
+    "fileFormat": "YYYYMMDDHHmmssSSS"
   }
 }
 ```
