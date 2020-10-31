@@ -34,3 +34,7 @@
 ```
 
 #### typora 设置
+
+选择 `Custom `
+
+`picgo upload`
