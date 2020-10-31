@@ -8,7 +8,7 @@
 
 `picgo install gitee-uploader`
 
-
+[设置](https://imgconvert.csdnimg.cn/aHR0cHM6Ly9naXRlZS5jb20vcmVhZGlheS9kb2N1bWVudC9yYXcvbWFya2Rvd24tcGljdHVyZS8yMDIwL2ltYWdlLTIwMjAwNTA4MDAzMzMwNzY3LnBuZw?x-oss-process=image/format,png)
 
 ```json
 {
