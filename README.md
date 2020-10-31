@@ -6,6 +6,8 @@
 
 `npm install picgo -g`
 
+`picgo install gitee-uploader`
+
 
 
 ```json
