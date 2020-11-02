@@ -10,7 +10,7 @@
 
 `picgo install gitee-uploader`
 
-`picgo install picgo-plugin-super-prefix`
+`picgo install super-prefix`
 
 #### pcigo 配置
 
