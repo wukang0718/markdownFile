@@ -1,6 +1,1 @@
-```js
-document.body.addEventListener("click", this.clickEvent, true)
-```
-
-在 安卓机型可以事件事件捕获、在 ios 无效
-
+![image-20201113092818673](https://gitee.com/wu_kang0718/image/raw/master//20201113092820231.png)
