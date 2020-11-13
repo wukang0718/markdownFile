@@ -4,7 +4,7 @@
 
 ```css
 input, textarea{
-    -webkit-appearance: none;
+    -webkit-appearance: none; // 去除系统默认的样式
 }
 ```
 
