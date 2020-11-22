@@ -2,7 +2,7 @@
 
 ### 解读 `@better-scroll/core` 包
 
-
+源码地址： [https://github.com/ustbhuangyi/better-scroll](https://github.com/ustbhuangyi/better-scroll)
 
 
 
