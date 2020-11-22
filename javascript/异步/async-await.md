@@ -1,5 +1,7 @@
 ### 当前版本： v2.0.5
 
+### 解读 `@better-scroll/core` 包
+
 
 
 
