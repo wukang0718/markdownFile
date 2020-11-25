@@ -11,7 +11,8 @@
 
 1. history 模式是使用正常的 url 路径显示
 2. history 模式通过 `pushState` 和 `replaceState` 方式修改路由改变
-3. 
+3. history 模式在页面刷新的时候，会请求当前地址栏中完成的 url，这时需要服务器对这个 url 有处理，如果没有对应的文件，需要返回 index.html
+4. 
 
 ### 总结
 
