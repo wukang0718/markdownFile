@@ -3,7 +3,7 @@
 ### hash模式
 
 1. hash 模式的路由中带有 `#` 号
-2. 
+2. hash 模式通过监听 `window,`
 
 ### history模式
 
