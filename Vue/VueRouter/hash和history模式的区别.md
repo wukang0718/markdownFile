@@ -6,6 +6,7 @@
 2. hash 模式通过 `window.onhashchange` 方法监听路由的修改
 3. hash 模式在页面刷新的时候，发送的请求 url 是不带 # 后面的内容的
 4. hash 模式可以兼容部分低版本的浏览器
+5. hash 模式打包后，直接在浏览器中打开 `/dist/index.html` 可以正常的访问
 
 ### history模式
 
