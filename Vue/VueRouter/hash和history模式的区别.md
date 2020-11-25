@@ -3,7 +3,8 @@
 ### hash模式
 
 1. hash 模式的路由中带有 `#` 号
-2. hash 模式通过监听 `window,`
+2. hash 模式通过 `window.onhashchange` 方法监听路由的修改
+3. 
 
 ### history模式
 
