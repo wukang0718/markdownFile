@@ -9,7 +9,8 @@
 
 ### history模式
 
-1. history 模式是使用正常的
+1. history 模式是使用正常的 url 路径显示
+2. 
 
 ### 总结
 
