@@ -16,4 +16,4 @@ loader 是文件加载器，能够加载资源文件，并对这些文件进行�
 
 ### 什么是 plugin
 
-在 webpack 运行
+在 webpack 运行的生命周期中，
