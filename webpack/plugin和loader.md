@@ -9,4 +9,4 @@
 
 ### 什么是 loader
 
-loader 是
+loader 是文件加载器，能对文件
