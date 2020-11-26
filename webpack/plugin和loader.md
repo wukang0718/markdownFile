@@ -16,4 +16,4 @@ loader 是文件加载器，能够加载资源文件，并对这些文件进行�
 
 ### 什么是 plugin
 
-在 webpack 运行的生命周期中会广播很多的事件（ hooks中的事件监听 ），plugin 可以监听这些事件（在），在合适的时机通过 webpack 提供的 Api 改变输出结果 。
+在 webpack 运行的生命周期中会广播很多的事件（ hooks中的事件监听 ），plugin 可以监听这些事件（在 apply 方法中监听 hooks 的声明周期），在合适的时机通过 webpack 提供的 Api 改变输出结果 。
