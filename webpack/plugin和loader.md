@@ -24,6 +24,6 @@ loader 是文件加载器，能够加载资源文件，并对这些文件进行�
 
 plugin 是一个扩展器，他丰富了 webpack 本身，在 webpack 的打包过程中，它并不直接操作文件，而是订阅 webpack 的声明周期，执行更广泛的操作。
 
-#### 参考文章：
+### 参考文章：
 
 [https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/308](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/308)
