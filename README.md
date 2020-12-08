@@ -45,4 +45,4 @@
 
 选择 `Custom Command`
 
-`picgo upload`
+`picgo upload` 
