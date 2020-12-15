@@ -37,10 +37,11 @@ function deleteProperty(target: object, key: string | symbol): boolean {
   }
   return result
 }
-
+// in 操作符调用
 function has(target: object, key: string | symbol): boolean {
   const result = Reflect.has(target, key)
   if (!isSymbol(key) || !builtInSymbols.has(key)) {
+    // key 和 value 不是 symbol 类型 收集依赖
     track(target, TrackOpTypes.HAS, key)
   }
   return result
