@@ -246,6 +246,40 @@ export const mutableCollectionHandlers: ProxyHandler<CollectionTypes> = {
 }
 ```
 
+##### createInstrumentationGetter
+
+```typescript
+function createInstrumentationGetter(isReadonly: boolean, shallow: boolean) {
+  const instrumentations = shallow
+    ? shallowInstrumentations
+    : isReadonly
+      ? readonlyInstrumentations
+      : mutableInstrumentations
+
+  return (
+    target: CollectionTypes,
+    key: string | symbol,
+    receiver: CollectionTypes
+  ) => {
+    if (key === ReactiveFlags.IS_REACTIVE) {
+      return !isReadonly
+    } else if (key === ReactiveFlags.IS_READONLY) {
+      return isReadonly
+    } else if (key === ReactiveFlags.RAW) {
+      return target
+    }
+
+    return Reflect.get(
+      hasOwn(instrumentations, key) && key in target
+        ? instrumentations
+        : target,
+      key,
+      receiver
+    )
+  }
+}
+```
+
 
 
 ## shallowReactive 方法
