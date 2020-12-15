@@ -144,7 +144,7 @@ export function triggerRef(ref: Ref) {
 ```typescript
 setup() {
     const ref = Vue.ref(0)
-    Vue.watchEffect(() => {
+    Vue.watchEffect(() => { // watchEffect 默认会收集依赖
         console.log(ref.value); // 0
     })
     Vue.triggerRef(ref) // 0
