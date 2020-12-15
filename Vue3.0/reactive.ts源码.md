@@ -66,7 +66,7 @@ export const mutableHandlers: ProxyHandler<object> = {
 }
 ```
 
-#### createGetter
+##### createGetter
 
 参数接收 `isReadonly` 是否只读， `shallow` 是否只做前代理， 返回一个 `get` 函数
 
@@ -184,7 +184,7 @@ const arrayInstrumentations: Record<string, Function> = {}
 })
 ```
 
-#### createSetter
+##### createSetter
 
 函数接收一个参数 `shallow` ，是否只做浅代理，返回一个 `set` 函数
 
@@ -237,6 +237,16 @@ function createSetter(shallow = false) {
   }
 }
 ```
+
+#### mutableCollectionHandlers
+
+```typescript
+export const mutableCollectionHandlers: ProxyHandler<CollectionTypes> = {
+  get: createInstrumentationGetter(false, false)
+}
+```
+
+
 
 ## shallowReactive 方法
 
