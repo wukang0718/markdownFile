@@ -147,7 +147,7 @@ function createGetter(isReadonly = false, shallow = false) {
 
 #### createSetter
 
-
+函数接收一个参数 `shallow` ，是否只做浅代理，返回一个
 
 ```typescript
 /**
