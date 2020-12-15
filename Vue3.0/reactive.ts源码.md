@@ -322,6 +322,8 @@ iteratorMethods.forEach(method => {
 
 ##### get
 
+代理 `get` 方法
+
 ```typescript
 /**
  * 获取值的方法
