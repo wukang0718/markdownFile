@@ -293,7 +293,7 @@ function createInstrumentationGetter(isReadonly: boolean, shallow: boolean) {
 
 #### instrumentations  => mutableInstrumentations
 
-返回了一个 `handle` 的对象
+返回了一个 `handle` 的对象，对象方法中的 `this`，都是指向 `reactive` 对象 
 
 ```typescript
 const mutableInstrumentations: Record<string, Function> = {
