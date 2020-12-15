@@ -85,17 +85,24 @@ function createReactiveObject(
     }
     return target
   }
+  // 如果target是只读对象，并且要获取只读对象的时候，就直接返回 target
   if (
     target[ReactiveFlags.RAW] &&
     !(isReadonly && target[ReactiveFlags.IS_REACTIVE])
   ) {
     return target
   }
+  // 如果 target 已经有了对象的代理对象，直接返回这个代理
   const proxyMap = isReadonly ? readonlyMap : reactiveMap
   const existingProxy = proxyMap.get(target)
   if (existingProxy) {
     return existingProxy
   }
+  /**
+   * targetType 指定要跳过或者不可扩展，或者不是Object/Array/Map/WeakMap/Set/WeakSet TargetType.INVALID
+   * Object/Array TargetType.COMMON
+   * Map/Set/WeakMap/WeakSet TargetType.COLLECTION
+   */
   const targetType = getTargetType(target)
   if (targetType === TargetType.INVALID) {
     return target
@@ -104,6 +111,7 @@ function createReactiveObject(
     target,
     targetType === TargetType.COLLECTION ? collectionHandlers : baseHandlers
   )
+  // 保存一下这个代理对象
   proxyMap.set(target, proxy)
   return proxy
 }
