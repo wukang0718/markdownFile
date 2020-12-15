@@ -32,6 +32,7 @@ function deleteProperty(target: object, key: string | symbol): boolean {
   const oldValue = (target as any)[key]
   const result = Reflect.deleteProperty(target, key)
   if (result && hadKey) {
+    // 如果删除成功，触发依赖更新 
     trigger(target, TriggerOpTypes.DELETE, key, undefined, oldValue)
   }
   return result
