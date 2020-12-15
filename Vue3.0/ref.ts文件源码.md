@@ -12,8 +12,6 @@ export function ref(value?: unknown) {
 
 ## shallowRef 方法
 
-> 源码地址：[https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/ref.ts](https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/ref.ts)
-
 接收一个参数，返回 对参数 浅代理
 
 ```typescript
