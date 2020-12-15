@@ -440,6 +440,42 @@ function add(this: SetTypes, value: unknown) {
 
 ##### set
 
+拦截 Map 和 WeakMap 的操作
+
+```typescript
+/**
+ * 拦截 Map 和 WeakMap 的操作
+ * @param this 元数据
+ * @param key key
+ * @param value value
+ */
+function set(this: MapTypes, key: unknown, value: unknown) {
+  value = toRaw(value) // 获取到 value 的原始值
+  const target = toRaw(this) // 获取到 target 的原始值
+  const { has, get } = getProto(target)
+
+  let hadKey = has.call(target, key) // boolean 元数据是否存在 key
+  if (!hadKey) {
+    key = toRaw(key) // key 的原始值
+    hadKey = has.call(target, key) // 如果没有 reactive 的key ，尝试获取 原始类型的key 是否存在
+  } else if (__DEV__) {
+    // 开发环境做的操作，忽略
+    checkIdentityKeys(target, has, key)
+  }
+
+  const oldValue = get.call(target, key)
+  target.set(key, value)
+  if (!hadKey) {
+    // 触发一次 添加的依赖
+    trigger(target, TriggerOpTypes.ADD, key, value)
+  } else if (hasChanged(value, oldValue)) {
+    // 触发一次修改的依赖
+    trigger(target, TriggerOpTypes.SET, key, value, oldValue)
+  }
+  return this
+}
+```
+
 
 
 ##### delete
