@@ -24,9 +24,6 @@ export function reactive(target: object) {
 
 ```typescript
 const get = /*#__PURE__*/ createGetter()
-const shallowGet = /*#__PURE__*/ createGetter(false, true)
-const readonlyGet = /*#__PURE__*/ createGetter(true)
-const shallowReadonlyGet = /*#__PURE__*/ createGetter(true, true)
 
 export const mutableHandlers: ProxyHandler<object> = {
   get,
