@@ -357,7 +357,7 @@ setup() {
        a: 12,
        b: Vue.ref(12)
    }
-   console.log(Vue.toRef(text, "a"))
+   console.log(Vue.toRef(text, "a")) // ObjectRefImpl
    console.log(Vue.toRef(text, "b"))
 }
 ```
