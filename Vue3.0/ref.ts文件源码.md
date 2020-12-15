@@ -93,6 +93,12 @@ const convert = <T extends unknown>(val: T): T =>
   isObject(val) ? reactive(val) : val
 ```
 
+示例：
+
+```
+
+```
+
 
 
 ## isRef 方法
