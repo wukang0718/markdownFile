@@ -367,6 +367,16 @@ const toReactive = <T extends unknown>(value: T): T =>
   isObject(value) ? reactive(value) : value
 ```
 
+##### size
+
+```typescript
+function size(target: IterableCollections, isReadonly = false) {
+  target = (target as any)[ReactiveFlags.RAW]
+  !isReadonly && track(toRaw(target), TrackOpTypes.ITERATE, ITERATE_KEY)
+  return Reflect.get(target, 'size', target)
+}
+```
+
 
 
 ## shallowReactive 方法
