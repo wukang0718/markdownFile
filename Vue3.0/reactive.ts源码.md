@@ -374,7 +374,7 @@ const toReactive = <T extends unknown>(value: T): T =>
 ```typescript
 /**
  * 拦截 .size 的获取
- * @param target 源数据
+ * @param proxy 对象 reactive 对象
  * @param isReadonly 是否只读
  */
 function size(target: IterableCollections, isReadonly = false) {
@@ -393,7 +393,7 @@ function size(target: IterableCollections, isReadonly = false) {
 ```typescript
 /**
  * 拦截 has 操作
- * @param this target
+ * @param proxy 对象 reactive 对象
  * @param key 判断的key
  * @param isReadonly 是否只读
  */
@@ -421,7 +421,7 @@ function has(this: CollectionTypes, key: unknown, isReadonly = false): boolean {
 ```typescript
 /**
  * 拦截 Set/WeakSet 的 add 操作
- * @param this 元数据
+ * @param proxy 对象 reactive 对象
  * @param value 添加的数据
  */
 function add(this: SetTypes, value: unknown) {
@@ -445,7 +445,7 @@ function add(this: SetTypes, value: unknown) {
 ```typescript
 /**
  * 拦截 Map 和 WeakMap 的操作
- * @param this 元数据
+ * @param proxy 对象 reactive 对象
  * @param key key
  * @param value value
  */
@@ -483,7 +483,7 @@ function set(this: MapTypes, key: unknown, value: unknown) {
 ```typescript
 /**
  * 拦截 delete 操作
- * @param this 元数据
+ * @param proxy 对象 reactive 对象
  * @param key key
  */
 function deleteEntry(this: CollectionTypes, key: unknown) {
