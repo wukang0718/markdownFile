@@ -46,7 +46,12 @@ function has(target: object, key: string | symbol): boolean {
   }
   return result
 }
-
+/** 拦截下面操作
+	Object.getOwnPropertyNames()
+    Object.getOwnPropertySymbols()
+    Object.keys()
+    Reflect.ownKeys()
+ */
 function ownKeys(target: object): (string | number | symbol)[] {
   track(target, TrackOpTypes.ITERATE, isArray(target) ? 'length' : ITERATE_KEY)
   return Reflect.ownKeys(target)
