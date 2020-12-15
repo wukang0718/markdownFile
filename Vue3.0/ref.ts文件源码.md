@@ -143,7 +143,11 @@ export function triggerRef(ref: Ref) {
 
 ```typescript
 setup() {
-    
+    const ref = Vue.ref(0)
+    Vue.watchEffect(() => {
+        console.log(ref.value); // 0
+    })
+    Vue.triggerRef(ref) // 0
 }
 ```
 
