@@ -28,7 +28,7 @@ const set = /*#__PURE__*/ createSetter() // 在下面
 
 // delete 操作符的时候调用
 function deleteProperty(target: object, key: string | symbol): boolean {
-  const hadKey = hasOwn(target, key)
+  const hadKey = hasOwn(target, key) // Object.prototype.hasOwnProperty
   const oldValue = (target as any)[key]
   const result = Reflect.deleteProperty(target, key)
   if (result && hadKey) {
