@@ -370,9 +370,16 @@ const toReactive = <T extends unknown>(value: T): T =>
 ##### size
 
 ```typescript
+/**
+ * 拦截 .size 的获取
+ * @param target 源数据
+ * @param isReadonly 是否只读
+ */
 function size(target: IterableCollections, isReadonly = false) {
   target = (target as any)[ReactiveFlags.RAW]
+  // 不是  只读 收集依赖
   !isReadonly && track(toRaw(target), TrackOpTypes.ITERATE, ITERATE_KEY)
+  // 返回原始的 size 属性
   return Reflect.get(target, 'size', target)
 }
 ```
