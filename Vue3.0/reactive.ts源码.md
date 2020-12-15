@@ -323,23 +323,31 @@ iteratorMethods.forEach(method => {
 ##### get
 
 ```typescript
+/**
+ * 获取值的方法
+ * @param target 原始值
+ * @param key 获取的key
+ * @param isReadonly 是否只读
+ * @param isShallow 是否浅代理
+ */
 function get(
   target: MapTypes,
   key: unknown,
   isReadonly = false,
   isShallow = false
 ) {
-  // #1772: readonly(reactive(Map)) should return readonly + reactive version
-  // of the value
-  target = (target as any)[ReactiveFlags.RAW]
-  const rawTarget = toRaw(target)
-  const rawKey = toRaw(key)
+  target = (target as any)[ReactiveFlags.RAW] // 获取到原始值 （可能是 reactive 对象） #1772
+  const rawTarget = toRaw(target) // 获取到最终的原始值
+  const rawKey = toRaw(key) // 获取 key 的原始值
   if (key !== rawKey) {
+    // 如果 key 是 reactive 类型，且代理不是 readonly ，收集 key 的依赖
     !isReadonly && track(rawTarget, TrackOpTypes.GET, key)
   }
+  // 再次收集一次依赖 ???
   !isReadonly && track(rawTarget, TrackOpTypes.GET, rawKey)
   const { has } = getProto(rawTarget)
   const wrap = isReadonly ? toReadonly : isShallow ? toShallow : toReactive
+  // 先获取 key 不是 reactive 的情况
   if (has.call(rawTarget, key)) {
     return wrap(target.get(key))
   } else if (has.call(rawTarget, rawKey)) {
