@@ -293,6 +293,8 @@ function createInstrumentationGetter(isReadonly: boolean, shallow: boolean) {
 
 #### instrumentations  => mutableInstrumentations
 
+返回了一个 `handle` 的对象
+
 ```typescript
 const mutableInstrumentations: Record<string, Function> = {
   get(this: MapTypes, key: unknown) {
