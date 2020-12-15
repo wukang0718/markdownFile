@@ -350,12 +350,11 @@ function get(
 
 ###### toReactive
 
-获取到最终要返回的值的方法
+获取到最终要返回的值的方法，如果是对象/数组类型，返回一个 reactive 类型，否则返回原始值
 
 ```typescript
 const toReactive = <T extends unknown>(value: T): T =>
   isObject(value) ? reactive(value) : value
-
 ```
 
 
