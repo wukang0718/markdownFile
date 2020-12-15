@@ -30,39 +30,6 @@ export function toRaw<T>(observed: T): T {
 
 ## markRaw 方法
 
-## track 方法
-
-收集依赖
-
-```typescript
-export function track(target: object, type: TrackOpTypes, key: unknown) {
-  if (!shouldTrack || activeEffect === undefined) {
-    return
-  }
-  let depsMap = targetMap.get(target)
-  if (!depsMap) {
-    targetMap.set(target, (depsMap = new Map()))
-  }
-  let dep = depsMap.get(key)
-  if (!dep) {
-    depsMap.set(key, (dep = new Set()))
-  }
-  if (!dep.has(activeEffect)) {
-    dep.add(activeEffect)
-    activeEffect.deps.push(dep)
-    // 开发环境才会执行，方便追踪依赖调试，忽略
-    if (__DEV__ && activeEffect.options.onTrack) {
-      activeEffect.options.onTrack({
-        effect: activeEffect,
-        target,
-        type,
-        key
-      })
-    }
-  }
-}
-```
-
 
 
 
