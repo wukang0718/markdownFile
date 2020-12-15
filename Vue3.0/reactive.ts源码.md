@@ -70,6 +70,8 @@ export const mutableHandlers: ProxyHandler<object> = {
 
 参数接收 `isReadonly` 是否只读， `shallow` 是否只做前代理， 返回一个 `get` 函数
 
+当返回值时一个对象，并且 `shallow`  为 false 时，会对返回值再做一次 `readonly` 或者 `reactive` 处理，实现深代理
+
 ```typescript
 /**
  * 返回一个 get 函数
