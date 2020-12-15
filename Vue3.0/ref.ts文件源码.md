@@ -274,8 +274,38 @@ class CustomRefImpl<T> {
 示例：
 
 ```typescript
-setup() {
-    
+Vue.createApp({
+    template: "#item-template",
+    setup() {
+        const text = useDebouncedRef("123")
+        Vue.watchEffect(() => {
+            console.log(text.value)
+            console.timeEnd("input")
+        })
+        console.time("input")
+        text.value = "345"
+        return {
+            text
+        }
+    }
+}).use(ElementPlus).mount("#app")
+
+function useDebouncedRef(value, delay = 200) {
+    let timer;
+    return Vue.customRef((track, trigger) => ({
+        get() {
+            track();
+            return value
+        },
+        set(val) {
+            timer && clearTimeout(timer);
+            timer = setTimeout(() => {
+                (value !== val) && (value = val);
+                trigger();
+                timer = null;
+            }, delay)
+        }
+    }))
 }
 ```
 
