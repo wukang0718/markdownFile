@@ -68,6 +68,8 @@ export const mutableHandlers: ProxyHandler<object> = {
 
 #### createGetter
 
+参数接收 `isReadonly` 是否只读， `shallow` 是否只做前代理， 返回一个 `get` 函数
+
 ```typescript
 function createGetter(isReadonly = false, shallow = false) {
   return function get(target: Target, key: string | symbol, receiver: object) {
@@ -126,7 +128,7 @@ function createGetter(isReadonly = false, shallow = false) {
 
 #### createSetter
 
-参数接收 `isReadonly` 是否只读， `shallow` 是否只做前代理， 返回一个 `get` 函数
+
 
 ```typescript
 function createSetter(shallow = false) {
