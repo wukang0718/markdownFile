@@ -71,27 +71,40 @@ export const mutableHandlers: ProxyHandler<object> = {
 参数接收 `isReadonly` 是否只读， `shallow` 是否只做前代理， 返回一个 `get` 函数
 
 ```typescript
+/**
+ * 返回一个 get 函数
+ * @param isReadonly 只读
+ * @param shallow 浅代理
+ */
 function createGetter(isReadonly = false, shallow = false) {
   return function get(target: Target, key: string | symbol, receiver: object) {
     if (key === ReactiveFlags.IS_REACTIVE) {
+      // 这个key __v_isReactive 表示对象是不是 reactive 类型
       return !isReadonly
     } else if (key === ReactiveFlags.IS_READONLY) {
+      // 这个key __v_isReadonly 表示对象是不是只读类型
       return isReadonly
     } else if (
       key === ReactiveFlags.RAW &&
       receiver === (isReadonly ? readonlyMap : reactiveMap).get(target)
     ) {
+      // 这个keym __v_raw 获取 代理的源对象
       return target
     }
+    // 上面的三个 特殊值，在 is 开头的函数 和 to 开头的函数中用到
+    // 例：isReactive / toRaw
 
     const targetIsArray = isArray(target)
 
+    // 不是只读，是数组，并且调用了数组的方法，需要特殊的方法处理
     if (!isReadonly && targetIsArray && hasOwn(arrayInstrumentations, key)) {
       return Reflect.get(arrayInstrumentations, key, receiver)
     }
 
     const res = Reflect.get(target, key, receiver)
-
+    
+    // key 是 symbol 类型，并且值也是 symbol 或者 获取的是  __proto__ 或者 __v_isRef 时
+    // 直接返回结果
     if (
       isSymbol(key)
         ? builtInSymbols.has(key as symbol)
@@ -100,20 +113,24 @@ function createGetter(isReadonly = false, shallow = false) {
       return res
     }
 
+    // 不是只读的数据，收集依赖
     if (!isReadonly) {
       track(target, TrackOpTypes.GET, key)
     }
-
+    
+    // 浅代理，返回结果
     if (shallow) {
       return res
     }
 
     if (isRef(res)) {
-      // ref unwrapping - does not apply for Array + integer key.
+      // ref展开-不适用于数组 和 整数键。
       const shouldUnwrap = !targetIsArray || !isIntegerKey(key)
+      // 这里对 ref 做了 返回原始值的处理
       return shouldUnwrap ? res.value : res
     }
-
+    
+    // 如果结果时对象，对这个对象在做一次 reactive 处理，实现深代理
     if (isObject(res)) {
       // Convert returned value into a proxy as well. we do the isObject check
       // here to avoid invalid value warning. Also need to lazy access readonly
