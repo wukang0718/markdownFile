@@ -1,4 +1,23 @@
+> 源码位置： [https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/reactive.ts](https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/reactive.ts)
+
 ## reactive 方法
+
+```typescript
+export function reactive(target: object) {
+  // if trying to observe a readonly proxy, return the readonly version.
+  if (target && (target as Target)[ReactiveFlags.IS_READONLY]) {
+    return target
+  }
+  return createReactiveObject(
+    target,
+    false,
+    mutableHandlers,
+    mutableCollectionHandlers
+  )
+}
+```
+
+
 
 ## shallowReactive 方法
 
