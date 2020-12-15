@@ -327,7 +327,7 @@ iteratorMethods.forEach(method => {
 ```typescript
 /**
  * 获取值的方法
- * @param target 原始值
+ * @param proxy 对象 reactive 对象
  * @param key 获取的key
  * @param isReadonly 是否只读
  * @param isShallow 是否浅代理
