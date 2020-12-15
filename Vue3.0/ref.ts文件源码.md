@@ -151,8 +151,6 @@ setup() {
 }
 ```
 
-
-
 ## unref 方法
 
 > 源码位置： [https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/ref.ts](https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/ref.ts)
@@ -162,6 +160,16 @@ setup() {
 ```typescript
 export function unref<T>(ref: T): T extends Ref<infer V> ? V : T {
   return isRef(ref) ? (ref.value as any) : ref
+}
+```
+
+示例：
+
+```typescript
+setup() {
+    const ref = Vue.ref(0)
+    console.log(Vue.unref(ref)) // 0
+    console.log(Vue.unref(0)) // 0
 }
 ```
 
