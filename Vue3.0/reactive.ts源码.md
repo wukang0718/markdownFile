@@ -126,7 +126,7 @@ function createGetter(isReadonly = false, shallow = false) {
 
 #### createSetter
 
-返回一个 `get` 函数
+参数接收 `isReadonly` 是否只读， `shallow` 是否只做前代理， 返回一个 `get` 函数
 
 ```typescript
 function createSetter(shallow = false) {
