@@ -213,6 +213,14 @@ const shallowUnwrapHandlers: ProxyHandler<any> = {
 }
 ```
 
+示例：
+
+```typescript
+setup() {
+	console.log(Vue.proxyRefs({a: 12}))
+}
+```
+
 
 
 ## customRef 方法
