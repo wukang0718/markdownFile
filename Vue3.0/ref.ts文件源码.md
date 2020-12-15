@@ -95,8 +95,13 @@ const convert = <T extends unknown>(val: T): T =>
 
 示例：
 
-```
-
+```typescript
+setup() {
+	const ref0 = Vue.ref({a: 1})
+    const ref1 = Vue.shallowRef({a: 1})
+    console.log(ref0);
+    console.log(ref1)
+}
 ```
 
 
