@@ -24,6 +24,7 @@ export function reactive(target: object) {
 
 ```typescript
 const get = /*#__PURE__*/ createGetter()
+const set = /*#__PURE__*/ createSetter()
 
 export const mutableHandlers: ProxyHandler<object> = {
   get,
