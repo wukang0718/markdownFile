@@ -162,21 +162,17 @@ const arrayInstrumentations: Record<string, Function> = {}
       // 循环对数组中的每一项添加依赖
       track(arr, TrackOpTypes.GET, i + '')
     }
-    // we run the method using the original args first (which may be reactive)
     // 先不对参数做处理，直接运行方法
     const res = method.apply(arr, args)
     if (res === -1 || res === false) {
       // 如果方法没有期望的返回值，在对参数做一次 toRaw（获取原始值） 转换
-      // if that didn't work, run it again using raw values.
       return method.apply(arr, args.map(toRaw))
     } else {
       return res
     }
   }
 })
-// instrument length-altering mutation methods to avoid length being tracked
-// which leads to infinite loops in some cases (#2137)
-// 这些方法会改变 Array 的length 属性，在某种情况下，会导致依赖循环触发
+// 这些方法会改变 Array 的length 属性，在某种情况下，会导致依赖循环触发 #2137
 ;(['push', 'pop', 'shift', 'unshift', 'splice'] as const).forEach(key => {
   const method = Array.prototype[key] as any
   arrayInstrumentations[key] = function(this: unknown[], ...args: unknown[]) {
