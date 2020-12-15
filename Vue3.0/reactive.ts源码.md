@@ -386,17 +386,19 @@ function size(target: IterableCollections, isReadonly = false) {
 }
 ```
 
-##### has,
+##### has
 
-#####   add,
 
-#####   set,
 
-#####   delete: deleteEntry,
+##### add
 
-#####   clear,
+##### set
 
-#####   forEach: createForEach(false, false)
+##### delete
+
+##### clear
+
+##### forEach
 
 ##### keys
 
