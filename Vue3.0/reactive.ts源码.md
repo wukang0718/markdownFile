@@ -69,6 +69,15 @@ export function shallowReadonly<T extends object>(
 
 #### createReactiveObject 方法
 
+参数
+
+| 参数               | 描述                                                         |
+| ------------------ | ------------------------------------------------------------ |
+| target             | 需要代理的源数据（一般是对象，可以是Map/Set/WeakMap/WeakSet） |
+| isReadonly         | 是否创建只读对象                                             |
+| baseHandlers       | target 是 Object/Array 时，proxy 的 handle 对象              |
+| collectionHandlers | target 是 Map/Set/WeakMap/WeakSet时，proxy 的 handle 对象    |
+
 
 
 ```typescript
