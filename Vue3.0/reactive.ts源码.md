@@ -8,6 +8,10 @@
 
 ## isReactive 方法
 
+## isReadonly 方法
+
+## isProxy 方法
+
 ## toRaw 方法
 
 > 源码位置： [https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/reactive.ts](https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/reactive.ts)
