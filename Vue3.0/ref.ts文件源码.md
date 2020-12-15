@@ -370,7 +370,15 @@ export function toRefs<T extends object>(object: T): ToRefs<T> {
 示例：
 
 ```typescript
-
+setup() {
+    const text = {
+        a: 12,
+        b: Vue.ref(12)
+    }
+    const refs = Vue.toRefs(text);
+    console.log(refs.a)
+    console.log(refs.b)
+}
 ```
 
 
