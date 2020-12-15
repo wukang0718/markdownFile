@@ -18,6 +18,12 @@ export function reactive(target: object) {
 }
 ```
 
+#### mutableHandlers 
+
+在 `target` 是一个正常的 `Object` 或者 `Array` 时，使用这个对象做 `proxy` 的 `handle`
+
+
+
 ## shallowReactive 方法
 
 参数接收一个对象，返回对象的浅代理，通过 `createReactiveObject` 方法
