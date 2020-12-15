@@ -4,7 +4,9 @@
 
 ## readonly 方法
 
-## shallowReadonly 方法
+## shallowReadonly 方法、
+
+## isReactive 方法
 
 ## toRaw 方法
 
