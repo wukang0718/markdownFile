@@ -177,7 +177,7 @@ const arrayInstrumentations: Record<string, Function> = {}
   const method = Array.prototype[key] as any
   arrayInstrumentations[key] = function(this: unknown[], ...args: unknown[]) {
     pauseTracking() // 停止依赖收集
-    const res = method.apply(this, args)
+    const res = method.apply(this, args) // 获取到处理结果
     resetTracking() // 恢复依赖收集
     return res
   }
