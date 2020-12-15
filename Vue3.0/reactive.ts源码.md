@@ -249,6 +249,11 @@ export const mutableCollectionHandlers: ProxyHandler<CollectionTypes> = {
 ##### createInstrumentationGetter
 
 ```typescript
+/**
+ * 返回一个 Collection 的get 函数，在 get 中，对 set/has... 方法做处理
+ * @param isReadonly 是否只读
+ * @param shallow 是否浅代理
+ */
 function createInstrumentationGetter(isReadonly: boolean, shallow: boolean) {
   const instrumentations = shallow
     ? shallowInstrumentations
@@ -268,7 +273,9 @@ function createInstrumentationGetter(isReadonly: boolean, shallow: boolean) {
     } else if (key === ReactiveFlags.RAW) {
       return target
     }
+    // 处理三个特殊 key 在 is... 和 to... 的方法中用到
 
+    // 如果是 instrumentations 中有的方法，并且是 target 中的原始存在的方法，就使用代理，否则直接放回对象本身的值
     return Reflect.get(
       hasOwn(instrumentations, key) && key in target
         ? instrumentations
