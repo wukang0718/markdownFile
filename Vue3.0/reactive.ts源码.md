@@ -20,7 +20,18 @@ export function reactive(target: object) {
 
 ## shallowReactive 方法
 
+参数接收一个对象，返回对象的浅代理
 
+```typescript
+export function shallowReactive<T extends object>(target: T): T {
+  return createReactiveObject(
+    target,
+    false,
+    shallowReactiveHandlers,
+    shallowCollectionHandlers
+  )
+}
+```
 
 ## readonly 方法
 
