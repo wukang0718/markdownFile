@@ -271,6 +271,16 @@ class CustomRefImpl<T> {
 }
 ```
 
+示例：
+
+```typescript
+setup() {
+    
+}
+```
+
+
+
 ## toRef 方法
 
 返回对象的 key 对应的值，返回的是一个具有 `value` 属性的对象
