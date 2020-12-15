@@ -139,6 +139,14 @@ export function triggerRef(ref: Ref) {
 }
 ```
 
+示例：
+
+```typescript
+setup() {
+    
+}
+```
+
 
 
 ## unref 方法
