@@ -539,6 +539,36 @@ function clear(this: IterableCollections) {
 
 ##### forEach
 
+拦截 `forEach` 操作
+
+```typescript
+/**
+ * 拦截 forEach 操作
+ * @param isReadonly 是否只读
+ * @param isShallow 是否浅代理
+ */
+function createForEach(isReadonly: boolean, isShallow: boolean) {
+  return function forEach(
+    this: IterableCollections, // proxy 对象
+    callback: Function, // 回调函数
+    thisArg?: unknown // 改变的 this 的值
+  ) {
+    const observed = this as any
+    const target = observed[ReactiveFlags.RAW]
+    const rawTarget = toRaw(target) // 原始的值
+    const wrap = isReadonly ? toReadonly : isShallow ? toShallow : toReactive
+    // 不是只读，触发一次iterate依赖
+    !isReadonly && track(rawTarget, TrackOpTypes.ITERATE, ITERATE_KEY)
+    return target.forEach((value: unknown, key: unknown) => {
+      // forEach callback 中接收到的值，是 reactive / readonly 类型
+      return callback.call(thisArg, wrap(value), wrap(key), observed)
+    })
+  }
+}
+```
+
+
+
 ##### keys
 
 ##### values
