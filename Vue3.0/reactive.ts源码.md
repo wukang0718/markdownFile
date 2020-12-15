@@ -478,6 +478,37 @@ function set(this: MapTypes, key: unknown, value: unknown) {
 
 ##### delete
 
+拦截 `delete` 操作
+
+```typescript
+/**
+ * 拦截 delete 操作
+ * @param this 元数据
+ * @param key key
+ */
+function deleteEntry(this: CollectionTypes, key: unknown) {
+  const target = toRaw(this)
+  const { has, get } = getProto(target)
+  let hadKey = has.call(target, key)
+  if (!hadKey) {
+    key = toRaw(key)
+    hadKey = has.call(target, key)
+  } else if (__DEV__) {
+    checkIdentityKeys(target, has, key)
+  }
+
+  const oldValue = get ? get.call(target, key) : undefined
+  const result = target.delete(key)
+  if (hadKey) {
+    // 如果删除的是之前存在的字段，触发一次 delete 依赖
+    trigger(target, TriggerOpTypes.DELETE, key, undefined, oldValue)
+  }
+  return result
+}
+```
+
+
+
 ##### clear
 
 ##### forEach
