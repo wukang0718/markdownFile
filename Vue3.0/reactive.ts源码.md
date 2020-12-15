@@ -386,7 +386,23 @@ function size(target: IterableCollections, isReadonly = false) {
 }
 ```
 
+##### has,
 
+#####   add,
+
+#####   set,
+
+#####   delete: deleteEntry,
+
+#####   clear,
+
+#####   forEach: createForEach(false, false)
+
+##### keys
+
+##### values
+
+##### entries
 
 ## shallowReactive 方法
 
