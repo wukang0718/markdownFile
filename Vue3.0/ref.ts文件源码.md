@@ -299,11 +299,11 @@ function useDebouncedRef(value, delay = 200) {
         },
         set(val) {
             timer && clearTimeout(timer);
-            timer = setTimeout(() => {
-                (value !== val) && (value = val);
+            (value !== val) && (timer = setTimeout(() => {
+                value = val;
                 trigger();
                 timer = null;
-            }, delay)
+            }, delay))
         }
     }))
 }
