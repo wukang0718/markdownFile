@@ -369,6 +369,8 @@ const toReactive = <T extends unknown>(value: T): T =>
 
 ##### size
 
+拦截 `.size` 的获取
+
 ```typescript
 /**
  * 拦截 .size 的获取
