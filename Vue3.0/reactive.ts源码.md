@@ -318,6 +318,34 @@ iteratorMethods.forEach(method => {
 })
 ```
 
+##### get
+
+```typescript
+function get(
+  target: MapTypes,
+  key: unknown,
+  isReadonly = false,
+  isShallow = false
+) {
+  // #1772: readonly(reactive(Map)) should return readonly + reactive version
+  // of the value
+  target = (target as any)[ReactiveFlags.RAW]
+  const rawTarget = toRaw(target)
+  const rawKey = toRaw(key)
+  if (key !== rawKey) {
+    !isReadonly && track(rawTarget, TrackOpTypes.GET, key)
+  }
+  !isReadonly && track(rawTarget, TrackOpTypes.GET, rawKey)
+  const { has } = getProto(rawTarget)
+  const wrap = isReadonly ? toReadonly : isShallow ? toShallow : toReactive
+  if (has.call(rawTarget, key)) {
+    return wrap(target.get(key))
+  } else if (has.call(rawTarget, rawKey)) {
+    return wrap(target.get(rawKey))
+  }
+}
+```
+
 
 
 ## shallowReactive 方法
