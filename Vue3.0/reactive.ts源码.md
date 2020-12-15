@@ -52,7 +52,7 @@ export function readonly<T extends object>(
 
 ## shallowReadonly 方法
 
-参数接收一个对象，返回一个只读 `readonly` 的对象，这个只读，只针对对象的第一层，不做深层的代理
+参数接收一个对象，返回一个只读 `readonly` 的对象，这个只读，只针对对象的第一层，不做深层的代理， 通过 `createReactiveObject` 方法
 
 ```typescript
 export function shallowReadonly<T extends object>(
@@ -67,7 +67,7 @@ export function shallowReadonly<T extends object>(
 }
 ```
 
-
+#### 
 
 ## isReactive 方法
 
