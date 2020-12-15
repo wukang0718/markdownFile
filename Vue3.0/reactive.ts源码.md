@@ -388,7 +388,7 @@ function size(target: IterableCollections, isReadonly = false) {
 
 ##### has
 
-拦截 has 操作
+拦截 `has` 操作
 
 ```typescript
 /**
@@ -416,7 +416,7 @@ function has(this: CollectionTypes, key: unknown, isReadonly = false): boolean {
 
 ##### add
 
-拦截 Set/WeakSet 的 add 操作
+拦截 `Set`/`WeakSet` 的 add 操作
 
 ```typescript
 /**
@@ -440,7 +440,7 @@ function add(this: SetTypes, value: unknown) {
 
 ##### set
 
-拦截 Map 和 WeakMap 的操作
+拦截 `Map` 和 `WeakMap` 的操作
 
 ```typescript
 /**
@@ -475,8 +475,6 @@ function set(this: MapTypes, key: unknown, value: unknown) {
   return this
 }
 ```
-
-
 
 ##### delete
 
