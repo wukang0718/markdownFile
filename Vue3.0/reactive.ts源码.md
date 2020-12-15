@@ -78,7 +78,7 @@ export function shallowReadonly<T extends object>(
 | baseHandlers       | target 是 Object/Array 时，proxy 的 handle 对象              |
 | collectionHandlers | target 是 Map/Set/WeakMap/WeakSet时，proxy 的 handle 对象    |
 
-
+返回一个 `proxy` 对象，会对返回的 `proxy` 和 `target` 做一个缓存，如果对同一个对象多次调用该方法，获取到的是同一个对象
 
 ```typescript
 function createReactiveObject(
