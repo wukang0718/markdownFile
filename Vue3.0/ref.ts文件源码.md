@@ -121,6 +121,9 @@ export function isRef(r: any): r is Ref {
 ```typescript
 setup() {
 	const ref = Vue.ref(0)
+    console.log(isRef(ref)); // true
+    console.log(isRef(0)); // false
+    console.log(isRef({__v_isRef: true})) // true
 }
 ```
 
