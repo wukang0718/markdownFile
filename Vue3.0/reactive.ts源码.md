@@ -2,6 +2,10 @@
 
 ## shallowReactive 方法
 
+## readonly 方法
+
+## shallowReadonly 方法
+
 ## toRaw 方法
 
 > 源码位置： [https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/reactive.ts](https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/reactive.ts)
