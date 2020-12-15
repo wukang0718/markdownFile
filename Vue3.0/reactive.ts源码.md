@@ -26,7 +26,7 @@ export function reactive(target: object) {
 const get = /*#__PURE__*/ createGetter() // 在下面
 const set = /*#__PURE__*/ createSetter() // 在下面
 
-// delete 操作符的时候调用
+// delete / Reflect.deleteProperty() 操作符的时候调用
 function deleteProperty(target: object, key: string | symbol): boolean {
   const hadKey = hasOwn(target, key) // Object.prototype.hasOwnProperty
   const oldValue = (target as any)[key]
@@ -37,7 +37,7 @@ function deleteProperty(target: object, key: string | symbol): boolean {
   }
   return result
 }
-// in 操作符调用
+// in / Reflect.has() 操作符调用
 function has(target: object, key: string | symbol): boolean {
   const result = Reflect.has(target, key)
   if (!isSymbol(key) || !builtInSymbols.has(key)) {
