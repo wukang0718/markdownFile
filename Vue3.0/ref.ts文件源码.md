@@ -376,8 +376,8 @@ setup() {
         b: Vue.ref(12)
     }
     const refs = Vue.toRefs(text);
-    console.log(refs.a)
-    console.log(refs.b)
+    console.log(refs.a) // ObjectRefImpl
+    console.log(refs.b) // RefImpl
 }
 ```
 
