@@ -99,12 +99,10 @@ const convert = <T extends unknown>(val: T): T =>
 setup() {
 	const ref0 = Vue.ref({a: 1})
     const ref1 = Vue.shallowRef({a: 1})
-    console.log(ref0);
-    console.log(ref1)
+    console.log(ref0); // {..., value: Proxy{a: 1}}
+    console.log(ref1); // {..., value: Object{a: 1}}
 }
 ```
-
-
 
 ## isRef 方法
 
