@@ -120,7 +120,7 @@ export function isRef(r: any): r is Ref {
 
 ```typescript
 setup() {
-	const ref0 = Vue.ref({a: 1})
+	const ref = Vue.ref(0)
 }
 ```
 
