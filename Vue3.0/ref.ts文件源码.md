@@ -127,8 +127,6 @@ setup() {
 }
 ```
 
-
-
 ## triggerRef 方法
 
 > 源码位置： [https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/ref.ts](https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/ref.ts)
@@ -140,6 +138,8 @@ export function triggerRef(ref: Ref) {
   trigger(toRaw(ref), TriggerOpTypes.SET, 'value', __DEV__ ? ref.value : void 0)
 }
 ```
+
+
 
 ## unref 方法
 
