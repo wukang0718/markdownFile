@@ -104,8 +104,6 @@ setup() {
 
 ## isRef 方法
 
-> 源码位置： [https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/ref.ts](https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/ref.ts)
-
 方法接收一个参数，返回 `boolean`，判断参数是不是 `ref` 类型
 
 ```typescript
@@ -126,8 +124,6 @@ setup() {
 ```
 
 ## triggerRef 方法
-
-> 源码位置： [https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/ref.ts](https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/ref.ts)
 
 方法接收一个 `ref` 对象，触发这个 `ref` 对象上收集的依赖
 
@@ -150,8 +146,6 @@ setup() {
 ```
 
 ## unref 方法
-
-> 源码位置： [https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/ref.ts](https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/ref.ts)
 
 方法接收一个参数，如果参数是 `ref` 类型，返回 `.value` 的值，否则返回参数自己
 
