@@ -184,8 +184,6 @@ const arrayInstrumentations: Record<string, Function> = {}
 })
 ```
 
-
-
 #### createSetter
 
 函数接收一个参数 `shallow` ，是否只做浅代理，返回一个 `set` 函数
@@ -239,8 +237,6 @@ function createSetter(shallow = false) {
   }
 }
 ```
-
-
 
 ## shallowReactive 方法
 
