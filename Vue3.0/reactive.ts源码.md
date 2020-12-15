@@ -23,8 +23,8 @@ export function reactive(target: object) {
 在 `target` 是一个正常的 `Object` 或者 `Array` 时，使用这个对象做 `proxy` 的 `handle`
 
 ```typescript
-const get = /*#__PURE__*/ createGetter()
-const set = /*#__PURE__*/ createSetter()
+const get = /*#__PURE__*/ createGetter() // 在下面
+const set = /*#__PURE__*/ createSetter() // 在下面
 
 function deleteProperty(target: object, key: string | symbol): boolean {
   const hadKey = hasOwn(target, key)
