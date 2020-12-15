@@ -26,6 +26,29 @@ export function reactive(target: object) {
 const get = /*#__PURE__*/ createGetter()
 const set = /*#__PURE__*/ createSetter()
 
+function deleteProperty(target: object, key: string | symbol): boolean {
+  const hadKey = hasOwn(target, key)
+  const oldValue = (target as any)[key]
+  const result = Reflect.deleteProperty(target, key)
+  if (result && hadKey) {
+    trigger(target, TriggerOpTypes.DELETE, key, undefined, oldValue)
+  }
+  return result
+}
+
+function has(target: object, key: string | symbol): boolean {
+  const result = Reflect.has(target, key)
+  if (!isSymbol(key) || !builtInSymbols.has(key)) {
+    track(target, TrackOpTypes.HAS, key)
+  }
+  return result
+}
+
+function ownKeys(target: object): (string | number | symbol)[] {
+  track(target, TrackOpTypes.ITERATE, isArray(target) ? 'length' : ITERATE_KEY)
+  return Reflect.ownKeys(target)
+}
+
 export const mutableHandlers: ProxyHandler<object> = {
   get,
   set,
