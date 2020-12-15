@@ -528,7 +528,7 @@ function clear(this: IterableCollections) {
     : undefined
   const result = target.clear()
   if (hadItems) {
-    // 如果之前有元素，触发一次依赖时事件
+    // 如果之前有元素，触发一次依赖事件
     trigger(target, TriggerOpTypes.CLEAR, undefined, undefined, oldTarget)
   }
   return result
