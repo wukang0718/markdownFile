@@ -2,7 +2,7 @@
 
 ## reactive 方法
 
-接收一个对象，如果对象说 `readonly` 类型的
+接收一个对象，如果对象说 `readonly` 类型的，就返回对象本身
 
 ```typescript
 export function reactive(target: object) {
