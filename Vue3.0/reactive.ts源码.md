@@ -2,6 +2,8 @@
 
 ## reactive 方法
 
+
+
 ```typescript
 export function reactive(target: object) {
   // if trying to observe a readonly proxy, return the readonly version.
