@@ -348,6 +348,22 @@ class ObjectRefImpl<T extends object, K extends keyof T> {
 }
 ```
 
+示例：
+
+```typescript
+setup() {
+   const b = Vue.ref(12)
+   const text = {
+       a: 12,
+       b: Vue.ref(12)
+   }
+   console.log(Vue.toRef(text, "a"))
+   console.log(Vue.toRef(text, "b"))
+}
+```
+
+
+
 ## toRefs 方法
 
 接收一个对象，返回一个新的对象， 这个对象的每一个属性都是一个具有 `value` 属性的对象，这个方法只做一层代理，没有深度遍历，且不会收集依赖和触发依赖
