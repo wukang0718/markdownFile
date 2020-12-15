@@ -248,6 +248,10 @@ export const mutableCollectionHandlers: ProxyHandler<CollectionTypes> = {
 
 ##### createInstrumentationGetter
 
+接收两个参数 `isReadonly` 是否只读和 `shallow` 是否浅代理
+
+
+
 ```typescript
 /**
  * 返回一个 Collection 的get 函数，在 get 中，对 set/has... 方法做处理
