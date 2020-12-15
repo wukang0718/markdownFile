@@ -388,9 +388,35 @@ function size(target: IterableCollections, isReadonly = false) {
 
 ##### has
 
+拦截 has 操作
 
+```typescript
+/**
+ * 拦截 has 操作
+ * @param this target
+ * @param key 判断的key
+ * @param isReadonly 是否只读
+ */
+function has(this: CollectionTypes, key: unknown, isReadonly = false): boolean {
+  const target = (this as any)[ReactiveFlags.RAW] // 获取原始值，可能是一个 reactive 对象
+  const rawTarget = toRaw(target) // 获取到最终的原始值
+  const rawKey = toRaw(key) // 获取到 key 的原始值
+  if (key !== rawKey) {
+    // key 是 reactive 类型时，收集 key 的依赖
+    !isReadonly && track(rawTarget, TrackOpTypes.HAS, key)
+  }
+  // 收集 rawKey 的依赖
+  !isReadonly && track(rawTarget, TrackOpTypes.HAS, rawKey)
+  // 先 判断 有没有 reactive 的 key 的值，然后判断 原始值的 key 的值
+  return key === rawKey
+    ? target.has(key)
+    : target.has(key) || target.has(rawKey)
+}
+```
 
 ##### add
+
+
 
 ##### set
 
