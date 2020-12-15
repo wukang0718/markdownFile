@@ -147,6 +147,49 @@ function createGetter(isReadonly = false, shallow = false) {
 
 这里用到了一个特殊的值 `arrayInstrumentations`
 
+这个值表示需要特殊处理的 `Array` 的方法
+
+```typescript
+/**
+ * 数组的一些方法需要做特殊的处理
+ */
+const arrayInstrumentations: Record<string, Function> = {}
+;(['includes', 'indexOf', 'lastIndexOf'] as const).forEach(key => {
+  const method = Array.prototype[key] as any
+  arrayInstrumentations[key] = function(this: unknown[], ...args: unknown[]) {
+    const arr = toRaw(this) // 获取到数组的原值
+    for (let i = 0, l = this.length; i < l; i++) {
+      // 循环对数组中的每一项添加依赖
+      track(arr, TrackOpTypes.GET, i + '')
+    }
+    // we run the method using the original args first (which may be reactive)
+    // 先不对参数做处理，直接运行方法
+    const res = method.apply(arr, args)
+    if (res === -1 || res === false) {
+      // 如果方法没有期望的返回值，在对参数做一次 toRaw（获取原始值） 转换
+      // if that didn't work, run it again using raw values.
+      return method.apply(arr, args.map(toRaw))
+    } else {
+      return res
+    }
+  }
+})
+// instrument length-altering mutation methods to avoid length being tracked
+// which leads to infinite loops in some cases (#2137)
+// 这些方法会改变 Array 的length 属性，在某种情况下，会导致依赖循环触发
+;(['push', 'pop', 'shift', 'unshift', 'splice'] as const).forEach(key => {
+  const method = Array.prototype[key] as any
+  arrayInstrumentations[key] = function(this: unknown[], ...args: unknown[]) {
+    pauseTracking() // 停止依赖收集
+    const res = method.apply(this, args)
+    resetTracking() // 恢复依赖收集
+    return res
+  }
+})
+```
+
+
+
 #### createSetter
 
 函数接收一个参数 `shallow` ，是否只做浅代理，返回一个 `set` 函数
