@@ -116,6 +116,16 @@ export function isRef(r: any): r is Ref {
 }
 ```
 
+示例：
+
+```typescript
+setup() {
+	const ref0 = Vue.ref({a: 1})
+}
+```
+
+
+
 ## triggerRef 方法
 
 > 源码位置： [https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/ref.ts](https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/ref.ts)
