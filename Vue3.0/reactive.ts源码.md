@@ -416,7 +416,27 @@ function has(this: CollectionTypes, key: unknown, isReadonly = false): boolean {
 
 ##### add
 
+拦截 Set/WeakSet 的 add 操作
 
+```typescript
+/**
+ * 拦截 Set/WeakSet 的 add 操作
+ * @param this 元数据
+ * @param value 添加的数据
+ */
+function add(this: SetTypes, value: unknown) {
+  value = toRaw(value) // 获取到 value 的原始值
+  const target = toRaw(this) // 获取 target 的原始值
+  const proto = getProto(target) //  获取原型
+  const hadKey = proto.has.call(target, value)
+  target.add(value) // 给 set 中添加原始值
+  if (!hadKey) {
+    // 如果 set 中之前没有这个值，触发一次依赖
+    trigger(target, TriggerOpTypes.ADD, value, value)
+  }
+  return this
+}
+```
 
 ##### set
 
