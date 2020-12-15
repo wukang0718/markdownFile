@@ -150,16 +150,21 @@ function createGetter(isReadonly = false, shallow = false) {
 
 
 ```typescript
+/**
+ * 返回一个 set 方法
+ * @param shallow 是否做浅代理操作
+ */
 function createSetter(shallow = false) {
   return function set(
     target: object,
     key: string | symbol,
     value: unknown,
     receiver: object
-  ): boolean {
+  ): boolean { 
     const oldValue = (target as any)[key]
     if (!shallow) {
       value = toRaw(value)
+      // 深代理模式下，如果数组中的每一项都是 ref 对象，修改只修改该项的 value 值，不替换整个对象
       if (!isArray(target) && isRef(oldValue) && !isRef(value)) {
         oldValue.value = value
         return true
@@ -168,16 +173,24 @@ function createSetter(shallow = false) {
       // in shallow mode, objects are set as-is regardless of reactive or not
     }
 
+    // 判断 key 是数组的下标或者 对象/数组的属性
     const hadKey =
       isArray(target) && isIntegerKey(key)
         ? Number(key) < target.length
         : hasOwn(target, key)
+      
+
     const result = Reflect.set(target, key, value, receiver)
     // don't trigger if target is something up in the prototype chain of original
+    // 不能直接触发依赖更新，有可能是原型链上的proxy被调用
+    // 要判断 receiver 的原始值，就是当前的target对象， 这样确保是当前的 target 的 proxy 被触发
     if (target === toRaw(receiver)) {
+      //
       if (!hadKey) {
+        // 没有 key 的情况是添加属性，或者 数组添加一项
         trigger(target, TriggerOpTypes.ADD, key, value)
       } else if (hasChanged(value, oldValue)) {
+        // 有 key 并且 新旧值不一样，修改成功，需要触发 set 的依赖
         trigger(target, TriggerOpTypes.SET, key, value, oldValue)
       }
     }
