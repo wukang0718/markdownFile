@@ -26,6 +26,7 @@ export function reactive(target: object) {
 const get = /*#__PURE__*/ createGetter() // 在下面
 const set = /*#__PURE__*/ createSetter() // 在下面
 
+// delete 操作符的时候调用
 function deleteProperty(target: object, key: string | symbol): boolean {
   const hadKey = hasOwn(target, key)
   const oldValue = (target as any)[key]
