@@ -511,6 +511,30 @@ function deleteEntry(this: CollectionTypes, key: unknown) {
 
 ##### clear
 
+拦截 `clear` 操作
+
+```typescript
+/**
+ * 拦截 clear 操作
+ * @param this proxy 对象 reactive 对象
+ */
+function clear(this: IterableCollections) {
+  const target = toRaw(this)
+  const hadItems = target.size !== 0
+  const oldTarget = __DEV__
+    ? isMap(target)
+      ? new Map(target)
+      : new Set(target)
+    : undefined
+  const result = target.clear()
+  if (hadItems) {
+    // 如果之前有元素，触发一次依赖时事件
+    trigger(target, TriggerOpTypes.CLEAR, undefined, undefined, oldTarget)
+  }
+  return result
+}
+```
+
 
 
 ##### forEach
