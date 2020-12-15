@@ -348,6 +348,16 @@ function get(
 }
 ```
 
+###### toReactive
+
+获取到最终要返回的值的方法
+
+```typescript
+const toReactive = <T extends unknown>(value: T): T =>
+  isObject(value) ? reactive(value) : value
+
+```
+
 
 
 ## shallowReactive 方法
