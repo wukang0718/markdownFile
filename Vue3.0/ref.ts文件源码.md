@@ -167,8 +167,6 @@ setup() {
 
 ## proxyRefs 方法
 
-> 源码位置： [https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/ref.ts](https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/ref.ts)
-
 方法接收一个参数，返回一个 `proxy` 对象
 
 > 这个方法返回的 `proxy` 对象，不会触发依赖的收集和触发
