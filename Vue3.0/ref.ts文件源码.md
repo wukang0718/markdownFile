@@ -217,7 +217,7 @@ const shallowUnwrapHandlers: ProxyHandler<any> = {
 
 ```typescript
 setup() {
-	console.log(Vue.proxyRefs({a: 12}))
+	console.log(Vue.proxyRefs({a: 12})) // Proxy{a: 12}
 }
 ```
 
