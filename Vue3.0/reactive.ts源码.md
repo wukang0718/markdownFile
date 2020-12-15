@@ -126,6 +126,8 @@ function createGetter(isReadonly = false, shallow = false) {
 
 #### createSetter
 
+返回一个 `get` 函数
+
 ```typescript
 function createSetter(shallow = false) {
   return function set(
