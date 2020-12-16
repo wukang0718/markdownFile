@@ -109,6 +109,8 @@ function baseCreateRenderer(
   const moveStaticNode = () => {}
   const removeStaticNode = () => {}
   const processElement = () => {}
+  const mountElement = () => {}
+  const setScopeId = () => {}
 }
 ```
 
