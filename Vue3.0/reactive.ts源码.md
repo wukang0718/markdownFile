@@ -679,6 +679,21 @@ export function shallowReactive<T extends object>(target: T): T {
 
 ### shallowReactiveHandlers
 
+```typescript
+export const shallowReactiveHandlers: ProxyHandler<object> = extend(
+  {},
+  mutableHandlers,
+  {
+    get: shallowGet,
+    set: shallowSet
+  }
+)
+```
+
+用了新的 `get` 和 `set` 方法
+
+
+
 ## readonly 方法
 
 参数接收一个对象，返回一个只读 `readonly` 对象，通过 `createReactiveObject` 方法
