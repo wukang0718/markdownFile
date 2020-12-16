@@ -768,7 +768,7 @@ export const readonlyCollectionHandlers: ProxyHandler<CollectionTypes> = {
 }
 ```
 
-用的 `createInstrumentationGetter` 方法，创建的
+用的 `createInstrumentationGetter` 方法，创建的 `handle` 对象
 
 ## shallowReadonly 方法
 
