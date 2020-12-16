@@ -108,6 +108,7 @@ function baseCreateRenderer(
   const patchStaticNode = () => {}
   const moveStaticNode = () => {}
   const removeStaticNode = () => {}
+  const processElement = () => {}
 }
 ```
 
