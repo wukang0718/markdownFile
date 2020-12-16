@@ -76,17 +76,6 @@ function createReactiveEffect<T = any>(
 
 - 这个函数的返回值被反复通过该方法执行的时候，只会执行一次
 
-示例：
-
-```typescript
-// watchEffect 函数通过调用 effect 函数实现
-setup() {
-   const a = () => {console.log("a");}
-   const b = Vue.watchEffect(a)
-   Vue.watchEffect(b) // a 只会输出一次
-}
-```
-
 
 
 ## pauseTracking
