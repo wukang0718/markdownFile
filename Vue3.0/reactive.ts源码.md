@@ -762,7 +762,13 @@ const readonlyGet = /*#__PURE__*/ createGetter(true)
 
 ### readonlyCollectionHandlers
 
+```typescript
+export const readonlyCollectionHandlers: ProxyHandler<CollectionTypes> = {
+  get: createInstrumentationGetter(true, false)
+}
+```
 
+用的 `createInstrumentationGetter` 方法，创建的
 
 ## shallowReadonly 方法
 
