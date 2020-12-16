@@ -927,6 +927,22 @@ setup() {
 
 ## isProxy 方法
 
+判断数据是不是 `reactive` 或者 `readonly` 类型的数据
+
+```typescript
+export function isProxy(value: unknown): boolean {
+  return isReactive(value) || isReadonly(value)
+}
+```
+
+示例：
+
+```
+
+```
+
+
+
 ## toRaw 方法
 
 > 源码位置： [https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/reactive.ts](https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/reactive.ts)
