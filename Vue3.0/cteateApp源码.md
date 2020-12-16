@@ -47,6 +47,8 @@ export const createApp = ((...args) => {
 
 调用 `ensureRenderer().createApp(...args)` 方法，获取到了 `app` 的实例；然后重写了 `app` 的 `mount` 方法，在新的 `mount` 方法中，先对 `container` 做了一次处理（如果传的是css选择器，通过 ` document.querySelector` 方法获取到的DOM元素 ），让 `container` 是一个真实的 `DOM元素`。
 
+在组件不是一个函数，并且没有设置 `render` 函数和 `tempalte` 参数的时候，默认
+
 
 
 
