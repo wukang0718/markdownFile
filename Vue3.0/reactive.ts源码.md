@@ -692,7 +692,12 @@ export const shallowReactiveHandlers: ProxyHandler<object> = extend(
 
 用了新的 `get` 和 `set` 方法
 
+```typescript
+const shallowGet = /*#__PURE__*/ createGetter(false, true)
+const shallowSet = /*#__PURE__*/ createSetter(true)
+```
 
+用了上面提到的 `createGetter` 和 `createSetter` 方法
 
 ## readonly 方法
 
@@ -710,6 +715,8 @@ export function readonly<T extends object>(
   )
 }
 ```
+
+
 
 ## shallowReadonly 方法
 
