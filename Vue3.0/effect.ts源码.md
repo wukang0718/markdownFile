@@ -185,7 +185,7 @@ export function track(target: object, type: TrackOpTypes, key: unknown) {
 
 ## trigger
 
-**触发依赖**
+**触发依赖，effect 的 `scheduler` 配置也是在这里被执行的**
 
 ```typescript
 /**
