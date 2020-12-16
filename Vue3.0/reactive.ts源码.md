@@ -952,8 +952,6 @@ setup() {
 
 ## toRaw 方法
 
-> 源码位置： [https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/reactive.ts](https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/reactive.ts)
-
 方法接收一个参数，如果参数是 `reactive` 对象会返回 `reactive` 对象的原始值，如果不是 `reactive` 对象，就返回接收的参数
 
 `ReactiveFlags.RAW` 在 `reactive` 对象的 `get` 方法中做了处理 
