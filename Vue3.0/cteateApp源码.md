@@ -177,24 +177,16 @@ export function createAppAPI<HostElement>(
     let isMounted = false
     
     const app = (context.app = {
-      _uid: uid++,
+      _uid: uid++, // 唯一id
       _component: rootComponent as ConcreteComponent,
       _props: rootProps,
       _container: null,
       _context: context,
 
-      version,
+      version, // vue 版本
 
       get config() {
         return context.config
-      },
-
-      set config(v) {
-        if (__DEV__) {
-          warn(
-            `app.config cannot be replaced. Modify individual options instead.`
-          )
-        }
       }, 
     })
     
