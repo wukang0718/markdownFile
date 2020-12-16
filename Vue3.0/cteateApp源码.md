@@ -53,7 +53,7 @@ export const createApp = ((...args) => {
 
 ### ensureRenderer
 
-惰性创建
+惰性创建 `renderer` 对象，
 
 ```typescript
 /**
