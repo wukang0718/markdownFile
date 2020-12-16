@@ -912,6 +912,17 @@ export function isReadonly(value: unknown): boolean {
 }
 ```
 
+示例：
+
+```typescript
+setup() {
+	const b = Vue.readonly({a: 123})
+    console.log(Vue.isReadonly(b))
+    console.log(Vue.isReadonly({__v_isReadonly: true}))
+    console.log(Vue.isReadonly({__v_isReadonly: 1}))
+}
+```
+
 
 
 ## isProxy 方法
