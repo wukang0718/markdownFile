@@ -1,6 +1,8 @@
-## effect 
+> 源码位置： [https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/effect.ts](https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/effect.ts)
+>
+> **这个文件的方法没有暴露给开发者，但是很重要**
 
-**这个方法没有暴露给开发者，但是很重要**
+## effect 
 
 执行需要收集依赖的函数，又有的依赖收集的调用，都要通过这个函数执行
 
