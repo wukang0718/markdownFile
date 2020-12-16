@@ -760,6 +760,10 @@ const readonlyGet = /*#__PURE__*/ createGetter(true)
 
 使用的是上面提到的  `createGetter` 方法
 
+### readonlyCollectionHandlers
+
+
+
 ## shallowReadonly 方法
 
 参数接收一个对象，返回一个只读 `readonly` 的对象，这个只读，只针对对象的第一层，不做深层的代理， 通过 `createReactiveObject` 方法
