@@ -49,7 +49,7 @@ export const createApp = ((...args) => {
 
 在组件不是一个函数，并且没有设置 `render` 函数和 `tempalte` 参数的时候，默认 `container` 中的 html 元素就是组件的 `template`。
 
-
+调用 `app` 中返回的 `mount` 方法，完成 `DOM` 的挂载
 
 
 
