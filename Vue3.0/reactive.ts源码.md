@@ -789,6 +789,16 @@ export function shallowReadonly<T extends object>(
 
 ### shallowReadonlyHandlers
 
+```typescript
+export const shallowReadonlyHandlers: ProxyHandler<object> = extend(
+  {},
+  readonlyHandlers,
+  {
+    get: shallowReadonlyGet
+  }
+)
+```
+
 
 
 ### createReactiveObject 方法
