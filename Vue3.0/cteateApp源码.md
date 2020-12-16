@@ -79,6 +79,8 @@ export function createRenderer<
 
 ### baseCreateRenderer
 
+> 源码位置： [https://github.com/vuejs/vue-next/blob/master/packages/runtime-core/src/renderer.ts](https://github.com/vuejs/vue-next/blob/master/packages/runtime-core/src/renderer.ts)
+
 ```typescript
 function baseCreateRenderer(
   options: RendererOptions,
@@ -141,7 +143,13 @@ function baseCreateRenderer(
 }
 ```
 
-在 `createApp` 中调用了
+在 `createApp` 中调用了 `ensureRenderer().createApp(...args)` 方法获取 `app` 的实例，就是 `baseCreateRenderer` 返回的对象中的 `createApp` 函数，通过 `createAppAPI` 函数生成的一个函数
+
+### createAppAPI
+
+> 源码位置：[https://github.com/vuejs/vue-next/blob/master/packages/runtime-core/src/apiCreateApp.ts](https://github.com/vuejs/vue-next/blob/master/packages/runtime-core/src/apiCreateApp.ts)
+
+
 
 
 
