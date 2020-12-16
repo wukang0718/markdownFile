@@ -981,7 +981,7 @@ setup() {
 
 ## markRaw 方法
 
-接收一个参数对象，标记这个对象是不需要代理的，通过 `ReactiveFlags.SKIP` / `__v_skip` 实现
+接收一个参数对象，标记这个对象是不需要代理的，通过 `ReactiveFlags.SKIP` / `__v_skip` 实现，会给对象添加一个 ` __v_skip` 属性，值是  `true`
 
 ```typescript
 export function markRaw<T extends object>(value: T): T {
