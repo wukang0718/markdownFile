@@ -102,15 +102,17 @@ function baseCreateRenderer(
     insertStaticContent: hostInsertStaticContent
   } = options
   const patch = () => {...}
-  const processText = () => {}
-  const processCommentNode = () => {}
-  const mountStaticNode = () => {}
-  const patchStaticNode = () => {}
-  const moveStaticNode = () => {}
-  const removeStaticNode = () => {}
-  const processElement = () => {}
-  const mountElement = () => {}
-  const setScopeId = () => {}
+  const processText = () => {...}
+  const processCommentNode = () => {...}
+  const mountStaticNode = () => {...}
+  const patchStaticNode = () => {...}
+  const moveStaticNode = () => {...}
+  const removeStaticNode = () => {...}
+  const processElement = () => {...}
+  const mountElement = () => {...}
+  const setScopeId = () => {...}
+  const mountChildren = () => {...}
+  
 }
 ```
 
