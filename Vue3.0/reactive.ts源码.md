@@ -13,7 +13,7 @@ setup() {
     const a = {b: 12}
     const reactive1 = Vue.reactive(a)
     const reactive2 = Vue.reactive(a)
-    console.log(reactive1 === reactive2)
+    console.log(reactive1 === reactive2) // true
 }
 ```
 
