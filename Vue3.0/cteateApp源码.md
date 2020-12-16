@@ -53,7 +53,7 @@ export const createApp = ((...args) => {
 
 ### ensureRenderer
 
-惰性创建 `renderer` 对象，
+惰性创建 `renderer` 对象，这个对象的创建和运行的平台有关系
 
 ```typescript
 /**
