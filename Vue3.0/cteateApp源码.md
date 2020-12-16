@@ -53,7 +53,7 @@ export const createApp = ((...args) => {
 
 ### ensureRenderer
 
-惰性创建 `renderer` 对象，这个对象的创建和运行的平台有关系
+惰性创建 `renderer` 对象，这个对象的创建和运行的平台有关系，在 WEB 平台时，参数 `rendererOptions` 这个是 `DOM` 操作的 API
 
 ```typescript
 /**
@@ -63,6 +63,8 @@ function ensureRenderer() {
   return renderer || (renderer = createRenderer<Node, Element>(rendererOptions))
 }
 ```
+
+### createRenderer
 
 
 
