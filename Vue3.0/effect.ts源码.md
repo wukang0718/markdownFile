@@ -79,6 +79,7 @@ function createReactiveEffect<T = any>(
 示例：
 
 ```typescript
+// watchEffect 函数通过调用 effect 函数实现
 setup() {
    const a = () => {console.log("a");}
    const b = Vue.watchEffect(a)
