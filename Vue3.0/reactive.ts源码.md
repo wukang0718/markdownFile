@@ -573,7 +573,7 @@ function createForEach(isReadonly: boolean, isShallow: boolean) {
 
 ###### createIterableMethod
 
-返回一个方法 拦截 iterate 操作
+返回一个方法 拦截 `iterate` 操作，返回一个遍历器，`for of` 遍历就是基于遍历器实现的
 
 ```typescript
 /**
