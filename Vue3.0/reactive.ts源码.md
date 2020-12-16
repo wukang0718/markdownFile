@@ -573,6 +573,65 @@ function createForEach(isReadonly: boolean, isShallow: boolean) {
 
 ###### createIterableMethod
 
+返回一个方法 拦截 iterate 操作
+
+```typescript
+/**
+ * 返回一个方法 拦截 iterate 操作
+ * @param method 方法名称 keys values entries
+ * @param isReadonly 是否只读
+ * @param isShallow 是否浅代理
+ */
+function createIterableMethod(
+  method: string | symbol,
+  isReadonly: boolean,
+  isShallow: boolean
+) {
+  return function(
+    this: IterableCollections, // this 是 proxy 对象
+    ...args: unknown[]
+  ): Iterable & Iterator {
+    const target = (this as any)[ReactiveFlags.RAW]
+    const rawTarget = toRaw(target)
+    const targetIsMap = isMap(rawTarget)
+    // 是否 map 遍历 iterate
+    const isPair =
+      method === 'entries' || (method === Symbol.iterator && targetIsMap)
+    // 是否获取map的keys
+    const isKeyOnly = method === 'keys' && targetIsMap
+    const innerIterator = target[method](...args)
+    const wrap = isReadonly ? toReadonly : isShallow ? toShallow : toReactive
+    // 收集依赖
+    !isReadonly &&
+      track(
+        rawTarget,
+        TrackOpTypes.ITERATE,
+        isKeyOnly ? MAP_KEY_ITERATE_KEY : ITERATE_KEY
+      )
+    // return a wrapped iterator which returns observed versions of the
+    // values emitted from the real iterator
+    // 返回的是一个next函数，next函数返回 value 和 done ，这是 iterable 接口规范
+    // value 的值还是一个 reactive / readonly / ... 的值
+    return {
+      // iterator protocol
+      next() {
+        const { value, done } = innerIterator.next()
+        return done
+          ? { value, done }
+          : {
+              value: isPair ? [wrap(value[0]), wrap(value[1])] : wrap(value),
+              done
+            }
+      },
+      // iterable protocol
+      [Symbol.iterator]() {
+        return this
+      }
+    }
+  }
+}
+```
+
 
 
 ## shallowReactive 方法
