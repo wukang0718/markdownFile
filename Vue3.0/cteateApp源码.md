@@ -187,7 +187,8 @@ export function createAppAPI<HostElement>(
         use() {...},
         mixin() {...},
 		component() {...},
-        directive() {...},    
+        directive() {...},
+        mount() {...}
     })
     
     return app
