@@ -45,3 +45,4 @@ export const createApp = ((...args) => {
 }) as CreateAppFunction<Element>
 ```
 
+调用 `ensureRenderer().createApp(...args)` 方法，获取到了 `app` 的实例
