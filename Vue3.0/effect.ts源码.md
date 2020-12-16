@@ -110,6 +110,20 @@ export function enableTracking() {
 
 ## resetTracking
 
+重置依赖收集，把依赖收集的状态恢复到上一次，默认是 `true`
+
+```typescript
+/**
+ * 重置依赖收集
+ */
+export function resetTracking() {
+  const last = trackStack.pop()
+  shouldTrack = last === undefined ? true : last
+}
+```
+
+
+
 ## track
 
 ## trigger
