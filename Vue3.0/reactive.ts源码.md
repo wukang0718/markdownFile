@@ -752,7 +752,13 @@ export const readonlyHandlers: ProxyHandler<object> = {
 }
 ```
 
+`get` 方法 `readonlyGet`
 
+```typescript
+const readonlyGet = /*#__PURE__*/ createGetter(true)
+```
+
+使用的是上面提到的  `createGetter` 方法
 
 ## shallowReadonly 方法
 
