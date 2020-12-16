@@ -21,8 +21,13 @@ setup() {
 
 示例：
 
-```
-
+```typescript
+setup() {
+    const a = {b: 12}
+    const readonly = Vue.readonly(a)
+    const reactive = Vue.reactive(readonly)
+    console.log(readonly === reactive) // true
+}
 ```
 
 
