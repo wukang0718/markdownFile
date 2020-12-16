@@ -6,6 +6,19 @@
 
 对象的 `reactive` 代理，会被缓存，所以对同一个对象执行多次 `reactive` 返回的是同一个值
 
+示例：
+
+```typescript
+setup() {
+    const a = {b: 12}
+    const reactive1 = Vue.reactive(a)
+    const reactive2 = Vue.reactive(a)
+    console.log(reactive1 === reactive2)
+}
+```
+
+
+
 ```typescript
 export function reactive(target: object) {
   if (target && (target as Target)[ReactiveFlags.IS_READONLY]) {
