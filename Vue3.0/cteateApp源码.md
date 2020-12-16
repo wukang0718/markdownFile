@@ -149,7 +149,35 @@ function baseCreateRenderer(
 
 > 源码位置：[https://github.com/vuejs/vue-next/blob/master/packages/runtime-core/src/apiCreateApp.ts](https://github.com/vuejs/vue-next/blob/master/packages/runtime-core/src/apiCreateApp.ts)
 
+```typescript
+/**
+ * 返回 app 实例
+ * @param render 
+ * @param hydrate 
+ */
+export function createAppAPI<HostElement>(
+  render: RootRenderFunction,
+  hydrate?: RootHydrateFunction
+): CreateAppFunction<HostElement> {
+  /**
+   * 接收两个参数
+   * rootComponent 根组件
+   * rootProps 传递给跟组件的 props 
+   */
+  return function createApp(rootComponent, rootProps = null) {
+    if (rootProps != null && !isObject(rootProps)) {
+      __DEV__ && warn(`root props passed to app.mount() must be an object.`)
+      rootProps = null
+    }
 
+    const context = createAppContext()
+    // 安装的插件
+    const installedPlugins = new Set()
+    // 是否挂载
+    let isMounted = false
+  }
+}
+```
 
 
 
