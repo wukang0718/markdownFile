@@ -78,6 +78,20 @@ function createReactiveEffect<T = any>(
 
 ## pauseTracking
 
+暂停依赖收集
+
+```typescript
+/**
+ * 暂停收集依赖
+ */
+export function pauseTracking() {
+  trackStack.push(shouldTrack)
+  shouldTrack = false // shouldTrack 会停止依赖收集
+}
+```
+
+
+
 ## enableTracking
 
 ## resetTracking
