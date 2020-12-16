@@ -169,7 +169,7 @@ export function createAppAPI<HostElement>(
       __DEV__ && warn(`root props passed to app.mount() must be an object.`)
       rootProps = null
     }
-
+	
     const context = createAppContext()
     // 安装的插件
     const installedPlugins = new Set()
