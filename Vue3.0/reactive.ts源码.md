@@ -805,7 +805,15 @@ export const shallowReadonlyHandlers: ProxyHandler<object> = extend(
 const shallowReadonlyGet = /*#__PURE__*/ createGetter(true, true)
 ```
 
+### readonlyCollectionHandlers
 
+```typescript
+export const readonlyCollectionHandlers: ProxyHandler<CollectionTypes> = {
+  get: createInstrumentationGetter(true, false)
+}
+```
+
+上面已经提到过
 
 ### createReactiveObject 方法
 
