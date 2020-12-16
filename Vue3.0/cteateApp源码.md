@@ -66,7 +66,14 @@ function ensureRenderer() {
 
 ### createRenderer
 
-
+```typescript
+export function createRenderer<
+  HostNode = RendererNode,
+  HostElement = RendererElement
+>(options: RendererOptions<HostNode, HostElement>) {
+  return baseCreateRenderer<HostNode, HostElement>(options)
+}
+```
 
 
 
