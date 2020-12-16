@@ -126,5 +126,9 @@ export function resetTracking() {
 
 ## track
 
+收集依赖
+
+
+
 ## trigger
 
