@@ -126,7 +126,7 @@ export function resetTracking() {
 
 ## track
 
-**收集依赖**
+**收集依赖，这个方法没有暴露给开发者**
 
 ```typescript
 /**
