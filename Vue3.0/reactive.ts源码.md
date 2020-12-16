@@ -917,9 +917,9 @@ export function isReadonly(value: unknown): boolean {
 ```typescript
 setup() {
 	const b = Vue.readonly({a: 123})
-    console.log(Vue.isReadonly(b))
-    console.log(Vue.isReadonly({__v_isReadonly: true}))
-    console.log(Vue.isReadonly({__v_isReadonly: 1}))
+    console.log(Vue.isReadonly(b)) // true
+    console.log(Vue.isReadonly({__v_isReadonly: true})) // true
+    console.log(Vue.isReadonly({__v_isReadonly: 1})) // true
 }
 ```
 
