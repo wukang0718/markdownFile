@@ -50,7 +50,7 @@ class ComputedRefImpl<T> {
   private _dirty = true
 
   public readonly effect: ReactiveEffect<T>
-
+  // 有一个 __v_isRef 属性 为 true ，在调用 isRef 的时候，返回 true
   public readonly __v_isRef = true;
   public readonly [ReactiveFlags.IS_READONLY]: boolean
 
