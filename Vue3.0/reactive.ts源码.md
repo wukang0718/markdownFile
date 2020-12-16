@@ -995,10 +995,10 @@ export function markRaw<T extends object>(value: T): T {
 ```typescript
 setup() {
 	const a = Vue.markRaw({a: 123})
-    console.log(a)
-    console.log(Vue.reactive({a: 123}))
-    console.log(Vue.reactive(a))
-    console.log(Vue.reactive({__v_skip: true}))
+    console.log(a) // {a: 123, __v_skip: true}
+    console.log(Vue.reactive({a: 123})) // Proxy {a: 123}
+    console.log(Vue.reactive(a)) // {a: 123, __v_skip: true}
+    console.log(Vue.reactive({__v_skip: true})) // {__v_skip: true}
 }
 ```
 
