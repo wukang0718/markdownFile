@@ -172,17 +172,22 @@ export function createAppAPI<HostElement>(
     let isMounted = false
     
     const app = (context.app = {
-      _uid: uid++, // 唯一id
-      _component: rootComponent as ConcreteComponent,
-      _props: rootProps,
-      _container: null,
-      _context: context,
+        _uid: uid++, // 唯一id
+        _component: rootComponent as ConcreteComponent,
+        _props: rootProps,
+        _container: null,
+        _context: context,
 
-      version, // vue 版本
+        version, // vue 版本
 
-      get config() { // config 是一个只读对象，设置 config 在开发环境会报警告
-        return context.config
-      }, 
+        get config() { // config 是一个只读对象，设置 config 在开发环境会报警告
+            return context.config
+        },
+
+        use() {...},
+        mixin() {...},
+		component() {...},
+        directive() {...},    
     })
     
     return app
