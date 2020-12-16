@@ -2,7 +2,7 @@
 
 ## reactive 方法
 
-接收一个对象，如果对象说 `readonly` 类型的，就返回对象本身，否则返回 对象深代理，通过 `createReactiveObject` 方法
+接收一个对象，否则返回 对象深代理，通过 `createReactiveObject` 方法
 
 对象的 `reactive` 代理，会被缓存，所以对同一个对象执行多次 `reactive` 返回的是同一个值
 
@@ -15,6 +15,14 @@ setup() {
     const reactive2 = Vue.reactive(a)
     console.log(reactive1 === reactive2) // true
 }
+```
+
+如果对象说 `readonly` 类型的，就返回对象本身
+
+示例：
+
+```
+
 ```
 
 
