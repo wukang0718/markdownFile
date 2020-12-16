@@ -45,4 +45,25 @@ export const createApp = ((...args) => {
 }) as CreateAppFunction<Element>
 ```
 
-调用 `ensureRenderer().createApp(...args)` 方法，获取到了 `app` 的实例
+调用 `ensureRenderer().createApp(...args)` 方法，获取到了 `app` 的实例；然后重写了 `app` 的 `mount` 方法，在新的 `mount` 方法中，先对 `container` 做了一次处理，让 `container` 是一个真实的 `DOM元素`。
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
