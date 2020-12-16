@@ -889,6 +889,8 @@ export function isReactive(value: unknown): boolean {
 }
 ```
 
+示例：
+
 ```typescript
 setup() {
 	const b = Vue.reactive({a: 123})
@@ -901,6 +903,16 @@ setup() {
 
 
 ## isReadonly 方法
+
+通过 `ReactiveFlags.IS_READONLY` / `__v_isReadonly` 判断是否是 `readonly` 类型
+
+```typescript
+export function isReadonly(value: unknown): boolean {
+  return !!(value && (value as Target)[ReactiveFlags.IS_READONLY])
+}
+```
+
+
 
 ## isProxy 方法
 
