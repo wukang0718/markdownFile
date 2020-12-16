@@ -113,7 +113,7 @@ function baseCreateRenderer(
   const setScopeId = () => {...}
   const mountChildren = () => {...}
   const patchElement = () => {...}
-  
+  const patchBlockChildren = () => {...}
 }
 ```
 
