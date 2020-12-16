@@ -127,11 +127,21 @@ function baseCreateRenderer(
   const move = () => {...}
   const unmount = () => {...}
   const remove = () => {...}
-  
+  const removeFragment = () => {...}
+  const unmountComponent = () => {...}
+  const unmountChildren = () => {...}
+  const getNextHostNode = () => {...}
+  const render = () => {...}
+  return {
+    render,
+    hydrate,
+    // createApp 入口
+    createApp: createAppAPI(render, hydrate)
+  }
 }
 ```
 
-
+在 `createApp` 中调用了
 
 
 
