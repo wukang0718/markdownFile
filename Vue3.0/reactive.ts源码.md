@@ -889,6 +889,15 @@ export function isReactive(value: unknown): boolean {
 }
 ```
 
+```
+setup() {
+	const b = Vue.reactive({a: 123})
+    console.log(Vue.isReactive(b))
+    console.log(Vue.isReactive({__v_isReactive: true}))
+    console.log(Vue.isReactive({__v_isReactive: 1}))
+}
+```
+
 
 
 ## isReadonly 方法
