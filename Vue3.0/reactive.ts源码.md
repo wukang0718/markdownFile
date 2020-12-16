@@ -699,6 +699,8 @@ const shallowSet = /*#__PURE__*/ createSetter(true)
 
 用了上面提到的 `createGetter` 和 `createSetter` 方法
 
+### shallowCollectionHandlers
+
 ## readonly 方法
 
 参数接收一个对象，返回一个只读 `readonly` 对象，通过 `createReactiveObject` 方法
