@@ -106,6 +106,7 @@ setup() {
     a.value = 5;
     a.value = 6;
     console.log(b.value) // 21 12
+    console.log(Vue.isRef(b)) // true
 }
 ```
 
