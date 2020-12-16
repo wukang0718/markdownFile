@@ -96,16 +96,16 @@ class ComputedRefImpl<T> {
 setup() {
     const a = Vue.ref(1)
     const b = Vue.computed(() => {
-        console.log("21");
+        console.log("computed");
         return a.value * 2
     })
     a.value = 2;
     a.value = 3;
     a.value = 4;
-    console.log(b.value) // 21 8
+    console.log(b.value) // computed 8
     a.value = 5;
     a.value = 6;
-    console.log(b.value) // 21 12
+    console.log(b.value) // computed 12
     console.log(Vue.isRef(b)) // true
 }
 ```
