@@ -114,6 +114,9 @@ function baseCreateRenderer(
   const mountChildren = () => {...}
   const patchElement = () => {...}
   const patchBlockChildren = () => {...}
+  const patchProps = () => {...}
+  const processFragment = () => {...}
+  const processComponent = () => {...}
 }
 ```
 
