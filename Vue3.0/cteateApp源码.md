@@ -102,6 +102,9 @@ function baseCreateRenderer(
     insertStaticContent: hostInsertStaticContent
   } = options
   const patch = () => {...}
+  const processText = () => {}
+  const processCommentNode = () => {}
+  const mountStaticNode = () => {}
 }
 ```
 
