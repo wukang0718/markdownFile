@@ -117,6 +117,17 @@ function baseCreateRenderer(
   const patchProps = () => {...}
   const processFragment = () => {...}
   const processComponent = () => {...}
+  const mountComponent = () => {...}
+  const updateComponent = () => {...}
+  const setupRenderEffect = () => {...}
+  const updateComponentPreRender = () => {...}
+  const patchChildren = () => {...}
+  const patchUnkeyedChildren = () => {...}
+  const patchKeyedChildren = () => {...}
+  const move = () => {...}
+  const unmount = () => {...}
+  const remove = () => {...}
+  
 }
 ```
 
