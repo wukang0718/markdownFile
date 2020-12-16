@@ -981,7 +981,12 @@ setup() {
 
 ## markRaw 方法
 
+接收一个参数对象，标记这个对象是不需要代理的
 
-
-
+```typescript
+export function markRaw<T extends object>(value: T): T {
+  def(value, ReactiveFlags.SKIP, true)
+  return value
+}
+```
 
