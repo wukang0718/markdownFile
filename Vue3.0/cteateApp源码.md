@@ -106,7 +106,8 @@ function baseCreateRenderer(
   const processCommentNode = () => {}
   const mountStaticNode = () => {}
   const patchStaticNode = () => {}
-  
+  const moveStaticNode = () => {}
+  const removeStaticNode = () => {}
 }
 ```
 
