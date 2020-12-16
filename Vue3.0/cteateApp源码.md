@@ -101,6 +101,7 @@ function baseCreateRenderer(
     cloneNode: hostCloneNode,
     insertStaticContent: hostInsertStaticContent
   } = options
+  const patch = () => {...}
 }
 ```
 
