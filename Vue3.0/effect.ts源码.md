@@ -94,6 +94,20 @@ export function pauseTracking() {
 
 ## enableTracking
 
+启动依赖收集
+
+```typescript
+/**
+ * 启动依赖收集
+ */
+export function enableTracking() {
+  trackStack.push(shouldTrack)
+  shouldTrack = true
+}
+```
+
+
+
 ## resetTracking
 
 ## track
