@@ -731,7 +731,7 @@ export function readonly<T extends object>(
 ```typescript
 export const readonlyHandlers: ProxyHandler<object> = {
   get: readonlyGet,
-  set(target, key) {
+  set(target, key) { // 不做任何改变，直接返回 true
     if (__DEV__) {
       console.warn(
         `Set operation on key "${String(key)}" failed: target is readonly.`,
@@ -740,7 +740,7 @@ export const readonlyHandlers: ProxyHandler<object> = {
     }
     return true
   },
-  deleteProperty(target, key) {
+  deleteProperty(target, key) { // 不做任何改变，直接返回 true
     if (__DEV__) {
       console.warn(
         `Delete operation on key "${String(key)}" failed: target is readonly.`,
