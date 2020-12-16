@@ -105,6 +105,8 @@ function baseCreateRenderer(
   const processText = () => {}
   const processCommentNode = () => {}
   const mountStaticNode = () => {}
+  const patchStaticNode = () => {}
+  
 }
 ```
 
