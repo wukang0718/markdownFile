@@ -701,6 +701,14 @@ const shallowSet = /*#__PURE__*/ createSetter(true)
 
 ### shallowCollectionHandlers
 
+```typescript
+export const shallowCollectionHandlers: ProxyHandler<CollectionTypes> = {
+  get: createInstrumentationGetter(false, true)
+}
+```
+
+用的还是上面提到的 `createInstrumentationGetter` 方法
+
 ## readonly 方法
 
 参数接收一个对象，返回一个只读 `readonly` 对象，通过 `createReactiveObject` 方法
