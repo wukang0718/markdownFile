@@ -29,6 +29,51 @@ export function effect<T = any>(
 
 ### createReactiveEffect
 
+执行一个需要收集依赖的函数，返回一个 `effect` 类型的函数
+
+```typescript
+/**
+ * 执行一个需要收集依赖的函数，返回一个 effect 类型的函数
+ * @param fn Function
+ * @param options 配置参数
+ */
+function createReactiveEffect<T = any>(
+  fn: () => T,
+  options: ReactiveEffectOptions
+): ReactiveEffect<T> {
+  // 这个函数不会立即执行，是否执行，在 effect 函数中控制
+  // 用户在 options 中配置了 lazy：true 可以让这个函数 在 effect 中不执行
+  const effect = function reactiveEffect(): unknown {
+    // 调用了 stop 后会停止这个函数的依赖处理部分的继续执行
+    if (!effect.active) {
+      return options.scheduler ? undefined : fn()
+    }
+    // 保证函数不会重复执行
+    if (!effectStack.includes(effect)) {
+      cleanup(effect) // 清除 函数的依赖相关
+      try {
+        enableTracking() // 启动依赖收集
+        effectStack.push(effect) // 把当前函数 推到 effect 栈中
+        activeEffect = effect // 这个就是依赖收集的时候，收集到的和依赖相关的函数
+        return fn() // fn 执行结束了，也就结束了依赖收集
+      } finally {
+        effectStack.pop() // 函数执行完，出栈
+        resetTracking() // 恢复依赖收集，在 fn 中可能执行了 pauseTracking 方法，停止了依赖收集
+        activeEffect = effectStack[effectStack.length - 1] // 下一次需要被依赖收集的函数
+      }
+    }
+  } as ReactiveEffect
+  effect.id = uid++
+  effect.allowRecurse = !!options.allowRecurse
+  effect._isEffect = true
+  effect.active = true
+  effect.raw = fn
+  effect.deps = []
+  effect.options = options
+  return effect
+}
+```
+
 
 
 ## pauseTracking
