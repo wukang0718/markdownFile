@@ -799,7 +799,7 @@ export const shallowReadonlyHandlers: ProxyHandler<object> = extend(
 )
 ```
 
-
+`get` 方法 `shallowReadonlyGet`
 
 ### createReactiveObject 方法
 
