@@ -185,3 +185,129 @@ export function track(target: object, type: TrackOpTypes, key: unknown) {
 
 ## trigger
 
+**触发依赖**
+
+```typescript
+/**
+ * 触发依赖
+ * @param target 触发依赖的数据源
+ * @param type 触发依赖的类型可以是 set/add/delete/clear
+ * @param key 触发依赖的 key，对应着收集依赖的key
+ * @param newValue 新值
+ * @param oldValue 旧值
+ * @param oldTarget 旧的数据源
+ */
+export function trigger(
+  target: object,
+  type: TriggerOpTypes,
+  key?: unknown,
+  newValue?: unknown,
+  oldValue?: unknown,
+  oldTarget?: Map<unknown, unknown> | Set<unknown>
+) {
+  // depsMap 获取到 target 对应的 Map 依赖源
+  const depsMap = targetMap.get(target)
+  // 没有需要触发的依赖
+  if (!depsMap) {
+    // never been tracked
+    return
+  }
+
+  const effects = new Set<ReactiveEffect>()
+  const add = (effectsToAdd: Set<ReactiveEffect> | undefined) => {
+    if (effectsToAdd) {
+      effectsToAdd.forEach(effect => {
+        // allowRecurse 设置为 true 会导致函数被多次触发
+        if (effect !== activeEffect || effect.allowRecurse) {
+          // 把依赖添加到 effects 中
+          effects.add(effect)
+        }
+      })
+    }
+  }
+
+  if (type === TriggerOpTypes.CLEAR) {
+    // collection being cleared
+    // trigger all effects for target
+    // 调用了 .clear 方法，触发 target 的所有依赖
+    depsMap.forEach(add)
+  } else if (key === 'length' && isArray(target)) {
+    // 改变了 数组的 length
+    // 要触发 被删除的 元素的 依赖 和 length 的依赖
+    depsMap.forEach((dep, key) => {
+      if (key === 'length' || key >= (newValue as number)) {
+        add(dep)
+      }
+    })
+  } else {
+    // schedule runs for SET | ADD | DELETE
+    if (key !== void 0) {
+      // depsMap.get(key) 是一个 Set
+      // 触发 target 上 相关这个 key 的依赖，最普通的情况
+      add(depsMap.get(key))
+    }
+
+    // also run for iteration key on ADD | DELETE | Map.SET
+    switch (type) {
+      case TriggerOpTypes.ADD:
+        // 添加事件触发
+        if (!isArray(target)) {
+          // 数组的遍历要触发
+          add(depsMap.get(ITERATE_KEY))
+          if (isMap(target)) {
+            // map 的编辑需要触发
+            add(depsMap.get(MAP_KEY_ITERATE_KEY))
+          }
+        } else if (isIntegerKey(key)) {
+          // 数组添加一项
+          // new index added to array -> length changes
+          // 数组长度变化，需要触发 length 的相关依赖
+          add(depsMap.get('length'))
+        }
+        break
+      case TriggerOpTypes.DELETE:
+        // 删除事件触发
+        if (!isArray(target)) {
+          // 数组遍历事件触发
+          add(depsMap.get(ITERATE_KEY))
+          if (isMap(target)) {
+            // map 遍历事件触发
+            add(depsMap.get(MAP_KEY_ITERATE_KEY))
+          }
+        }
+        break
+      case TriggerOpTypes.SET:
+        if (isMap(target)) {
+          // 触发 map 的遍历
+          add(depsMap.get(ITERATE_KEY))
+        }
+        break
+    }
+  }
+
+  const run = (effect: ReactiveEffect) => {
+    // onTrigger 开发环境可以用
+    if (__DEV__ && effect.options.onTrigger) {
+      effect.options.onTrigger({
+        effect,
+        target,
+        key,
+        type,
+        newValue,
+        oldValue,
+        oldTarget
+      })
+    }
+    if (effect.options.scheduler) {
+      // 如果 effect 中设置了 scheduler，调用这个方法，自定义是否需要触发依赖
+      // effect 和 watchEffect 方法可以设置，其他方法（watch）??? TODO
+      effect.options.scheduler(effect)
+    } else {
+      effect()
+    }
+  }
+  // 调用所有依赖添加的函数
+  effects.forEach(run)
+}
+```
+
