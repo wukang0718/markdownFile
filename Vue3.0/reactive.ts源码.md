@@ -937,8 +937,15 @@ export function isProxy(value: unknown): boolean {
 
 示例：
 
-```
-
+```typescript
+setup() {
+    const a = Vue.reactive({a: 123})
+    const b = Vue.readonly({a: 123})
+    console.log(Vue.isProxy(a)) // true
+    console.log(Vue.isProxy(b)) // true
+    console.log(Vue.isProxy({__v_isReadonly: true})) // true
+    console.log(Vue.isProxy({__v_isReactive: true})) // true
+}
 ```
 
 
