@@ -51,6 +51,8 @@ export const createApp = ((...args) => {
 
 调用 `app` 中返回的 `mount` 方法，完成 `DOM` 的挂载
 
+### ensureRenderer
+
 
 
 
