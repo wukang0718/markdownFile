@@ -137,7 +137,6 @@ export function resetTracking() {
  */
 export function track(target: object, type: TrackOpTypes, key: unknown) {
   // shouldTrack 标识是否收集依赖，可以调用 pauseTracking 暂停收集依赖
-  // activeEffect 当前执行的 effect ，createApp 执行的时候，会初始化这个值
   // activeEffect 渲染时是 当前组件的渲染任务
   // 在执行 effect 或者 watchEffect 时，调用了 ref.value(或者其他会获取依赖的方法)，就是当前 effect（或者其他方法）传递的函数
   if (!shouldTrack || activeEffect === undefined) {
@@ -163,7 +162,7 @@ export function track(target: object, type: TrackOpTypes, key: unknown) {
      */
     depsMap.set(key, (dep = new Set()))
   }
-
+  // 在这里把依赖收集起来
   if (!dep.has(activeEffect)) {
     dep.add(activeEffect)
     activeEffect.deps.push(dep)
