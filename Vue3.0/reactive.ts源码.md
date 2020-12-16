@@ -889,12 +889,12 @@ export function isReactive(value: unknown): boolean {
 }
 ```
 
-```
+```typescript
 setup() {
 	const b = Vue.reactive({a: 123})
-    console.log(Vue.isReactive(b))
-    console.log(Vue.isReactive({__v_isReactive: true}))
-    console.log(Vue.isReactive({__v_isReactive: 1}))
+    console.log(Vue.isReactive(b)) // true
+    console.log(Vue.isReactive({__v_isReactive: true})) // true
+    console.log(Vue.isReactive({__v_isReactive: 1})) // true
 }
 ```
 
