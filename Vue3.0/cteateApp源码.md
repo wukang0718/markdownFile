@@ -175,6 +175,30 @@ export function createAppAPI<HostElement>(
     const installedPlugins = new Set()
     // 是否挂载
     let isMounted = false
+    
+    const app = (context.app = {
+      _uid: uid++,
+      _component: rootComponent as ConcreteComponent,
+      _props: rootProps,
+      _container: null,
+      _context: context,
+
+      version,
+
+      get config() {
+        return context.config
+      },
+
+      set config(v) {
+        if (__DEV__) {
+          warn(
+            `app.config cannot be replaced. Modify individual options instead.`
+          )
+        }
+      }, 
+    })
+    
+    return app
   }
 }
 ```
