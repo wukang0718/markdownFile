@@ -126,7 +126,58 @@ export function resetTracking() {
 
 ## track
 
-收集依赖
+**收集依赖**
+
+```typescript
+/**
+ * 收集依赖
+ * @param target 收集依赖的依赖源
+ * @param type 依赖的类型，可以是get、has、iterate
+ * @param key 依赖的哪个属性
+ */
+export function track(target: object, type: TrackOpTypes, key: unknown) {
+  // shouldTrack 标识是否收集依赖，可以调用 pauseTracking 暂停收集依赖
+  // activeEffect 当前执行的 effect ，createApp 执行的时候，会初始化这个值
+  // activeEffect 渲染时是 当前组件的渲染任务
+  // 在执行 effect 或者 watchEffect 时，调用了 ref.value(或者其他会获取依赖的方法)，就是当前 effect（或者其他方法）传递的函数
+  if (!shouldTrack || activeEffect === undefined) {
+    return
+  }
+  // targetMap 是 WeakMap 类型，在 依赖的源对象被垃圾回收后，会自动删除这个key
+  // depsMap 是对 target 收集的依赖
+  // depsMap 是一个 Map类型
+  let depsMap = targetMap.get(target)
+  if (!depsMap) {
+    targetMap.set(target, (depsMap = new Map()))
+  }
+  // dep 是 set 类型
+  let dep = depsMap.get(key)
+  if (!dep) {
+    // 这里收集需要触发的依赖，使用set类型，保证没有重复的依赖
+    /**
+     * targetMap(WeakMap): {
+     *  target(Map): {
+     *    key(Set): []
+     *  }
+     * }
+     */
+    depsMap.set(key, (dep = new Set()))
+  }
+
+  if (!dep.has(activeEffect)) {
+    dep.add(activeEffect)
+    activeEffect.deps.push(dep)
+    if (__DEV__ && activeEffect.options.onTrack) {
+      activeEffect.options.onTrack({
+        effect: activeEffect,
+        target,
+        type,
+        key
+      })
+    }
+  }
+}
+```
 
 
 
