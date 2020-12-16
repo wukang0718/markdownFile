@@ -74,6 +74,8 @@ function createReactiveEffect<T = any>(
 }
 ```
 
+这个函数的返回值被反复通过该方法执行的时候，只会执行一次
+
 
 
 ## pauseTracking
