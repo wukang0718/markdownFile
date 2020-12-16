@@ -632,6 +632,14 @@ function createIterableMethod(
 }
 ```
 
+示例： 
+
+```typescript
+setup() {
+    
+}
+```
+
 
 
 ## shallowReactive 方法
