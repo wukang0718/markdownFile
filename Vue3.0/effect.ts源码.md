@@ -167,7 +167,7 @@ export function track(target: object, type: TrackOpTypes, key: unknown) {
     dep.add(activeEffect)
     activeEffect.deps.push(dep)
     if (__DEV__ && activeEffect.options.onTrack) {
-      // onTrack 只在开发的时候可以有效
+      // onTrack 只在开发的时候可以有效，可以用来追踪依赖收集
       activeEffect.options.onTrack({
         effect: activeEffect,
         target,
