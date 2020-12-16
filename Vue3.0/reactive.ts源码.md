@@ -966,6 +966,17 @@ export function toRaw<T>(observed: T): T {
 
 示例：
 
+```typescript
+setup() {
+    const a = Vue.reactive({a: 123})
+    const b = Vue.readonly({b: 123})
+    console.log(Vue.toRaw(a)) // {a: 123}
+    console.log(Vue.toRaw(b)) // {b: 123}
+    console.log(Vue.toRaw({__v_isReadonly: true})) // {__v_isReadonly: true}
+    console.log(Vue.toRaw({__v_isReactive: true})) // {__v_isReactive: true}
+}
+```
+
 
 
 ## markRaw 方法
