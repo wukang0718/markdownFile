@@ -4,6 +4,8 @@
 
 接收一个对象，如果对象说 `readonly` 类型的，就返回对象本身，否则返回 对象深代理，通过 `createReactiveObject` 方法
 
+对象的 `reactive` 代理，会被缓存，所以对同一个对象执行多次 `reactive` 返回的是同一个值
+
 ```typescript
 export function reactive(target: object) {
   if (target && (target as Target)[ReactiveFlags.IS_READONLY]) {
