@@ -38,3 +38,74 @@ export function computed<T>(
 
 ### ComputedRefImpl 类
 
+```typescript
+/**
+ * 一个 computed 实例
+ * getter  方法
+ * _setter  方法
+ * isReadonly 是否可以修改
+ */
+class ComputedRefImpl<T> {
+  private _value!: T
+  private _dirty = true
+
+  public readonly effect: ReactiveEffect<T>
+
+  public readonly __v_isRef = true;
+  public readonly [ReactiveFlags.IS_READONLY]: boolean
+
+  constructor(
+    getter: ComputedGetter<T>,
+    private readonly _setter: ComputedSetter<T>,
+    isReadonly: boolean
+  ) {
+    // 调用 effect 方法，收集 getter 方法中的依赖
+    this.effect = effect(getter, {
+      lazy: true, // 方法不会立即执行
+      scheduler: () => {
+        // 只有这个 值 被使用过，才会重新计算
+        if (!this._dirty) {
+          this._dirty = true // 等下一次或者值的时候，才会调用
+          trigger(toRaw(this), TriggerOpTypes.SET, 'value')
+        }
+      }
+    })
+
+    this[ReactiveFlags.IS_READONLY] = isReadonly
+  }
+
+  get value() {
+    if (this._dirty) {
+      this._value = this.effect() // 这个就是 getter 函数执行的结果
+      this._dirty = false
+    }
+    // 收集依赖
+    track(toRaw(this), TrackOpTypes.GET, 'value')
+    return this._value
+  }
+
+  set value(newValue: T) {
+    this._setter(newValue)
+  }
+}
+```
+
+示例：
+
+```typescript
+setup() {
+    const a = Vue.ref(1)
+    const b = Vue.computed(() => {
+        console.log("21");
+        return a.value * 2
+    })
+    a.value = 2;
+    a.value = 3;
+    a.value = 4;
+    console.log(b.value) // 21 8
+    a.value = 5;
+    a.value = 6;
+    console.log(b.value) // 21 12
+}
+```
+
