@@ -185,7 +185,7 @@ export function createAppAPI<HostElement>(
 
       version, // vue 版本
 
-      get config() {
+      get config() { // config 是一个只读对象，设置 config 在开发环境会报警告
         return context.config
       }, 
     })
