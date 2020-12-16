@@ -878,6 +878,17 @@ function createReactiveObject(
 
 ## isReactive 方法
 
+```typescript
+export function isReactive(value: unknown): boolean {
+  if (isReadonly(value)) {
+    return isReactive((value as Target)[ReactiveFlags.RAW])
+  }
+  return !!(value && (value as Target)[ReactiveFlags.IS_REACTIVE])
+}
+```
+
+
+
 ## isReadonly 方法
 
 ## isProxy 方法
