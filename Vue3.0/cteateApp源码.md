@@ -53,7 +53,14 @@ export const createApp = ((...args) => {
 
 ### ensureRenderer
 
-
+```typescript
+/**
+ * 惰性 创建 renderer
+ */
+function ensureRenderer() {
+  return renderer || (renderer = createRenderer<Node, Element>(rendererOptions))
+}
+```
 
 
 
