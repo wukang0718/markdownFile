@@ -162,7 +162,7 @@ export function createAppAPI<HostElement>(
   /**
    * 接收两个参数
    * rootComponent 根组件
-   * rootProps 传递给跟组件的 props 
+   * rootProps 传递给根组件的 props 
    */
   return function createApp(rootComponent, rootProps = null) {
     if (rootProps != null && !isObject(rootProps)) {
