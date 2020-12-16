@@ -878,6 +878,8 @@ function createReactiveObject(
 
 ## isReactive 方法
 
+通过 `ReactiveFlags.IS_REACTIVE` 属性判断是不是 `reactive` 对象，这个对象的获取在 `proxy` 的 `handle` 中做了处理
+
 ```typescript
 export function isReactive(value: unknown): boolean {
   if (isReadonly(value)) {
