@@ -801,6 +801,12 @@ export const shallowReadonlyHandlers: ProxyHandler<object> = extend(
 
 `get` 方法 `shallowReadonlyGet`
 
+```typescript
+const shallowReadonlyGet = /*#__PURE__*/ createGetter(true, true)
+```
+
+
+
 ### createReactiveObject 方法
 
 参数
