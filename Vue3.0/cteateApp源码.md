@@ -79,7 +79,14 @@ export function createRenderer<
 
 ### baseCreateRenderer
 
-
+```typescript
+function baseCreateRenderer(
+  options: RendererOptions,
+  createHydrationFns?: typeof createHydrationFunctions
+): any {
+      
+}
+```
 
 
 
