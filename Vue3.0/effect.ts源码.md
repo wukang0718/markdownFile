@@ -1,6 +1,6 @@
 > 源码位置： [https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/effect.ts](https://github.com/vuejs/vue-next/blob/master/packages/reactivity/src/effect.ts)
 >
-> **这个文件的方法没有暴露给开发者，但是很重要**
+> **这个文件的方法暴露在 "@vue/reactivity"**
 
 ## effect 
 
