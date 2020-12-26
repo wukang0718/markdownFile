@@ -6,5 +6,7 @@
 - [ ] 接收数据：
   - [ ] 接收一个数组 timestampList 
     - [ ] timestamp：时间类型
-    - [ ] content： 可以是 render 函数、html、或者 string
+    - [ ] content： string // 优先级最低
+    - [ ] render: h 函数 // 优先级最高
+    - [ ] html: html 文本 / /优先级第二
 
