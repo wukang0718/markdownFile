@@ -9,4 +9,5 @@
     - [ ] content： string // 优先级最低
     - [ ] render: h 函数 // 优先级最高
     - [ ] html: html 文本 / /优先级第二
+    - [ ] isTop: 内容展示到时间轴上面
 
