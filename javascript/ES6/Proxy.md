@@ -8,7 +8,11 @@
 
 ## Proxy 对比 Object.defineProperty
 
+## Proxy 的语法
 
+### 通过 `new` 关键字调用
+
+### 静态方法 `Proxy.revocable`
 
 ## 参考文章
 
