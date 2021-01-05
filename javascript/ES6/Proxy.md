@@ -26,8 +26,6 @@ const proxy = new Proxy(target, {
 console.log(proxy.getData)
 ```
 
-
-
 - 
 
 ## Proxy 的语法
