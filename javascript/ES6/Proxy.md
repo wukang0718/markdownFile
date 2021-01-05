@@ -124,6 +124,23 @@ console.log(proxy.getData)
 
   返回 `Boolean` 类型的值，`true` 表示修改成功，`false` 表示修改失败。
 
+  ```js
+  const target = {};
+  
+  const proxy = new Proxy(target, {
+      set (target, key, value, receiver) {
+          target[key] = value;
+          return true;
+      }
+  })
+  
+  proxy.getData = 123
+  console.log(target.getData) // 123
+  console.log(proxy.getData) // 123
+  ```
+
+  
+
 ## Proxy 对比 Object.defineProperty
 
 
