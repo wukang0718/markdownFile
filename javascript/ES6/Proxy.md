@@ -92,7 +92,7 @@ console.log(proxy.getData); // Uncaught TypeError: Cannot perform 'get' on a pro
 
 - `get` 代理对象属性的读取
 
-  可以接收三个参数
+  接收三个参数
 
   - target：源对象
   - key：获取的对象的属性名称
@@ -115,7 +115,14 @@ console.log(proxy.getData)
 
 - `set` 代理对象属性的设置
 
+  接收四个参数
 
+  - target：源对象
+  - key：要设置的对象的属性
+  - value：要设置的对象属性的值
+  - receiver：proxy 实例本身
+
+  返回 `Boolean` 类型的值，`true` 表示修改成功，`false` 表示修改失败。
 
 ## Proxy 对比 Object.defineProperty
 
