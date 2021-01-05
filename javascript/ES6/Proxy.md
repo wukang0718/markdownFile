@@ -10,7 +10,47 @@
 
 ### 通过 `new` 关键字调用
 
+可以接收两个参数
+
+| 参数名称 | 参数描述                                                     |
+| -------- | ------------------------------------------------------------ |
+| target   | 需要 `proxy` 包装的对象（可以是任意类型的对象，包括数组、函数，甚至是另一个 `Proxy` 的实例） |
+| handle   | 一个以函数作为属性的**对象**，属性定义了在执行代理操作时的行为 |
+
+```javascript
+const target = {};
+
+const proxy = new Proxy(target, {
+    get (target, key, receiver) {
+        return 123;
+    }
+})
+// 不管是通过 proxy 获取任何的属性的值，这里都会返回 123
+console.log(proxy.getData)
+```
+
 ### 静态方法 `Proxy.revocable`
+
+接收和通过 `new` 调用一样的参数，返回值时一个**对象**，包含 `proxy` 和 `revoke` 两个属性
+
+| 属性   | 说明                                                         |
+| ------ | ------------------------------------------------------------ |
+| proxy  | `Proxy` 对象的实例，和通过 `new` 关键字调用返回一样的代理对象 |
+| revoke | 函数，执行会销毁 `proxy` 属性的代理行为，在执行了 `revoke` 方法后，在使用 `proxy` 对象，会报错 |
+
+```javascript
+const target = {};
+
+const {proxy, revoke} = Proxy.revocable(target, {
+    get (target, key, receiver) {
+        return 123;
+    }
+})
+// 不管是通过 proxy 获取任何的属性的值，这里都会返回 123
+console.log(proxy.getData); // 123
+revoke(); // 销毁 proxy 代理
+console.log(proxy.getData); // Uncaught TypeError: Cannot perform 'get' on a proxy that has been revoked
+```
 
 ## Proxy 可以做哪些事情
 
