@@ -10,17 +10,15 @@
 
 > **`Proxy`** 对象用于创建一个对象的代理，从而实现基本操作的拦截和自定义（如属性查找、赋值、枚举、函数调用等）   ----MDN
 
-
-
-## Proxy 对比 Object.defineProperty
-
-
-
 ## Proxy 的语法
 
 ### 通过 `new` 关键字调用
 
 ### 静态方法 `Proxy.revocable`
+
+## Proxy 对比 Object.defineProperty
+
+
 
 ## 参考文章
 
