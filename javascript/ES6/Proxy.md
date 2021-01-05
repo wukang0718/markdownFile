@@ -10,7 +10,36 @@
 
 > **`Proxy`** 对象用于创建一个对象的代理，从而实现基本操作的拦截和自定义（如属性查找、赋值、枚举、函数调用等）   ----MDN
 
+ts 中对 `proxy` 接口的定义
+
+```typescript
+
+interface ProxyHandler<T extends object> {
+    getPrototypeOf? (target: T): object | null;
+    setPrototypeOf? (target: T, v: any): boolean;
+    isExtensible? (target: T): boolean;
+    preventExtensions? (target: T): boolean;
+    getOwnPropertyDescriptor? (target: T, p: PropertyKey): PropertyDescriptor | undefined;
+    has? (target: T, p: PropertyKey): boolean;
+    get? (target: T, p: PropertyKey, receiver: any): any;
+    set? (target: T, p: PropertyKey, value: any, receiver: any): boolean;
+    deleteProperty? (target: T, p: PropertyKey): boolean;
+    defineProperty? (target: T, p: PropertyKey, attributes: PropertyDescriptor): boolean;
+    ownKeys? (target: T): PropertyKey[];
+    apply? (target: T, thisArg: any, argArray?: any): any;
+    construct? (target: T, argArray: any, newTarget?: any): object;
+}
+
+interface ProxyConstructor {
+    revocable<T extends object>(target: T, handler: ProxyHandler<T>): { proxy: T; revoke: () => void; };
+    new <T extends object>(target: T, handler: ProxyHandler<T>): T;
+}
+declare var Proxy: ProxyConstructor;
+```
+
 ## Proxy 的语法
+
+通过ts 的接口的定义可以发现 `Proxy` 有两种使用方式，可以通过 `new` 关键词调用，或者使用 `Proxy.revocable` 的静态方法。
 
 ### 通过 `new` 关键字调用
 
