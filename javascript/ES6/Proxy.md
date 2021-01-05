@@ -14,6 +14,22 @@
 
 - `get` 代理对象属性的读取
 
+```javascript
+const target = {};
+
+const proxy = new Proxy(target, {
+    get (target, key, receiver) {
+        return 123;
+    }
+})
+
+console.log(proxy.getData)
+```
+
+
+
+- 
+
 ## Proxy 的语法
 
 ### 通过 `new` 关键字调用
