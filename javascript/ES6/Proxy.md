@@ -95,7 +95,7 @@ console.log(proxy.getData); // Uncaught TypeError: Cannot perform 'get' on a pro
   可以接收三个参数
 
   - target：源对象
-  - p：获取的对象的属性
+  - p：获取的对象的属性名称
   - receiver：proxy 对象实例本身
 
 ```javascript
