@@ -88,9 +88,7 @@ console.log(proxy.getData); // Uncaught TypeError: Cannot perform 'get' on a pro
 
 ## Proxy 可以代理哪些行为
 
-`Proxy` 可以代理所有 `ProxyHandler` 中定义的行为
-
-`proxy` 顾名思义，就是“代理”的意思，那他都可以代理那些行为呢？
+`Proxy` 可以代理所有 `ProxyHandler` 中定义的行为，下面会详细的解释一下。
 
 - `get` 代理对象属性的读取
 
