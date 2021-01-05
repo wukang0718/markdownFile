@@ -103,6 +103,7 @@ const target = {};
 
 const proxy = new Proxy(target, {
     get (target, key, receiver) {
+        console.log(receiver === proxy) // true
         return 123;
     }
 })
