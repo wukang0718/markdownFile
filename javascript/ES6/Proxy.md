@@ -139,6 +139,8 @@ console.log(target.getData) // 123
 console.log(proxy.getData) // 123
 ```
 
+- `has` 代理对象 `in` 操作符
+
 
 
 ## Proxy 对比 Object.defineProperty
