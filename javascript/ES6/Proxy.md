@@ -98,6 +98,8 @@ console.log(proxy.getData); // Uncaught TypeError: Cannot perform 'get' on a pro
   - p：获取的对象的属性名称
   - receiver：proxy 对象实例本身
 
+  返回值可以是任意值，表示代理对象 `p` 属性的值
+
 ```javascript
 const target = {};
 
