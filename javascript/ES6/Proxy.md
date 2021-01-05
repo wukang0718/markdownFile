@@ -22,7 +22,7 @@ const proxy = new Proxy(target, {
         return 123;
     }
 })
-
+// 不管是通过 proxy 获取任何的属性的值，这里都会返回 123
 console.log(proxy.getData)
 ```
 
