@@ -75,7 +75,7 @@ const proxy = new Proxy(target, {
 console.log(proxy.getData)
 ```
 
-- 
+- `set` 代理对象属性的设置
 
 ## Proxy 对比 Object.defineProperty
 
