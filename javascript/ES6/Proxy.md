@@ -122,7 +122,7 @@ console.log(proxy.getData)
   - value：要设置的对象属性的值
   - receiver：proxy 实例本身
 
-  返回 `Boolean` 类型的值，`true` 表示修改成功，`false` 表示修改失败。
+  返回 `Boolean` 类型的值.
 
 ```js
 const target = {};
