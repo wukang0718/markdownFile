@@ -50,6 +50,7 @@ const {proxy, revoke} = Proxy.revocable(target, {
 console.log(proxy.getData); // 123
 revoke(); // 销毁 proxy 代理
 console.log(proxy.getData); // Uncaught TypeError: Cannot perform 'get' on a proxy that has been revoked
+// 被销毁的代理对象不能在执行代理方法
 ```
 
 ## Proxy 可以做哪些事情
