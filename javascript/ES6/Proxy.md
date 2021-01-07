@@ -92,15 +92,15 @@ console.log(proxy.getData); // Uncaught TypeError: Cannot perform 'get' on a pro
 
 `Proxy` 可以代理对象的13种行为：
 
-- `get` 代理对象属性的读取
+### `get` 代理对象属性的读取
 
-  接收三个参数
+接收三个参数
 
-  - target：源对象
-  - key：获取的对象的属性名称
-  - receiver：proxy 对象实例本身
+- target：源对象
+- key：获取的对象的属性名称
+- receiver：proxy 对象实例本身
 
-  返回值可以是任意值，表示代理对象 `key` 属性的值
+返回值可以是任意值，表示代理对象 `key` 属性的值
 
 ```javascript
 const target = {};
@@ -115,16 +115,16 @@ const proxy = new Proxy(target, {
 console.log(proxy.getData)
 ```
 
-- `set` 代理对象属性的设置
+### `set` 代理对象属性的设置
 
-  接收四个参数
+接收四个参数
 
-  - target：源对象
-  - key：要设置的对象的属性
-  - value：要设置的对象属性的值
-  - receiver：proxy 实例本身
+- target：源对象
+- key：要设置的对象的属性
+- value：要设置的对象属性的值
+- receiver：proxy 实例本身
 
-  返回 `Boolean` 类型的值。
+返回 `Boolean` 类型的值。
 
 ```js
 const target = {};
@@ -141,14 +141,14 @@ console.log(target.getData) // 123
 console.log(proxy.getData) // 123
 ```
 
-- `has` 代理对象 `in` 操作符
+### `has` 代理对象 `in` 操作符
 
-  接收两个参数
+接收两个参数
 
-  - target：源对象
-  - key： 要判断的key
+- target：源对象
+- key： 要判断的key
 
-  返回 `Boolean` 类型的值
+返回 `Boolean` 类型的值
 
 ```js
 const target = {};
@@ -171,7 +171,7 @@ console.log("a" in proxy)
 
     返回一个对象或者 `null`
 
-**五种可以触发 `getPrototypeOf` 的方式**
+#### **五种可以触发 `getPrototypeOf` 的方式**
 
 ```js
 Object.getPrototypeOf(p) // Object.getPrototypeOf
@@ -181,7 +181,7 @@ Array.prototype.isPrototypeOf(p) // isPrototypeOf 方法
 p instanceof Array    // instanceof 操作符
 ```
 
-
+示例代码:
 
 ```js
 const target = {};
@@ -199,14 +199,14 @@ console.log(Object.getPrototypeOf(target))
 
 ![image-20210107185116501](https://gitee.com/wu_kang0718/image/raw/master//20210107185117191.png)
 
-- `setPrototypeOf` 代理 `Object.setPrototypeOf` 设置原型对象的行为
+### `setPrototypeOf` 代理 `Object.setPrototypeOf` 设置原型对象的行为
 
-  接收两个参数
+接收两个参数
 
-  - target：源对象
-  - v：要设置成原型的对象可以是 对象或者 `null`
+- target：源对象
+- v：要设置成原型的对象可以是 对象或者 `null`
 
-  返回一个 `Boolean` 类型
+返回一个 `Boolean` 类型
 
 ```js
 const target = {};
@@ -224,13 +224,13 @@ console.log(Object.getPrototypeOf(proxy)) // {a: 1}
 console.log(Object.getPrototypeOf(target)) // {a: 1}
 ```
 
-- `isExtensible` 代理 `Object.isExtensible()` 判断对象是否可扩展的行为
+### `isExtensible` 代理 `Object.isExtensible()` 判断对象是否可扩展的行为
 
-  接收一个参数：
+接收一个参数：
 
-  - target：源对象
+- target：源对象
 
-  返回一个 `Boolean`
+返回一个 `Boolean`
 
 > 如果违背了以下的约束，`proxy` 会抛出 `TypeError`:
 >
@@ -265,13 +265,13 @@ console.log(Object.isExtensible(proxy))
 
 ![image-20210107190807219](https://gitee.com/wu_kang0718/image/raw/master//20210107190807908.png)
 
-- `preventExtensions` 代理 `Object.preventExtensions` 让对象变成不可扩展的行为
+### `preventExtensions` 代理 `Object.preventExtensions` 让对象变成不可扩展的行为
 
-  接收一个参数：
+接收一个参数：
 
-  - target：源对象
+- target：源对象
 
-  返回一个 `Boolean`
+返回一个 `Boolean`
 
 > 如果违反了下列规则, proxy则会抛出一个 `TypeError`:
 >
@@ -291,14 +291,14 @@ console.log(Object.isExtensible(proxy)) // false
 console.log(Object.isExtensible(target)) // false
 ```
 
-- `getOwnPropertyDescriptor` 代理 `Object.getOwnPropertyDescriptor` 获取对象上的一个自有属性的描述符的行为
+### `getOwnPropertyDescriptor` 代理 `Object.getOwnPropertyDescriptor` 获取对象上的一个自有属性的描述符的行为
 
-  接收两个参数：
+接收两个参数：
 
-  - target：源对象
-  - key：要获取属性描述符的对象的key
+- target：源对象
+- key：要获取属性描述符的对象的key
 
-  返回 `PropertyDescriptor` 或 `undefined`， 获取的 key 不存在的时候返回 `undefined`
+返回 `PropertyDescriptor` 或 `undefined`， 获取的 key 不存在的时候返回 `undefined`
 
 ```js
 const target = {
