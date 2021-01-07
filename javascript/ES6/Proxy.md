@@ -171,6 +171,18 @@ console.log("a" in proxy)
 
     返回一个对象或者 `null`
 
+  物种可以触发 `getPrototypeOf` 的方式
+
+  ```js
+  Object.getPrototypeOf(p)
+  Reflect.getPrototypeOf(p)
+  p.__proto__
+  Array.prototype.isPrototypeOf(p) // isPrototypeOf 方法
+  p instanceof Array    // instanceof 操作符
+  ```
+
+  
+
 ```js
 const target = {};
 
@@ -287,6 +299,22 @@ console.log(Object.isExtensible(target)) // false
   - key：要获取属性描述符的对象的key
 
   返回 `PropertyDescriptor` 或 `undefined`， 获取的 key 不存在的时候返回 `undefined`
+
+```js
+const target = {
+    a: 123
+};
+
+const proxy = new Proxy(target, {
+    getOwnPropertyDescriptor (target, key) {
+        return Reflect.getOwnPropertyDescriptor(target, key)
+    }
+})
+
+console.log(Object.getOwnPropertyDescriptor(proxy, 'a'))
+```
+
+
 
 ## Proxy 对比 Object.defineProperty
 
