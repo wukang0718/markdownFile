@@ -201,7 +201,7 @@ const target = {};
 
 const proxy = new Proxy(target, {
     setPrototypeOf (target, v) {
-        return Reflect.setPrototypeOf(target, v)
+        return Reflect.setPrototypeOf(target, v) // 反射
     }
 })
 Object.setPrototypeOf(proxy, null)
@@ -210,6 +210,18 @@ console.log(Object.getPrototypeOf(target)) // null
 Object.setPrototypeOf(proxy, {a: 1})
 console.log(Object.getPrototypeOf(proxy)) // {a: 1}
 console.log(Object.getPrototypeOf(target)) // {a: 1}
+```
+
+- `isExtensible` 代理 `Object.isExtensible()` 判断对象是否可扩展的行为
+
+  接收一个参数：
+
+  - target：源对象
+
+  返回一个 `Boolean`
+
+```
+
 ```
 
 
