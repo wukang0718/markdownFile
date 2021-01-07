@@ -255,6 +255,12 @@ console.log(Object.isExtensible(proxy))
 
 - `preventExtensions` 代理 `Object.preventExtensions` 让对象变成不可扩展的行为
 
+  接收一个参数：
+
+  - target：源对象
+
+  返回一个 `Boolean`
+
 ## Proxy 对比 Object.defineProperty
 
 
