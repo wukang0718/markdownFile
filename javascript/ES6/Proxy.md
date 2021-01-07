@@ -141,9 +141,27 @@ console.log(proxy.getData) // 123
 
 - `has` 代理对象 `in` 操作符
 
-接收两个参数
+  接收两个参数
 
+  - target：源对象
+  - key： 要判断的key
 
+  返回 `Boolean` 类型的值
+
+  ```js
+  const target = {};
+  
+  const proxy = new Proxy(target, {
+      has (target, key) {
+          return key === 'getData'
+      }
+  })
+  
+  console.log("getData" in proxy)
+  console.log("a" in proxy)
+  ```
+
+- `getPrototypeOf` 代理 `Object.getPrototypeOf` 的行为
 
 ## Proxy 对比 Object.defineProperty
 
