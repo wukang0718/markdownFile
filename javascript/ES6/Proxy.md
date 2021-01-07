@@ -192,6 +192,26 @@ console.log(Object.getPrototypeOf(target))
   - target：源对象
   - v：要设置成原型的对象可以是 对象或者 `null`
 
+  返回一个 `Boolean` 类型
+
+```js
+const target = {};
+
+const proxy = new Proxy(target, {
+    setPrototypeOf (target, v) {
+        return Reflect.setPrototypeOf(target, v)
+    }
+})
+Object.setPrototypeOf(proxy, null)
+console.log(Object.getPrototypeOf(proxy)) // null
+console.log(Object.getPrototypeOf(target)) // null
+Object.setPrototypeOf(proxy, {a: 1})
+console.log(Object.getPrototypeOf(proxy)) // {a: 1}
+console.log(Object.getPrototypeOf(target)) // {a: 1}
+```
+
+
+
 ## Proxy 对比 Object.defineProperty
 
 
