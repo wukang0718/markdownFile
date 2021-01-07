@@ -210,7 +210,7 @@ console.log(Object.getPrototypeOf(target))
 
 #### 两种可以触发 `setPrototypeOf` 的方法
 
-```
+```js
 Object.setPrototypeOf()
 Reflect.setPrototypeOf() // 反射方法
 ```
@@ -247,12 +247,12 @@ console.log(Object.getPrototypeOf(target)) // {a: 1}
 
 #### 两种可以触发 `isExtensible`  方法的操作：
 
-```
+```js
 Object.isExtensible()
 Reflect.isExtensible()
 ```
 
-
+示例代码：
 
 ```js
 const target = {};
@@ -294,6 +294,8 @@ console.log(Object.isExtensible(proxy))
 > 如果违反了下列规则, proxy则会抛出一个 `TypeError`:
 >
 > - 如果目标对象是可扩展的，那么只能返回 `false`
+
+
 
 ```js
 const target = {};
