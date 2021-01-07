@@ -187,6 +187,11 @@ console.log(Object.getPrototypeOf(target))
 
 - `setPrototypeOf` 代理 `Object.setPrototypeOf` 设置原型对象的行为
 
+  接收两个参数
+
+  - target：源对象
+  - v：要设置成原型的对象可以是 对象或者 `null`
+
 ## Proxy 对比 Object.defineProperty
 
 
