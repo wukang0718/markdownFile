@@ -141,6 +141,8 @@ console.log(proxy.getData) // 123
 
 - `has` 代理对象 `in` 操作符
 
+接收两个参数
+
 
 
 ## Proxy 对比 Object.defineProperty
