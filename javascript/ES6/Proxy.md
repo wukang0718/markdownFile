@@ -176,7 +176,7 @@ console.log("a" in proxy)
   ```js
   Object.getPrototypeOf(p)
   Reflect.getPrototypeOf(p)
-  p.__proto__
+  p.__proto__ // __proto__ 属性
   Array.prototype.isPrototypeOf(p) // isPrototypeOf 方法
   p instanceof Array    // instanceof 操作符
   ```
