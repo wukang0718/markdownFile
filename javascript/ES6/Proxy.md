@@ -201,7 +201,7 @@ const target = {};
 
 const proxy = new Proxy(target, {
     setPrototypeOf (target, v) {
-        return Reflect.setPrototypeOf(target, v) // 反射
+        return Reflect.setPrototypeOf(target, v) // 反射也是ES6中提供的新的操作对象的方法
     }
 })
 Object.setPrototypeOf(proxy, null)
