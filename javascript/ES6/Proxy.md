@@ -253,7 +253,7 @@ console.log(Object.isExtensible(proxy))
 
 ![image-20210107190807219](https://gitee.com/wu_kang0718/image/raw/master//20210107190807908.png)
 
-
+- `preventExtensions` 代理 `Object.preventExtensions` 让对象变成不可扩展的行为
 
 ## Proxy 对比 Object.defineProperty
 
