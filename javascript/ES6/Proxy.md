@@ -327,6 +327,15 @@ console.log(Object.isExtensible(target)) // false
 
 返回 `PropertyDescriptor` 或 `undefined`， 获取的 key 不存在的时候返回 `undefined`
 
+#### 两种可以触发 `getOwnPropertyDescriptor` 的方式
+
+```js
+Object.getOwnPropertyDescriptor()
+Reflect.getOwnPropertyDescriptor()
+```
+
+示例代码：
+
 ```js
 const target = {
     a: 123
