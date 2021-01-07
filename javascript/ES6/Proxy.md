@@ -90,6 +90,8 @@ console.log(proxy.getData); // Uncaught TypeError: Cannot perform 'get' on a pro
 
 `Proxy` 可以代理所有 `ProxyHandler` 中定义的行为，下面会详细的解释一下。
 
+`Proxy` 可以代理对象的13种行为：
+
 - `get` 代理对象属性的读取
 
   接收三个参数
