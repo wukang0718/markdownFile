@@ -174,8 +174,8 @@ console.log("a" in proxy)
   物种可以触发 `getPrototypeOf` 的方式
 
   ```js
-  Object.getPrototypeOf(p)
-  Reflect.getPrototypeOf(p)
+  Object.getPrototypeOf(p) // Object.getPrototypeOf
+  Reflect.getPrototypeOf(p) // 反射方法 Reflect.getPrototypeOf
   p.__proto__ // __proto__ 属性
   Array.prototype.isPrototypeOf(p) // isPrototypeOf 方法
   p instanceof Array    // instanceof 操作符
