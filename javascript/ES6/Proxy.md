@@ -274,7 +274,7 @@ const proxy = new Proxy(target, {
     }
 })
 
-console.log(Object.preventExtensions(proxy))
+Object.preventExtensions(proxy)
 console.log(Object.isExtensible(proxy)) // false
 console.log(Object.isExtensible(target)) // false
 ```
