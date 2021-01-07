@@ -161,7 +161,7 @@ console.log(proxy.getData) // 123
   console.log("a" in proxy)
   ```
 
-- `getPrototypeOf` 代理 `Object.getPrototypeOf` 的行为
+- `getPrototypeOf` 代理 `Object.getPrototypeOf` 获取原型对象的行为
 
   接收一个参数
 
