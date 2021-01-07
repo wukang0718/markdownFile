@@ -360,6 +360,8 @@ const proxy = new Proxy(target, {
 console.log(Object.getOwnPropertyDescriptor(proxy, 'a')) // {value: 123, writable: true, enumerable: true, configurable: true}
 ```
 
+### `defineProperty` 代理 `Object.defineProperty` 在对象上添加一个新的属性或者修改对象上现有属性的行为
+
 
 
 ## Proxy 对比 Object.defineProperty
