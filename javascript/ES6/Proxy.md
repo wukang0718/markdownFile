@@ -166,7 +166,8 @@ console.log(proxy.getData) // 123
   接收一个参数
 
   - target：源对象
-  - 
+
+    返回一个对象或者 `null`
 
 ## Proxy 对比 Object.defineProperty
 
