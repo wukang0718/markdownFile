@@ -208,6 +208,15 @@ console.log(Object.getPrototypeOf(target))
 
 返回一个 `Boolean` 类型
 
+两种可以触发 `setPrototypeOf` 的方法
+
+```
+Object.setPrototypeOf()
+Reflect.setPrototypeOf() // 反射方法
+```
+
+示例代码：
+
 ```js
 const target = {};
 
