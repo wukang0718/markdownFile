@@ -333,6 +333,7 @@ console.log(Object.isExtensible(target)) // false
 >
 > - 如果属性作为目标对象的不可配置的属性存在，则该属性无法报告为不存在，即如果源对象中的属性配置符的 `configurable` 属性为 `false` 时，`getOwnPropertyDescriptor` 返回的配置符必须和源对象属性的配置符一致。
 > - 如果属性作为目标对象的属性存在，并且目标对象不可扩展，则该属性无法报告为不存在，即当源对象时不可扩展的（使用了 `Object.preventExtensions` 方法后）并且对象上有要查找的属性，那么`getOwnPropertyDescriptor` 返回的配置符必须和源对象属性的配置符一致。
+> - 属性不能被报告为不可配置，如果它不作为目标对象的自身属性存在，或者作为目标对象的可配置的属性存在，即当源对象上有要查找的属性，并且属性描述符的 `configurable` 是 `true`，那么`getOwnPropertyDescriptor` 返回的配置符中的 `configurable` 也必须是 `true`，
 
 #### 两种可以触发 `getOwnPropertyDescriptor` 的方式
 
