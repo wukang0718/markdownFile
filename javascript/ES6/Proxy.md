@@ -224,9 +224,34 @@ console.log(Object.getPrototypeOf(target)) // {a: 1}
 >
 > - `Object.isExtensible(proxy)` 必须同`Object.isExtensible(target)`返回相同值。也就是必须返回`true`或者为`true`的值,返回`false`和为`false`的值都会报错。
 
+```js
+const target = {};
+
+const proxy = new Proxy(target, {
+    isExtensible (target) {
+        return true
+    }
+})
+
+console.log(Object.isExtensible(proxy)) // true
+console.log(Object.isExtensible(target)) // true
 ```
 
+**错误示例**
+
+```js
+const target = {};
+
+const proxy = new Proxy(target, {
+    isExtensible (target) {
+        return false
+    }
+})
+
+console.log(Object.isExtensible(proxy))
 ```
+
+![image-20210107190807219](https://gitee.com/wu_kang0718/image/raw/master//20210107190807908.png)
 
 
 
