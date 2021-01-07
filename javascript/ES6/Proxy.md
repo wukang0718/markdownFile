@@ -372,7 +372,7 @@ console.log(Object.getOwnPropertyDescriptor(proxy, 'a')) // {value: 123, writabl
 
 > 如果违背了以下的不变量，proxy会抛出 `TypeError`:
 >
-> - 如果目标对象不可扩展， 将不能添加属性。
+> - 如果目标对象不可扩展， 将不能添加属性，即对源对象或者 `proxy` 示例调用过 `Object.preventExtensions` 或者 `Reflect.preventExtensions` 方法后，不能再使用 `defineProperty` 
 > - 不能添加或者修改一个属性为不可配置的，如果它不作为一个目标对象的不可配置的属性存在的话。
 > - 如果目标对象存在一个对应的可配置属性，这个属性可能不会是不可配置的。
 > - 如果一个属性在目标对象中存在对应的属性，那么 `Object.defineProperty(target, prop, descriptor)` 将不会抛出异常。
