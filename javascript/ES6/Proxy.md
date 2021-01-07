@@ -279,7 +279,14 @@ console.log(Object.isExtensible(proxy)) // false
 console.log(Object.isExtensible(target)) // false
 ```
 
+- `getOwnPropertyDescriptor` 代理 `Object.getOwnPropertyDescriptor` 获取对象上的一个自有属性的描述符的行为
 
+  接收两个参数：
+
+  - target：源对象
+  - key：要获取属性描述符的对象的key
+
+  返回 `PropertyDescriptor` 或 `undefined`， 获取的 key 不存在的时候返回 `undefined`
 
 ## Proxy 对比 Object.defineProperty
 
