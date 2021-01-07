@@ -148,18 +148,18 @@ console.log(proxy.getData) // 123
 
   返回 `Boolean` 类型的值
 
-  ```js
-  const target = {};
-  
-  const proxy = new Proxy(target, {
-      has (target, key) {
-          return key === 'getData'
-      }
-  })
-  
-  console.log("getData" in proxy)
-  console.log("a" in proxy)
-  ```
+```js
+const target = {};
+
+const proxy = new Proxy(target, {
+    has (target, key) {
+        return key === 'getData'
+    }
+})
+
+console.log("getData" in proxy)
+console.log("a" in proxy)
+```
 
 - `getPrototypeOf` 代理 `Object.getPrototypeOf` 获取原型对象的行为
 
@@ -168,6 +168,24 @@ console.log(proxy.getData) // 123
   - target：源对象
 
     返回一个对象或者 `null`
+
+```js
+const target = {};
+
+const proxy = new Proxy(target, {
+    getPrototypeOf (target) {
+        return {}
+    }
+})
+console.log(Object.getPrototypeOf(proxy))
+console.log(Object.getPrototypeOf(target))
+```
+
+输出结果：
+
+![image-20210107185116501](https://gitee.com/wu_kang0718/image/raw/master//20210107185117191.png)
+
+
 
 ## Proxy 对比 Object.defineProperty
 
