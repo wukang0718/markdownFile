@@ -329,7 +329,8 @@ console.log(Object.isExtensible(target)) // false
 
 > - `getOwnPropertyDescriptor` 必须返回一个 `object` 或 `undefined`
 >
-> - 如果属性作为目标对象的不可配置的属性存在，则该属性无法报告为不存在，即 返回操作符中`writable`必须和源对象中的属性的操作符中的 `writable` 一致。
+> - 如果属性作为目标对象的不可配置的属性存在，则该属性无法报告为不存在，即如果源对象中的属性配置符的 `configurable` 属性为 `false` 时，`getOwnPropertyDescriptor` 返回的配置符必须和源对象属性的配置符一致。
+> - 
 
 #### 两种可以触发 `getOwnPropertyDescriptor` 的方式
 
