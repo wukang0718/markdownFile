@@ -357,8 +357,7 @@ const proxy = new Proxy(target, {
         return Reflect.getOwnPropertyDescriptor(target, key)
     }
 })
-
-console.log(Object.getOwnPropertyDescriptor(proxy, 'a'))
+console.log(Object.getOwnPropertyDescriptor(proxy, 'a')) // {value: 123, writable: true, enumerable: true, configurable: true}
 ```
 
 
