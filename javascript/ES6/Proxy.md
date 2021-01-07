@@ -208,7 +208,7 @@ console.log(Object.getPrototypeOf(target))
 
 返回一个 `Boolean` 类型
 
-两种可以触发 `setPrototypeOf` 的方法
+#### 两种可以触发 `setPrototypeOf` 的方法
 
 ```
 Object.setPrototypeOf()
@@ -244,6 +244,15 @@ console.log(Object.getPrototypeOf(target)) // {a: 1}
 > 如果违背了以下的约束，`proxy` 会抛出 `TypeError`:
 >
 > - `Object.isExtensible(proxy)` 必须同`Object.isExtensible(target)`返回相同值。也就是必须返回`true`或者为`true`的值,返回`false`和为`false`的值都会报错。
+
+#### 两种可以触发 `isExtensible`  方法的操作：
+
+```
+Object.isExtensible()
+Reflect.isExtensible()
+```
+
+
 
 ```js
 const target = {};
