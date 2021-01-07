@@ -362,7 +362,11 @@ console.log(Object.getOwnPropertyDescriptor(proxy, 'a')) // {value: 123, writabl
 
 ### `defineProperty` 代理 `Object.defineProperty` 在对象上添加一个新的属性或者修改对象上现有属性的行为
 
+接口三个参数
 
+- target： 源对象
+- key：要添加或者修改的属性
+- attributes： 要添加或修改的属性的描述符		
 
 ## Proxy 对比 Object.defineProperty
 
