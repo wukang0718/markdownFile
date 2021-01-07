@@ -376,7 +376,7 @@ console.log(Object.getOwnPropertyDescriptor(proxy, 'a')) // {value: 123, writabl
 > - 不能添加或者修改一个属性为不可配置的，如果它不作为一个目标对象的不可配置的属性存在的话。
 > - 如果目标对象存在一个对应的可配置属性，这个属性可能不会是不可配置的。
 > - 如果一个属性在目标对象中存在对应的属性，那么 `Object.defineProperty(target, prop, descriptor)` 将不会抛出异常。
-> - 在严格模式下， `false` 作为` handler.defineProperty` 方法的返回值的话将会抛出 [`TypeError`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypeError) 异常.
+> - 在严格模式下， `false` 作为` handler.defineProperty` 方法的返回值的话将会抛出 `TypeError`
 
 ## Proxy 对比 Object.defineProperty
 
