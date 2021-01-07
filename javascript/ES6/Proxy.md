@@ -261,6 +261,16 @@ console.log(Object.isExtensible(proxy))
 
   返回一个 `Boolean`
 
+> 如果违反了下列规则, proxy则会抛出一个 `TypeError`:
+>
+> - 如果目标对象是可扩展的，那么只能返回 `false`
+
+```
+
+```
+
+
+
 ## Proxy 对比 Object.defineProperty
 
 
