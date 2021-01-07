@@ -295,7 +295,14 @@ console.log(Object.isExtensible(proxy))
 >
 > - 如果目标对象是可扩展的，那么只能返回 `false`
 
+#### 两种可以触发 `preventExtensions` 的方式：
 
+```js
+Object.preventExtensions()
+Reflect.preventExtensions()
+```
+
+示例代码：
 
 ```js
 const target = {};
