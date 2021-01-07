@@ -220,6 +220,10 @@ console.log(Object.getPrototypeOf(target)) // {a: 1}
 
   返回一个 `Boolean`
 
+> 如果违背了以下的约束，`proxy` 会抛出 `TypeError`:
+>
+> - `Object.isExtensible(proxy)` 必须同`Object.isExtensible(target)`返回相同值。也就是必须返回true或者为true的值,返回false和为false的值都会报错。
+
 ```
 
 ```
