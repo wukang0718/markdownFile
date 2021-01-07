@@ -163,6 +163,11 @@ console.log(proxy.getData) // 123
 
 - `getPrototypeOf` 代理 `Object.getPrototypeOf` 的行为
 
+  接收一个参数
+
+  - target：源对象
+  - 
+
 ## Proxy 对比 Object.defineProperty
 
 
