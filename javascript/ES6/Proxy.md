@@ -265,8 +265,18 @@ console.log(Object.isExtensible(proxy))
 >
 > - 如果目标对象是可扩展的，那么只能返回 `false`
 
-```
+```js
+const target = {};
 
+const proxy = new Proxy(target, {
+    preventExtensions (target) {
+        return Reflect.preventExtensions(target)
+    }
+})
+
+console.log(Object.preventExtensions(proxy))
+console.log(Object.isExtensible(proxy)) // false
+console.log(Object.isExtensible(target)) // false
 ```
 
 
