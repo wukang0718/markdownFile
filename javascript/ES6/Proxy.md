@@ -185,7 +185,7 @@ console.log(Object.getPrototypeOf(target))
 
 ![image-20210107185116501](https://gitee.com/wu_kang0718/image/raw/master//20210107185117191.png)
 
-
+- `setPrototypeOf` 代理 `Object.setPrototypeOf` 设置原型对象的行为
 
 ## Proxy 对比 Object.defineProperty
 
