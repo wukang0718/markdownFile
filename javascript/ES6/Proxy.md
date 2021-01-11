@@ -108,10 +108,12 @@ console.log(proxy.getData); // Uncaught TypeError: Cannot perform 'get' on a pro
 #### 三种可以触发 `get` 的方法
 
 ```
-
+访问属性: proxy[foo]和 proxy.bar
+访问原型链上的属性: Object.create(proxy)[foo]
+Reflect.get()
 ```
 
-
+示例代码：
 
 ```javascript
 const target = {};
