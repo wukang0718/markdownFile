@@ -575,6 +575,12 @@ proxy.a.call(proxy, 123)
 - argumentsList： constructor 的参数列表
 - newTarget：最初被调用的构造函数
 
+> 如果违反以下约定，代理将会抛出错误 `TypeError`:
+>
+> - 必须返回一个对象.
+
+
+
 ## Proxy 对比 Object.defineProperty
 
 
