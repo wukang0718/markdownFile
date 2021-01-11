@@ -531,11 +531,15 @@ console.log(Object.keys(proxy)) // ['a']
 
 接收三个参数：
 
-- target：源对象
+- target：源方法
 - thisArg： 被调用时的上下文
 - argumentsList：被调用时的上下文
 
 返回任意值
+
+> 如果违反了以下约束，代理将抛出一个`TypeError`：
+>
+> `target`必须是可被调用的。也就是说，它必须是一个函数。
 
 ## Proxy 对比 Object.defineProperty
 
