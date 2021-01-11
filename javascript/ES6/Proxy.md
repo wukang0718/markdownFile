@@ -489,6 +489,19 @@ delete proxy.a
 
 ### `ownKeys` 方法拦截 使用`Object.getOwnPropertyNames()`方法返回一个由指定对象所有自身属性的属性名（包括不可枚举，但是不包括 `Symbol`值作为名称的属性）组成的数组
 
+接收一个参数
+
+- target：源对象
+
+返回一个数组
+
+> 如果违反了下面的约束，proxy将抛出错误`TypeError`:
+>
+> - `ownKeys` 的结果必须是一个数组.
+> - 数组的元素类型要么是一个 [`String`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/String) ，要么是一个 [`Symbol`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol).
+> - 结果列表必须包含目标对象的所有不可配置（non-configurable ）、自有（own）属性的key.
+> - 如果目标对象不可扩展，那么结果列表必须包含目标对象的所有自有（own）属性的key，不能有其它值.
+
 ## Proxy 对比 Object.defineProperty
 
 
