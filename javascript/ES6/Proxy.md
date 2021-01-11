@@ -616,7 +616,8 @@ proxy 和 `Object.defineProperty` 都可以对 源对象的`get` 和 `set` 方�
 
 ## Proxy 对比 Object.defineProperty
 
-
+- `Object.defineProperty` 不能一次监听所有的属性，只能递归遍历，才能代理到所有的属性，对于新添加的属性做不到监听
+- 
 
 ## 参考文章
 
