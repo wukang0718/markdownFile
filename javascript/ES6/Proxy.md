@@ -586,6 +586,8 @@ new proxy(...args)
 Reflect.construct()
 ```
 
+示例代码：
+
 
 
 ## Proxy 对比 Object.defineProperty
