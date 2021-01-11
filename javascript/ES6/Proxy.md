@@ -105,7 +105,13 @@ console.log(proxy.getData); // Uncaught TypeError: Cannot perform 'get' on a pro
 > - 如果要访问的目标属性是不可写以及不可配置的，则返回的值必须与该目标属性的值相同，即当源对象的属性的描述符 `configurable` 和 `writable` 为 `false`，必须返回和源对象的属性一样的值 。
 > - 如果要访问的目标属性没有配置访问方法，即get方法是undefined的，则返回值必须为undefined，即当通过 `Object.defineProperty` 给源对象设置属性，并且没有设置 `get` 是，代理必须返回 `undefined`。
 
-#### 
+#### 三种可以触发 `get` 的方法
+
+```
+
+```
+
+
 
 ```javascript
 const target = {};
@@ -160,7 +166,7 @@ console.log(proxy.getData) // 123
 > - 如果目标对象的某一属性本身不可被配置，则该属性不能够被代理隐藏，即如果对象树形的描述符 `configurable` 值为 `false`，`has` 代理不能返回 `false` .
 > - 如果目标对象为不可扩展对象，则该对象的属性不能够被代理隐藏，即源对象或代理对象被 `Object.preventExtensions` 方法调用后，不能返回`false`
 
-#### 两种情况可以触发 `has`方法
+#### 两种可以触发 `has`的方法
 
 ```
 属性查询: foo in proxy
