@@ -541,6 +541,16 @@ console.log(Object.keys(proxy)) // ['a']
 >
 > `target`必须是可被调用的。也就是说，它必须是一个函数。
 
+#### 三种触发 `apply ` 的方法
+
+```
+proxy(...args)
+Function.prototype.apply() 和 Function.prototype.call()
+Reflect.apply()
+```
+
+
+
 ## Proxy 对比 Object.defineProperty
 
 
