@@ -100,7 +100,10 @@ console.log(proxy.getData); // Uncaught TypeError: Cannot perform 'get' on a pro
 - key：获取的对象的属性名称
 - receiver：proxy 对象实例本身
 
-返回值可以是任意值，表示代理对象 `key` 属性的值
+> 如果违背了以下的约束，proxy会抛出 `TypeError`:
+>
+> - 如果要访问的目标属性是不可写以及不可配置的，则返回的值必须与该目标属性的值相同。
+> - 如果要访问的目标属性没有配置访问方法，即get方法是undefined的，则返回值必须为undefined。
 
 ```javascript
 const target = {};
