@@ -456,6 +456,10 @@ Object.defineProperty(proxy, 'a', {
 
 返回 `boolean` 类型的值
 
+> 如果违背了以下不变量，proxy 将会抛出一个 `TypeError`:
+>
+> - 如果目标对象的属性是不可配置的，那么该属性不能被删除。
+
 ## Proxy 对比 Object.defineProperty
 
 
