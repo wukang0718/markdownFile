@@ -588,6 +588,28 @@ Reflect.construct()
 
 示例代码：
 
+```typescript
+class A {
+    constructor(a, b) {
+        console.log(a, b) // 1, 2
+        this.a = a;
+        this.b = b;
+    }
+}
+
+const proxy = new Proxy(A, {
+    construct(target, argArray, newTarget) {
+        console.log(target) // A
+        console.log(argArray) // [1, 2]
+        console.log(newTarget) // proxy
+        console.log(newTarget === proxy) // true
+        return Reflect.construct(target, argArray, newTarget)
+    }
+})
+
+console.log(new proxy(1, 2)); // A {a: 1, b: 2}
+```
+
 
 
 ## Proxy 对比 Object.defineProperty
