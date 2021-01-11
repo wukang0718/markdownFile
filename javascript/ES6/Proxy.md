@@ -454,6 +454,8 @@ Object.defineProperty(proxy, 'a', {
 - target：源对象
 - key：要删除的属性名
 
+返回 `boolean` 类型的值
+
 ## Proxy 对比 Object.defineProperty
 
 
