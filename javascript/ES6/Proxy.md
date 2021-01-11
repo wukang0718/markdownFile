@@ -460,6 +460,15 @@ Object.defineProperty(proxy, 'a', {
 >
 > - 如果目标对象的属性是不可配置的，那么该属性不能被删除，即当源对象的属性的描述符的 `configurable` 属性值为 `false` 的时候，不能删除对象的该属性， `deleteProperty` 方法必须返回 `false`。
 
+#### 两种可以触发  `deleteProperty`  的方法
+
+```
+删除属性: delete proxy[foo] 和 delete proxy.foo
+Reflect.deleteProperty()
+```
+
+
+
 ## Proxy 对比 Object.defineProperty
 
 
