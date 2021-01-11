@@ -158,7 +158,7 @@ console.log(proxy.getData) // 123
 #### 两种情况可以触发 `has`方法
 
 ```
-
+foo in proxy
 ```
 
 
