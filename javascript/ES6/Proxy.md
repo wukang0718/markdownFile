@@ -137,7 +137,11 @@ console.log(proxy.getData)
 - value：要设置的对象属性的值
 - receiver：proxy 实例本身
 
-返回 `Boolean` 类型的值。
+> 如果违背以下的约束条件，proxy 会抛出一个`TypeError`异常：
+>
+> - 若目标属性是一个不可写及不可配置的数据属性，则不能改变它的值。
+> - 如果目标属性没有配置存储方法，即 `[[Set]]` 属性的是 `undefined`，则不能设置它的值。
+> - 在严格模式下，如果 `set()` 方法返回 `false`，那么也会抛出一个 [`TypeError`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypeError) 异常。
 
 ```js
 const target = {};
