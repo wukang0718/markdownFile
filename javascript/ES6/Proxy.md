@@ -447,7 +447,7 @@ Object.defineProperty(proxy, 'a', {
 })
 ```
 
-### `deleteProperty`
+### `deleteProperty` 代理 `delete` 操作符删除对象的属性的操作
 
 ## Proxy 对比 Object.defineProperty
 
