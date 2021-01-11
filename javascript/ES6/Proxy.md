@@ -549,6 +549,24 @@ Function.prototype.apply() 和 Function.prototype.call()
 Reflect.apply()
 ```
 
+示例代码：
+
+```typescript
+const target = {
+    a(b) {
+        console.log(b);
+    }
+};
+
+const proxy = new Proxy(target, {
+    apply(target, thisArg, argumentsList) {
+        // console.log('target', target)
+        return Reflect.apply(target, thisArg, argumentsList)
+    }
+})
+proxy.a.call(proxy, 123)
+```
+
 
 
 ## Proxy 对比 Object.defineProperty
