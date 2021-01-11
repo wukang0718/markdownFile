@@ -610,7 +610,7 @@ const proxy = new Proxy(A, {
 console.log(new proxy(1, 2)); // A {a: 1, b: 2}
 ```
 
-
+到这里 `Proxy` 能做的代理就结束了。
 
 ## Proxy 对比 Object.defineProperty
 
