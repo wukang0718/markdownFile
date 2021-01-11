@@ -432,7 +432,19 @@ proxy.property='value'
 示例代码：
 
 ```
+const target = {};
 
+const proxy = new Proxy(target, {
+    defineProperty(target, key, attr) {
+        return Reflect.defineProperty(target, key, attr)
+    }
+})
+
+Object.defineProperty(proxy, 'a', {
+    configurable: false,
+    writable: false,
+    value: 123
+})
 ```
 
 
