@@ -487,7 +487,7 @@ const proxy = new Proxy(target, {
 delete proxy.a
 ```
 
-
+### `ownKeys` 方法拦截 使用`Object.getOwnPropertyNames()`方法返回一个由指定对象所有自身属性的属性名（包括不可枚举，但是不包括 `Symbol`值作为名称的属性）组成的数组
 
 ## Proxy 对比 Object.defineProperty
 
