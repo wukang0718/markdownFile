@@ -497,7 +497,7 @@ delete proxy.a
 
 > 如果违反了下面的约束，proxy将抛出错误`TypeError`:
 >
-> - `ownKeys` 的结果必须是一个数组.
+> - `ownKeys` 的返回值必须是一个数组.
 > - 数组的元素类型要么是一个 [`String`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/String) ，要么是一个 [`Symbol`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol).
 > - 结果列表必须包含目标对象的所有不可配置（non-configurable ）、自有（own）属性的key.
 > - 如果目标对象不可扩展，那么结果列表必须包含目标对象的所有自有（own）属性的key，不能有其它值.
