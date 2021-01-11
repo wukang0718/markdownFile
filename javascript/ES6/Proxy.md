@@ -143,7 +143,15 @@ console.log(proxy.getData)
 > - 如果目标属性没有配置存储方法，即 `[[Set]]` 属性的是 `undefined`，则不能设置它的值，即当通过 `Object.defineProperty` 给源对象设置属性，并且没有设置 `set` 时，不能修改。
 > - 在严格模式下，如果 `set()` 方法返回 `false`，那么也会抛出一个 [`TypeError`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypeError) 异常。
 
+三种可以触发 `set` 的方法
 
+```
+指定属性值：proxy[foo] = bar 和 proxy.foo = bar
+指定继承者的属性值：Object.create(proxy)[foo] = bar
+Reflect.set()
+```
+
+示例代码：
 
 ```js
 const target = {};
