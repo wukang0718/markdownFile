@@ -527,7 +527,9 @@ const proxy = new Proxy(target, {
 console.log(Object.keys(proxy)) // ['a']
 ```
 
-### `apply`
+### `apply` 方法拦截函数的调用
+
+
 
 ## Proxy 对比 Object.defineProperty
 
