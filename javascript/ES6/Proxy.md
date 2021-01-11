@@ -139,7 +139,7 @@ console.log(proxy.getData)
 
 > 如果违背以下的约束条件，proxy 会抛出一个`TypeError`异常：
 >
-> - 若目标属性是一个不可写及不可配置的数据属性，则不能改变它的值，即当源对象的属性的描述符的 `configurable` 和 `writable` 都是 `false` 的时候，。
+> - 若目标属性是一个不可写及不可配置的数据属性，则不能改变它的值，即当源对象的属性的描述符的 `configurable` 和 `writable` 都是 `false` 的时候，不能修改。
 > - 如果目标属性没有配置存储方法，即 `[[Set]]` 属性的是 `undefined`，则不能设置它的值。
 > - 在严格模式下，如果 `set()` 方法返回 `false`，那么也会抛出一个 [`TypeError`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/TypeError) 异常。
 
