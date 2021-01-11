@@ -567,7 +567,13 @@ const proxy = new Proxy(target, {
 proxy.a.call(proxy, 123)
 ```
 
+### `construct` 方法拦截用于 `new` 操作
 
+接收三个参数：
+
+- target：源对象
+- argumentsList： constructor 的参数列表
+- newTarget：最初被调用的构造函数
 
 ## Proxy 对比 Object.defineProperty
 
