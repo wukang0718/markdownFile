@@ -502,6 +502,17 @@ delete proxy.a
 > - 结果数组必须包含目标对象的所有不可配置（non-configurable ）、自有（own）属性的key.
 > - 如果目标对象不可扩展，那么结果列表必须包含目标对象的所有自有（own）属性的key，不能有其它值.
 
+#### 四种触发 `ownKeys` 的方法
+
+```
+Object.getOwnPropertyNames()
+Object.getOwnPropertySymbols()
+Object.keys()
+Reflect.ownKeys()
+```
+
+
+
 ## Proxy 对比 Object.defineProperty
 
 
