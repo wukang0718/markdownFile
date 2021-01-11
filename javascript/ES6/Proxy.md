@@ -150,6 +150,11 @@ console.log(proxy.getData) // 123
 
 返回 `Boolean` 类型的值
 
+> 如果违反了下面这些规则,  proxy 将会抛出 `TypeError`:
+>
+> - 如果目标对象的某一属性本身不可被配置，则该属性不能够被代理隐藏，即如果对象树形的描述符 `configurable` 值为 `false`，`has` 代理不能返回 `false` .
+> - 如果目标对象为不可扩展对象，则该对象的属性不能够被代理隐藏
+
 ```js
 const target = {};
 
@@ -387,3 +392,18 @@ console.log(Object.getOwnPropertyDescriptor(proxy, 'a')) // {value: 123, writabl
 [【你不知道的 Proxy】：用 ES6 Proxy 能做哪些有意思的事情？](https://juejin.cn/post/6844904101218631694)
 
 [MND Proxy 文档](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
