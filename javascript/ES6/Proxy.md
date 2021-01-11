@@ -421,6 +421,8 @@ console.log(Object.getOwnPropertyDescriptor(proxy, 'a')) // {value: 123, writabl
 > - 如果一个属性在目标对象中存在对应的属性，那么 `Object.defineProperty(target, prop, descriptor)` 将不会抛出异常。
 > - 在严格模式下， `false` 作为` handler.defineProperty` 方法的返回值的话将会抛出 `TypeError`
 
+#### 三种可以触发 `defineProperty` 的方法
+
 ## Proxy 对比 Object.defineProperty
 
 
