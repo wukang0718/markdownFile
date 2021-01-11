@@ -431,7 +431,7 @@ proxy.property='value'
 
 示例代码：
 
-```
+```typescript
 const target = {};
 
 const proxy = new Proxy(target, {
@@ -447,7 +447,7 @@ Object.defineProperty(proxy, 'a', {
 })
 ```
 
-
+### `deleteProperty`
 
 ## Proxy 对比 Object.defineProperty
 
