@@ -480,8 +480,7 @@ Object.defineProperty(target, 'a', {
 
 const proxy = new Proxy(target, {
     deleteProperty(target, key) {
-        delete target[key]
-        return false
+        return Reflect.deleteProperty(target, key)
     }
 })
 
