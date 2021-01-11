@@ -513,6 +513,20 @@ Reflect.ownKeys()
 
 示例代码：
 
+```typescript
+const target = {
+    a: '123',
+    [Symbol()]: 123
+};
+
+const proxy = new Proxy(target, {
+    ownKeys(target) {
+        return Reflect.ownKeys(target)
+    }
+})
+console.log(Object.keys(proxy)) // ['a']
+```
+
 
 
 ## Proxy 对比 Object.defineProperty
