@@ -158,7 +158,10 @@ console.log(proxy.getData) // 123
 #### 两种情况可以触发 `has`方法
 
 ```
-foo in proxy
+属性查询: foo in proxy
+继承属性查询: foo in Object.create(proxy)
+with 检查: with(proxy) { (foo); }
+Reflect.has()
 ```
 
 
