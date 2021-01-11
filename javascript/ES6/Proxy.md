@@ -529,7 +529,13 @@ console.log(Object.keys(proxy)) // ['a']
 
 ### `apply` 方法拦截函数的调用
 
+接收三个参数：
 
+- target：源对象
+- thisArg： 被调用时的上下文
+- argumentsList：被调用时的上下文
+
+返回任意值
 
 ## Proxy 对比 Object.defineProperty
 
