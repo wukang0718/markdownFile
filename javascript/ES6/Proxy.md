@@ -467,6 +467,27 @@ Object.defineProperty(proxy, 'a', {
 Reflect.deleteProperty()
 ```
 
+示例代码：
+
+```typescript
+const target = {};
+
+Object.defineProperty(target, 'a', {
+    configurable: false,
+    writable: false,
+    value: 123
+})
+
+const proxy = new Proxy(target, {
+    deleteProperty(target, key) {
+        delete target[key]
+        return false
+    }
+})
+
+delete proxy.a
+```
+
 
 
 ## Proxy 对比 Object.defineProperty
