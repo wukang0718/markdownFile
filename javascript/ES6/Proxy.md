@@ -103,7 +103,7 @@ console.log(proxy.getData); // Uncaught TypeError: Cannot perform 'get' on a pro
 > 如果违背了以下的约束，proxy会抛出 `TypeError`:
 >
 > - 如果要访问的目标属性是不可写以及不可配置的，则返回的值必须与该目标属性的值相同，即当源对象的属性的描述符 `configurable` 和 `writable` 为 `false`，必须返回和源对象的属性一样的值 。
-> - 如果要访问的目标属性没有配置访问方法，即get方法是undefined的，则返回值必须为undefined。
+> - 如果要访问的目标属性没有配置访问方法，即get方法是undefined的，则返回值必须为undefined，即当通过 `Object.defineProperty` 给源对象设置。
 
 ```javascript
 const target = {};
