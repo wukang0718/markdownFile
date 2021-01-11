@@ -579,6 +579,13 @@ proxy.a.call(proxy, 123)
 >
 > - 必须返回一个对象.
 
+#### 两种触发 `construct` 的方法
+
+```
+new proxy(...args)
+Reflect.construct()
+```
+
 
 
 ## Proxy 对比 Object.defineProperty
