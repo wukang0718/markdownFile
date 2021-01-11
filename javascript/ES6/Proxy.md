@@ -527,7 +527,7 @@ const proxy = new Proxy(target, {
 console.log(Object.keys(proxy)) // ['a']
 ```
 
-
+### `apply`
 
 ## Proxy 对比 Object.defineProperty
 
