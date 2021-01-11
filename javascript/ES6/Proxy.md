@@ -449,6 +449,11 @@ Object.defineProperty(proxy, 'a', {
 
 ### `deleteProperty` 代理 `delete` 操作符删除对象的属性的操作
 
+接收两个参数
+
+- target：源对象
+- key：要删除的属性名
+
 ## Proxy 对比 Object.defineProperty
 
 
