@@ -155,6 +155,8 @@ console.log(proxy.getData) // 123
 > - 如果目标对象的某一属性本身不可被配置，则该属性不能够被代理隐藏，即如果对象树形的描述符 `configurable` 值为 `false`，`has` 代理不能返回 `false` .
 > - 如果目标对象为不可扩展对象，则该对象的属性不能够被代理隐藏，即源对象或代理对象被 `Object.preventExtensions` 方法调用后，不能返回`false`
 
+#### 两种情况可以触发 `has`代理
+
 ```js
 const target = {};
 
