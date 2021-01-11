@@ -423,10 +423,16 @@ console.log(Object.getOwnPropertyDescriptor(proxy, 'a')) // {value: 123, writabl
 
 #### 三种可以触发 `defineProperty` 的方法
 
-```
+```js
 Object.defineProperty()
 Reflect.defineProperty()
 proxy.property='value'
+```
+
+示例代码：
+
+```
+
 ```
 
 
