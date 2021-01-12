@@ -627,7 +627,7 @@ proxy 和 `Object.defineProperty` 都可以对 源对象的`get` 和 `set` 方�
 
 
 
-![扫码_搜索联合传播样式-标准色版](https://gitee.com/wu_kang0718/image/raw/master//20210112150124024.png)
+![扫码_搜索联合传播样式-白色版](https://gitee.com/wu_kang0718/image/raw/master//20210112150209210.png)
 
 
 
