@@ -560,11 +560,10 @@ const target = {
 
 const proxy = new Proxy(target, {
     apply(target, thisArg, argumentsList) {
-        // console.log('target', target)
         return Reflect.apply(target, thisArg, argumentsList)
     }
 })
-proxy.a.call(proxy, 123)
+proxy.a.call(proxy, 123) // 123
 ```
 
 ### `construct` 方法拦截用于 `new` 操作
