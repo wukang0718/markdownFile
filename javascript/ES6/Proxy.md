@@ -58,8 +58,8 @@ const proxy = new Proxy(target, {
         return 123;
     }
 })
-// 通过 proxy 获取任何的属性的值，这里都会返回 123
-console.log(proxy.getData)
+
+console.log(proxy.getData) // 123 通过 proxy 获取任何的属性的值,这里都会输出123
 ```
 
 ### 静态方法 `Proxy.revocable`
