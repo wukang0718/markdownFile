@@ -1,3 +1,5 @@
+# 关于proxy一篇就够了
+
 ## 前言
 
 关注 `vue2.0` 的同学都知道， `vue2.0` 实现响应式的方式的是通过 `Object.defineProperty`，而 vue3.0的响应式实现是用的 ES6 的新语法 `proxy` 代理实现的。
