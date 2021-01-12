@@ -79,7 +79,7 @@ const {proxy, revoke} = Proxy.revocable(target, {
         return 123;
     }
 })
-// 不管是通过 proxy 获取任何的属性的值，这里都会返回 123
+
 console.log(proxy.getData); // 123
 revoke(); // 销毁 proxy 代理
 console.log(proxy.getData); // Uncaught TypeError: Cannot perform 'get' on a proxy that has been revoked
