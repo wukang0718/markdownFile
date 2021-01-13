@@ -615,7 +615,7 @@ console.log(new proxy(1, 2)); // A {a: 1, b: 2}
 
 proxy 和 `Object.defineProperty` 都可以对 源对象的`get` 和 `set` 方法做拦截，为什么 vue3 弃用 `Object.defineProperty` 选用 `proxy` 了呢？
 
-## Proxy 对比 Object.defineProperty
+## 对比 Object.defineProperty
 
 - `Object.defineProperty` 不能一次监听所有的属性，只能递归遍历，才能代理到所有的属性，对于新添加的属性做不到监听
 - `Object.defineProperty` 不能监听 `Array` 类型的数据的操作
