@@ -36,5 +36,19 @@
 
 
 
+http://192.168.32.94:8080/doc.html#/default/%E5%B7%A5%E4%BD%9C%E5%8F%B0/getWorkbenchHotlineManagerMonitoringUsingGET
+工作台-热线经理-坐席监控
+
+http://192.168.32.94:8080/doc.html#/default/%E5%B7%A5%E4%BD%9C%E5%8F%B0/visitSeatsUsingGET
+工作台-回访坐席
+
+http://192.168.32.94:8080/doc.html#/default/%E5%B7%A5%E4%BD%9C%E5%8F%B0/getWorkbenchVisitManagerUsingGET
+工作台-回访经理
+
+http://192.168.32.94:8080/doc.html#/default/%E5%B7%A5%E4%BD%9C%E5%8F%B0/getVisitSeatMonitoringUsingGET
+工作台-回访经理-坐席监控
+
+
+
 
 
