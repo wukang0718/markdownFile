@@ -15,5 +15,5 @@ vuex：属性及作用
 
 ES6:
 
-​		
+​		Promise：
 
