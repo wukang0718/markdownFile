@@ -98,7 +98,7 @@ http://192.168.32.94:8080/doc.html#/default/%E5%B7%A5%E4%BD%9C%E5%8F%B0/insertWo
     disposeCount: 1 // 已处理工单数
     duration: 0
     historyOrderCount: 0
-    hotlineCount: 2
+    hotlineCount: 2 // 新分热线数
     pendingAllotHotlineCount: 2
     processedAllotHotlineCount: 1
     turnover: 0
