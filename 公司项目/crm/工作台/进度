@@ -61,58 +61,6 @@ private String applyForCallName;
 http://192.168.32.94:8080/doc.html#/default/%E5%B7%A5%E4%BD%9C%E5%8F%B0/insertWorkbenchHotlineAndCallbackCountUsingGET
 工作台-热线&回访经理-坐席监控-增加拨打次数
 
-
-
-![image-20210224134858761](https://gitee.com/wu_kang0718/image/raw/master//20210224134859801.png)
-
- 3：30
-
-
-
-
-
-- [ ] 订单审核权限
-- [ ] 扫吗出单禁用键盘
-
-
-
-添加快递按钮隐藏
-
-下面字段禁用：
-
-​	公司编码
-
-​	名称
-
-​	合作网点
-
-​	网点地址
-
-热线数据
-
-```
-{
-    callbackCount: 0 // 已回拨人数  错误
-    disposeCount: 1 // 已处理工单数
-    duration: 0 // 通话时长,单位：秒
-    historyOrderCount: 0 // 历史订单数  
-    hotlineCount: 2 // 新分热线数
-    pendingAllotHotlineCount: 2 // 待处理分配热线数  错误
-    processedAllotHotlineCount: 1 // 已处理分配热线数  错误
-    turnover: 0 // 成交金额
-}
-```
-
-
-
-顾客卡号  100000002
-
-
-
-- [ ] 扫吗出单  = 》 禁用键盘事件  =》 不能实现，扫描使用的是键盘事件，不能禁用键盘
-
-
-
 面试
 
 
