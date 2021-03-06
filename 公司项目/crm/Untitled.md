@@ -6,4 +6,4 @@ ON202103051757450212825999
 
 ON202103051757450212825999
 
-![image-20210306095743518](C:\Users\wukang\AppData\Roaming\Typora\typora-user-images\image-20210306095743518.png)
+![image-20210306095743518](https://gitee.com/wu_kang0718/image/raw/master//20210306095745484.png)
