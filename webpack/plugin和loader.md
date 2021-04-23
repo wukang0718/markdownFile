@@ -28,19 +28,3 @@ plugin 是一个扩展器，他丰富了 webpack 本身，在 webpack 的打包�
 
 [https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/308](https://github.com/Advanced-Frontend/Daily-Interview-Question/issues/308)
 
-
-
-
-
-# 一号
-
-## 二号
-
-### 三号
-
-#### 四号
-
-##### 五号
-
-###### 六号
-
