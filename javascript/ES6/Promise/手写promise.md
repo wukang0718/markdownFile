@@ -8,4 +8,4 @@
     - fulfilled // 执行resolve之后的promise 的状态
     - rejected  //  执行reject 之后的promise 的状态
 
-    promise 的装
+    promise 的状态只能 修改一次 是不可逆的
