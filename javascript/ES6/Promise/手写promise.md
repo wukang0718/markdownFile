@@ -8,4 +8,6 @@
     - fulfilled // 执行resolve之后的promise 的状态
     - rejected  //  执行reject 之后的promise 的状态
 
-    promise 的状态只能 修改一次 是不可逆的
+    promise 的状态只能修改一次
+
+- then / catch 都会返回一个新的 promise 实例
