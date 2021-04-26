@@ -11,3 +11,7 @@
     promise 的状态只能修改一次
 
 - then / catch 都会返回一个新的 promise 实例
+
+- then 函数的返回值不可以是之前的 promise 实例
+
+- then / catch 回调函数只会被调用一次
