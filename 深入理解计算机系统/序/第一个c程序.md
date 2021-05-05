@@ -14,7 +14,7 @@
 
 ## 编写c
 
-vscode 安装
+vscode 安装插件 `code runner` 、`C/C++` 
 
 
 
