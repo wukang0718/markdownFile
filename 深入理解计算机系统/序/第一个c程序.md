@@ -6,3 +6,4 @@
 
 ### 配置环境变量
 
+![image-20210505121948023](https://gitee.com/wu_kang0718/image/raw/master//20210505122003111.png)
