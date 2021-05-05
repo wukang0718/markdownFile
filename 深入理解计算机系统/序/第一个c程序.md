@@ -32,7 +32,7 @@ int main()
 
 右键选择 `run code`；输出 `hello world` 运行成功
 
-> 如果输出错误消息‘gcc 不是内部或外部命令’
+> 如果输出错误消息‘gcc 不是内部或外部命令’，重启机器重试即可
 
 ![image-20210505131844016](https://gitee.com/wu_kang0718/image/raw/master//20210505131856649.png)
 
