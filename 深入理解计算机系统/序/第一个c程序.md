@@ -30,9 +30,11 @@ int main()
 
 ### 运行
 
-右键选择 `run code`
+右键选择 `run code`；输出 `hello world` 运行成功
 
+> 如果输出错误消息‘gcc’
 
+![image-20210505131844016](https://gitee.com/wu_kang0718/image/raw/master//20210505131856649.png)
 
 
 
