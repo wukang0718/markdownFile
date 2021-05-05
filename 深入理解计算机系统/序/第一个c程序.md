@@ -16,9 +16,21 @@
 
 vscode 安装插件 `code runner` 、`C/C++` 
 
-新建文件
+### 新建文件 `hello.c`
 
+```c
+#include <stdio.h>
 
+int main() 
+{
+    printf("hello, world\n");
+    return 0;
+}
+```
+
+### 运行
+
+右键
 
 
 
