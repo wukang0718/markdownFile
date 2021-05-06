@@ -27,10 +27,12 @@
         gzip    on;
         gzip_types  application/javascript text/plain application/x-javascript text/css application/xml text/javascript image/jpeg image/gif image/png;
         #设置压缩缓冲区大小，此处设置为4个8K内存作为压缩结果流缓存
-        gzip_buffers 4 8k;
+        gzip_buffers 4 16k;
         #压缩级别1-9
         gzip_comp_level 9;
         #给响应头加个vary，告知客户端能否缓存
         gzip_vary on;
+        #设置允许压缩的页面最小字节(从header头的Content-Length中获取) ，当返回内容大于此值时才会使用gzip进行压缩,以K为单位,当值为0时，所有页面都进行压缩。建议大于1k
+	    gzip_min_length 1k;  
     }
 ```
