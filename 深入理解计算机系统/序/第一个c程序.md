@@ -36,10 +36,10 @@ int main()
 
 ![image-20210505131844016](https://gitee.com/wu_kang0718/image/raw/master//20210505131856649.png)
 
+![[Pasted image 20240809214657.png]]
 
 
-
-
+![[Pasted image 20240809215151.png]]
 
 
 
